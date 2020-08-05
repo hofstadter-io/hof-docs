@@ -1,0 +1,30 @@
+substitutions:
+  _HOF_ENV: "develop"
+  _HUGO_VERSION: "0.74.3"
+  _WEBSITE_URL: "docs.hofstadter.io"
+
+steps:
+
+# Download hugo
+- name: 'gcr.io/cloud-builders/gsutil'
+  args: ['cp', 'gs://hof-io--${_HOF_ENV}-internal/tools/hugo-${_HUGO_VERSION}', 'hugo']
+
+# Run Hugo
+- name: 'ubuntu'
+  entrypoint: 'bash'
+  args: ['-c', 'chmod +x hugo && ./hugo --baseURL https://${_DOMAIN}/ -d dist']
+
+# Build image
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'us.gcr.io/$PROJECT_ID/${_DOMAIN}:$BRANCH_NAME-$SHORT_SHA', '.' ]
+
+# Plain tag image
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'us.gcr.io/$PROJECT_ID/${_DOMAIN}:$BRANCH_NAME', '.' ]
+
+# Push images
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'push', 'us.gcr.io/$PROJECT_ID/${_DOMAIN}:$BRANCH_NAME' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'push', 'us.gcr.io/$PROJECT_ID/${_DOMAIN}:$BRANCH_NAME-$SHORT_SHA' ]
+

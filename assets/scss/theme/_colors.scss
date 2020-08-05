@@ -1,0 +1,154 @@
+$primary-color-blue: #02344D;
+// rgb(2, 52, 77)
+$primary-color-gold: #CBA44F;
+// rgb(203, 164, 79)
+$primary-color-white: #F1EDE0;
+// rgb(241, 237, 224)
+
+$secondary-color-red: #FF554F;
+$secondary-color-blue: #06B2BC;
+$secondary-color-purple: #995587;
+$secondary-color-green: #95C755;
+
+$primary-color-1: $primary-color-blue;
+$primary-color-2: $primary-color-gold;
+$primary-color-3: $primary-color-white;
+
+$greyscale-1: #F1F4F5;
+$greyscale-2: #DAE1E4;
+$greyscale-3: #C0CCD2;
+$greyscale-4: #A7B7C0;
+
+.grey-bg-1 {
+  background-color: $greyscale-1;
+}
+
+.grey-bg-2 {
+  background-color: $greyscale-2;
+}
+
+.grey-bg-3 {
+  background-color: $greyscale-3;
+}
+
+.grey-bg-4 {
+  background-color: $greyscale-4;
+}
+
+.text-blue {
+  color: $primary-color-blue;
+}
+.text-blue-bg {
+  background-color: $primary-color-blue;
+}
+
+.carousel-caption {
+  background: rgba(2,52,70,0.67);
+  border-radius: 2em;
+}
+
+.text-gold {
+  color: $primary-color-gold;
+}
+.text-gold-bg {
+  background-color: $primary-color-gold;
+}
+
+.text-white {
+  color: white;
+}
+.text-white-bg {
+  background-color: white;
+}
+
+.text-grey {
+  color: #f1f4f5;
+}
+.text-grey-bg {
+  background-color: #f1f4f5;
+}
+
+.text-ivory {
+  color: $primary-color-white;
+}
+.text-ivory-bg {
+  background-color: $primary-color-white;
+}
+
+.text-red2 {
+  color: $secondary-color-red;
+}
+
+.text-red2-bg {
+  background-color: $secondary-color-red;
+}
+
+.text-blue2 {
+  color: $secondary-color-blue;
+}
+
+.text-blue2-bg {
+  background-color: $secondary-color-blue;
+}
+
+.text-purple2 {
+  color: $secondary-color-purple;
+}
+
+.text-purple2-bg {
+  background-color: $secondary-color-purple;
+}
+
+.text-green2 {
+  color: $secondary-color-green;
+}
+
+.text-green2-bg {
+  background-color: $secondary-color-green;
+}
+
+.link-blue-white {
+  color: $primary-color-blue;
+  &:hover {
+    text-decoration: none;
+    color: $primary-color-white;
+  }
+}
+.link-blue-gold {
+  color: $primary-color-blue;
+  &:hover {
+    text-decoration: none;
+    color: $primary-color-gold;
+  }
+}
+
+.link-gold-white {
+  color: $primary-color-gold;
+  &:hover {
+    text-decoration: none;
+    color: $primary-color-white;
+  }
+}
+.link-gold-blue {
+  color: $primary-color-gold;
+  &:hover {
+    text-decoration: none;
+    color: $primary-color-blue;
+  }
+}
+
+.link-white-gold {
+  color: $primary-color-white;
+  &:hover {
+    text-decoration: none;
+    color: $primary-color-gold;
+  }
+}
+.link-white-blue {
+  color: $primary-color-white;
+  &:hover {
+    text-decoration: none;
+    color: $primary-color-blue;
+  }
+}
+

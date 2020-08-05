@@ -1,0 +1,9 @@
+{{ partial "page-meta-links.html" . }}
+{{ if not .Params.notoc }}
+<h5 class="my-2">Page Contents</h5>
+{{ with .TableOfContents }}
+{{ if ge (len .) 200 }}
+{{ . }}
+{{ end }}
+{{ end }}
+{{ end }}

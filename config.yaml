@@ -1,0 +1,181 @@
+baseURL: /
+title: Hofstadter
+
+enableRobotsTXT: true
+
+# Hugo allows theme composition (and inheritance). The precedence is from left to right.
+theme: []
+
+# Will give values to .Lastmod etc.
+enableGitInfo: true
+
+disableKinds:
+- taxonomy
+- taxonomyTerm
+
+permalinks:
+  blog: /:section/:year/:month/:day/:slug/
+
+imaging:
+  anchor: smart
+  quality: 75
+  resampleFilter: CatmullRom
+
+# Language settings
+contentDir: content/en
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+# Useful when translating.
+enableMissingTranslationPlaceholders: true
+
+languages:
+  en:
+    description: Hofstadter - The Hige Code Framework
+    languageName: English
+    title: Hofstadter
+    weight: 1
+
+blackfriday:
+  angledQuotes: false
+  hrefTargetBlank: true
+  latexDashes: true
+  plainIDAnchors: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    noClasses: true
+    style: solarized-dark
+    tabWidth: 2
+
+versions:
+  hof: "v0.4.1"
+  mvs: "v0.7.2"
+  dma: "v0.0.2"
+
+
+params:
+  analytics:
+    # ga:
+    gtm: GTM-5HFC5MV
+  algolia_docsearch: false
+  gcs_engine_id: 011737558837375720776:fsdu1nryfng
+  offlineSearch: false
+  archived_version: false
+  copyright: Hofstadter, Inc
+  github_project_repo: https://github.com/hofstadter-io/hof
+  github_repo: https://github.com/hofstadter-io/hof-docs
+  time_format_blog: "Monday, January 02, 2006"
+  time_format_default: "January 2, 2006"
+  # Sections to publish in the main RSS feed.
+  rss_sections: ["blog"]
+
+  version_hof: "0.4.6"
+  version_mvs: "0.7.6"
+  version_dma: "0.0.5"
+
+  links:
+
+    hof:
+
+    - desc: Hofstadter Website
+      icon: fad fa-home-alt
+      style: "--fa-primary-color: rgb(203, 164, 79); --fa-secondary-color: rgb(241, 237, 224); --fa-secondary-opacity: 1;"
+      name: Homepage
+      slug: home
+      url: https://hofstadter.io
+
+    - desc: Send us an email.
+      icon: fad fa-envelope
+      style: "--fa-primary-color: red; --fa-secondary-color: rgb(241, 237, 224); --fa-secondary-opacity: 1;"
+      name: Email
+      slug: email
+      url: mailto:contact@hofstadter.io
+
+
+    social:
+    - desc: Open source on GitHub!
+      icon: fab fa-github
+      style: "color: rgb(241, 237, 224);"
+      name: GitHub
+      slug: github
+      url: https://github.com/hofstadter-io
+
+    - desc: Follow us on Twitter to get the latest news!
+      icon: fab fa-twitter
+      style: "color: rgb(0, 172, 238);"
+      name: Twitter
+      slut: twitter
+      url: https://twitter.com/hofstadter_io
+
+    other:
+
+    - desc: Chat with other developers
+      icon: fad fa-comment-alt-lines
+      style: "--fa-primary-color: white; --fa-secondary-color: darkmagenta; --fa-secondary-opacity: 1;"
+      name: Chat
+      slug: chat
+      url: https://gitter.im/hofstadter-io/hof
+
+
+
+    - desc: Follow us on Twitter to get the latest news!
+      icon: fab fa-linkedin
+      style: "color: white;"
+      name: LinkedIn
+      slut: linkedin
+      url: https://www.linkedin.com/company/hofstadter
+
+
+    - desc: Hofstadter Playground
+      icon: fad fa-browser
+      name: Playground
+      slug: playground
+      style: "--fa-primary-color: cornflowerblue; --fa-secondary-color: LemonChiffon; --fa-secondary-opacity: 1;"
+      url: https://hofstadter.io/labs/playground
+
+    - desc: Hofstadter Labs
+      icon: fad fa-flask
+      name: Labs
+      slug: labs
+      style: "--fa-primary-color: skyblue; --fa-secondary-color: blueviolet; --fa-secondary-opacity: 1;"
+      url: https://hofstadter.io/labs
+
+    - desc: Hofstadter Studios
+      icon: fad fa-laptop-code
+      style: "--fa-primary-color: lightgrey; --fa-secondary-color: rgb(79, 192, 141); --fa-secondary-opacity: 1;"
+      name: Studios
+      slug: studios
+      url: https://hofstadter.io/studios
+
+  privacy_policy: https://hofstadter.io/privacy
+
+  ui:
+    breadcrumb_disable: false
+    feedback:
+      enable: true
+      "no": Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell
+        us how we can improve</a>.
+      "yes": Glad to hear it!  Follow us on <a href="https://twitter.com/hofstadter_io">Twitter</a>.
+    footer_about_disable: true
+    navbar_logo: true
+    sidebar_menu_compact: true
+    sidebar_search_disable: false
+
+  url_latest_version: https://docs.hofstadter.io
+  version: "0.0"
+  version_menu: Releases
+  versions:
+  - url: https://docs.hofstadter.io
+    version: latest
+
+services:
+  googleAnalytics: {}

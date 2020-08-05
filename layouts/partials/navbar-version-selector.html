@@ -1,0 +1,18 @@
+<span class="d-flex flex-row">
+  <span class="mr-3">
+    Version:
+  </span>
+  <span>
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{ (index .Site.Params.versions 0).version }}
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      {{ range $i, $V := .Site.Params.versions }}
+      <a class="dropdown-item" href="{{ .url }}">{{ $V.version }}</a>
+      {{ if eq $i 0 }}
+      <div class="dropdown-divider"></div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </span>
+</span>

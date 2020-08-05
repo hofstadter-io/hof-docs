@@ -1,0 +1,16 @@
+.footer-link-list {
+  list-style-type: none;
+
+  a {
+    color: $primary-color-white;
+
+    &:hover {
+      color: $primary-color-gold;
+    }
+  }
+
+  i {
+    text-align: center;
+    min-width: 32px;
+  }
+}

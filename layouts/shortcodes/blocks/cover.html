@@ -1,0 +1,55 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{ $blockID := printf "td-cover-block-%d" .Ordinal }}
+{{ $promo_image := (.Page.Resources.ByType "image").GetMatch "**background*" }}
+{{ $logo_image := (.Page.Resources.ByType "image").GetMatch "**logo*" }}
+{{ $col_id := .Get "color" | default "dark" }}
+{{ $image_anchor := .Get "image_anchor" | default "smart" }}
+{{ $logo_anchor := .Get "logo_anchor" | default "smart" }}
+{{/* Height can be one of: auto, min, med, max, full. */}}
+{{ $height := .Get "height" | default "max" }}
+{{ $byline := .Get "byline" | default "" }}
+{{ with $promo_image }}
+{{ $promo_image_big := (.Fill (printf "1920x1080 %s" $image_anchor)) }}
+{{ $promo_image_small := (.Fill (printf "960x540 %s" $image_anchor)) }}
+<link rel="preload" as="image" href="{{ $promo_image_small.RelPermalink }}" media="(max-width: 1200px)">
+<link rel="preload" as="image" href="{{ $promo_image_big.RelPermalink }}" media="(min-width: 1200px)">
+<style>
+#{{ $blockID }} {
+      background: linear-gradient(rgba(2, 52, 77, 0.69),rgba(2, 52, 77, 0.69)), url({{ $promo_image_small.RelPermalink }}); 
+        background-size: cover;
+}
+@media only screen and (min-width: 1200px) {
+    #{{ $blockID }} {
+      background: linear-gradient(rgba(2, 52, 77, 0.69),rgba(2, 52, 77, 0.69)), url({{ $promo_image_big.RelPermalink }}); 
+        background-size: cover;
+    }
+}
+</style>
+{{ end }}
+<section id="{{ $blockID }}" class="row td-cover-block td-cover-block--height-{{ $height }} js-td-cover td-overlay td-overlay--dark -bg-{{ $col_id }}">
+  <div class="container td-overlay__inner">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center pt-3">
+          <a id="" class="" href="{{ .Site.Home.RelPermalink }}">
+            <img src="/images/logoHofstadter.svg" width="370" height="72"></img>
+          </a>
+          {{ with .Get "subtitle" }}
+            <p class="font-sans-fira text-ivory display-4 mt-4 mb-5 px-3">
+              {{ . | html }}
+            </p>
+          {{ end }}
+
+        </div>
+        <p class="text-ivory text-left pt-4 px-3">
+          {{ .Inner | markdownify}}
+        </p>
+      </div>
+    </div>
+  </div>
+  {{ if $byline }}
+  <div class="byline">
+    <small>{{ $byline }}</small>
+  </div>
+  {{ end }}
+</section>
