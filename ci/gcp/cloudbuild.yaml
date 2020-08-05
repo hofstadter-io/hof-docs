@@ -12,6 +12,8 @@ steps:
 # Run Hugo
 - name: 'node:lts-stretch'
   entrypoint: 'bash'
+  env:
+    - GIT_DISCOVERY_ACROSS_FILESYSTEM=1
   args: ['-c', 'npm install -g postcss-cli && npm install autoprefixer && chmod +x hugo && ./hugo --baseURL https://${_DOMAIN}/ -d dist']
 
 # Build image

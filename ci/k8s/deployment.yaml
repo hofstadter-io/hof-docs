@@ -21,11 +21,10 @@ spec:
     metadata:
       labels:
         app: hof-docs
-        version: "__SHA__"
     spec:
       containers:
       - name: website
-        image: gcr.io/hof-io--system/docs.hofstadter.io:master
+        image: us.gcr.io/hof-io--develop/docs.hofstadter.io:master
         imagePullPolicy: Always
         ports:
         - containerPort: 80
