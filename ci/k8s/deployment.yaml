@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: website
-        image: us.gcr.io/hof-io--develop/docs.hofstadter.io:master
+        image: us.gcr.io/hof-io--develop/docs.hofstadter.io:manual
         imagePullPolicy: Always
         ports:
         - containerPort: 80

@@ -96,9 +96,9 @@ params:
     - desc: Send us an email.
       icon: fad fa-envelope
       style: "--fa-primary-color: red; --fa-secondary-color: rgb(241, 237, 224); --fa-secondary-opacity: 1;"
-      name: Email
-      slug: email
-      url: mailto:contact@hofstadter.io
+      name: Chat
+      slug: chat
+      url: https://gitter.im/hofstadter-io
 
 
     social:

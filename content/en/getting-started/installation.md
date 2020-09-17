@@ -1,50 +1,39 @@
 ---
-title: "Installing the CLI"
-date: 2019-03-02
-draft: false
-type: "page"
-
+title: "Installing hof"
 weight: 3
 ---
 
-To work with __Hofstadter Studios__ you will need the __hof__ CLI tool.
 __hof__ is available for all major operation systems
-and architectures. Thank You Golang Developers and Community!
+and architectures. Thank you to the Golang developers, Goreleaser, and the community!
 
-### Precompiled Binaries
+
+## Precompiled Binaries
 
 Download a precompiled binary from the github
 [releases page](https://github.com/hofstadter-io/hof/releases).
 
-### Other Options
+The latest release is [v0.5.10](https://github.com/hofstadter-io/hof/releases/tag/v0.5.10)
 
-##### Homebrew
 
-```sh
-brew install hofstadter-io/homebrew-tap/hof
-```
-
-##### Build from source
-
-You can go get and compile the latest version with:
-
-```sh
-go get github.com/hofstadter-io/hof
-```
-
-Dependencies are vendored and committed to the repository
-to ensure compatibility and simplicity.
-You will also need your `GOPATH` and `$GOPATH/bin`
-added to your `PATH`.
-
-### Test the installation
+## Test the installation
 
 Run `hof help` to make sure the tool is available.
 
-You can now configure the __hof__ tool to connect to the
-__Hofstadter Studios__ system.
 
-##### Windows Users
+## Build from source
+
+You can clone and compile the latest on `_dev` with:
+
+```sh
+git clone https://github.com/hofstadter-io/hof
+
+go mod vendor
+
+go install ./cmd/hof
+```
+
+
+## Windows Users
 
 There may be issues with your anti-virus and
 trusting the binary as well as the "`$HOME/.hof`" directory.
