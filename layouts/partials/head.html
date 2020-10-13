@@ -1,8 +1,14 @@
+{{ if eq hugo.Environment "production" }}
+{{ partial "onetrust/prod-head.html" . }}
+{{ else }}
+{{ partial "onetrust/test-head.html" . }}
+{{ end }}
+
 {{ partial "analytics/gtm-head.html" . }}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 {{ hugo.Generator }}
-{{ if eq (getenv "HUGO_ENV") "production" }}
+{{ if eq hugo.Environment "production" }}
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 {{ else }}
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -16,11 +22,8 @@
 {{- template "_internal/google_news.html" . -}}
 {{- template "_internal/schema.html" . -}}
 {{- template "_internal/twitter_cards.html" . -}}
-{{ if eq (getenv "HUGO_ENV") "production" }}
-{{ template "_internal/google_analytics_async.html" . }}
-{{ end }}
 {{ partialCached "head-css.html" . "asdf" }}
-<link href="/css/fontawesome.min.css" rel="stylesheet" async>
+<!--<link href="/css/fontawesome.min.css" rel="stylesheet" async>-->
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

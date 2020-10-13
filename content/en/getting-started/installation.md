@@ -1,5 +1,5 @@
 ---
-title: "Installing hof"
+title: "Installation"
 weight: 3
 ---
 
