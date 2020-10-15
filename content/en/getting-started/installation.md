@@ -6,18 +6,37 @@ weight: 3
 __hof__ is available for all major operation systems
 and architectures. Thank you to the Golang developers, Goreleaser, and the community!
 
+You will only need to install __hof__ once like this.
+__hof__ has an update command which you can use to check and install any version with.
 
-## Precompiled Binaries
+## Precompiled binaries
 
 Download a precompiled binary from the github
 [releases page](https://github.com/hofstadter-io/hof/releases).
 
-The latest release is [v0.5.10](https://github.com/hofstadter-io/hof/releases/tag/v0.5.10)
+The latest release is [v0.5.11](https://github.com/hofstadter-io/hof/releases/tag/v0.5.11)
 
 
 ## Test the installation
 
-Run `hof help` to make sure the tool is available.
+To make sure the tool is available, run
+
+```sh
+hof help
+```
+
+## Updating __hof__
+
+```sh
+# Check for an update
+hof update --check
+
+# Update to the latest version
+hof update
+
+# Install a specific version
+hof update --version vX.Y.Z
+```
 
 
 ## Build from source
