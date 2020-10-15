@@ -29,8 +29,11 @@ You can learn more about CUE from these links:
 - [The CUE Language Specification](https://cuelang.org/docs/references/spec/)
 
 
-## __hof__ uses CUE v0.2.2
+## __hof__ uses CUE v0.3.0
 
-You will find comments in our documentation
-that talk about CUE as we introduce new syntax.
+You will find additional discussions in this documentation
+which talk about CUE as we introduce new syntax and concepts.
+
+_note, Cue v0.3.0 is still in alpha stage but becoming increasingly stable.
+See https://github.com/cuelang/cue for the current status._
 

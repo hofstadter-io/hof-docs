@@ -1,7 +1,7 @@
 ---
-title: "Databases"
+title: "Datastores"
 
-weight: 8
+weight: 20
 ---
 
 ### PostgreSQL

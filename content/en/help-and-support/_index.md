@@ -20,6 +20,7 @@ Enterprise customers have access to additional channels:
 
 - Email, phone, and video calls
 - Prioritized support ticketing system
+- Professional services and training
 
 [Contact us](mailto://sales@hofstadter.io) to learn more.
 
