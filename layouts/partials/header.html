@@ -1,14 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top" id="navbarMain">
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary shadow sticky-top" id="navbarMain">
     <div class="container-fluid">
         <div>
             <a class="navbar-brand" href="{{ .Site.BaseURL | relLangURL }}">
-                {{ with .Site.Params.site_logo }}
-                    <img src="{{ . }}" />
-                {{ end }}
-                {{ .Site.Title }}
+                <img src="/images/logoHofstadter.svg" /> Documentation
             </a>
         </div>
-        <!-- only add the navbar toggle button if there are elements within the toggle -->
         {{- if .Site.Menus.shortcuts}}
             <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarMainCollapse" aria-controls="navbarMainCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>

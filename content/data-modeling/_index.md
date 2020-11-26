@@ -17,11 +17,4 @@ With `hof datamodels` you will be able to:
 
 The following sections will take you through the life-cycle of `hof datamodels`
 
-1. [Introduction data models]
-2. [The data model schema]
-3. [Data model commands]
-4. [Generating code]
-5. [Managing migrations]
-6. [Sharing and reusing]
-7. [Community data models]
-8. [References]
+{{< childpages >}}

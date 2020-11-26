@@ -8,3 +8,4 @@ description: >
 
 Notes and references for the Hofstadter Datamodel system.
 
+{{< childpages >}}

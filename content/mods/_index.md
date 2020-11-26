@@ -6,3 +6,4 @@ description: >
   Modules for the Hofstadter code generator.
 ---
 
+{{< childpages >}}

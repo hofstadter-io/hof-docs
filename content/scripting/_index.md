@@ -14,3 +14,5 @@ HLS is designed to combine
 - methods for working with multiple files in a single file from Golang's txtar
 
 You can invoke these with `hof run` and there is a shell in the works.
+
+{{< childpages >}}

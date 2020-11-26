@@ -4,6 +4,10 @@ languageCode = "en-us"
 DefaultContentLanguage = "en"
 title = "Hofstadter Documentation"
 # theme = ""
+
+
+enableGitInfo = true
+
 pygmentsCodeFences = true
 pygmentsStyle = "solarized-dark"
 
@@ -20,6 +24,7 @@ menushortcutsnewtab = true # set true to open shortcuts links to a new tab/windo
 googleAnalytics = "GTM-5HFC5MV"
 github_project_repo = "https://github.com/hofstadter-io/hof"
 github_repo = "https://github.com/hofstadter-io/hof-docs"
+time_format_default = "January 2, 2006"
 
 [markup]
   [markup.goldmark]
@@ -30,17 +35,19 @@ github_repo = "https://github.com/hofstadter-io/hof-docs"
 home = [ "HTML", "RSS", "JSON"]
 
 [[menu.shortcuts]]
-name = "Homepage"
-url = "https://hofstadter.io"
-weight = 0
-
-[[menu.shortcuts]]
-name = "GitHub"
+# name = "<i class='fab fa-github'></i> github"
+name = "github"
 url = "https://github.com/hofstadter-io"
 weight = 1
 
 [[menu.shortcuts]]
-name = "Chat"
+# name = "<i class='far fa-'></i> chat"
+name = "chat"
 url = "https://gitter.im/hofstadter-io"
 weight = 2
+
+[[menu.shortcuts]]
+name = "_hof.io"
+url = "https://hofstadter.io"
+weight = 3
 

@@ -25,3 +25,4 @@ The types of tests are:
 
 The following sections will go into greater depth.
 
+{{< childpages >}}

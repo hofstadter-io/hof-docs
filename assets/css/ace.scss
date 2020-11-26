@@ -41,9 +41,8 @@ $dark:          #343a40;
 }
 
 .navbar-brand {
-  font-size: 2rem;
   img {
-      height: 3rem;
+      height: 1.5rem;
   }
 }
 
@@ -54,7 +53,7 @@ $dark:          #343a40;
 
 @media (min-width: 768px) {
     .docs-sidenav, .docs-toc{
-        height: calc(100vh - 8rem);
+        min-height: calc(100vh - 7rem);
         top:4rem;
         position: sticky;
     }

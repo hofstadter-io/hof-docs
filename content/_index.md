@@ -1,15 +1,14 @@
 ---
-title: Learn you some CUE for a great good!
-description: "Cue Tutorials"
+title: Hofstadter Documentation
+description: "Hofstadter Documentation"
 ---
 
-{{< childpages page="introduction/" >}}
-
-{{< childpages page="starting-out/" >}}
-
-{{< childpages page="tour/" >}}
-
-{{< childpages page="go-api/" >}}
-
-{{< childpages page="internals/" >}}
+{{< childpages page="getting-started/" >}}
+{{< childpages page="data-modeling/" >}}
+{{< childpages page="code-generation/" >}}
+{{< childpages page="testing/" >}}
+{{< childpages page="scripting/" >}}
+{{< childpages page="examples/" >}}
+{{< childpages page="mods/" >}}
+{{< childpages page="notes/" >}}
 

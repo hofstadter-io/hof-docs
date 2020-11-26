@@ -6,3 +6,4 @@ description: >
   These sections will get you up and running and then take you on a tour of __hof__
 ---
 
+{{< childpages >}}
