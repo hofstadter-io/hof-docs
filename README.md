@@ -1,11 +1,15 @@
-# cuetorials.com
+# hof-docs
 
-Hugo static website based on the ACE documentatino theme.
+Documentation website for _Hofstadter.
 
-- https://cutorials.com
-- https://gohugo.io
-- https://themes.gohugo.io/ace-documentation/
-- https://docs.vantage-design.com/ace/
 
-You can run this locally using the normal hugo commands.
+### Running
+
+You'll need a recent version of [Hugo](https://gohugo.io) __extended__ from https://github.com/gohugoio/hugo/releases. (make sure to get the "hugo_extended_..." version for your system)
+
+```sh
+hugo server
+```
+
+You should now be able to edit pages live. Hugo will print a link for previewing.
 
