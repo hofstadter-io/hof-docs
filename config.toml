@@ -1,0 +1,46 @@
+baseURL = "https://docs.hofstadter.io/"
+
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+title = "Hofstadter Documentation"
+# theme = ""
+pygmentsCodeFences = true
+pygmentsStyle = "solarized-dark"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir= false
+enableMissingTranslationPlaceholders = false
+
+[params]
+ordersectionsby = "weight" # ordersectionsby = "title"
+disableSearch = false # default is false
+disableReadmoreNav = false # set true to hide prev/next navigation, default is false
+highlightClientSide = false # set true to use highlight.pack.js instead of the default hugo chroma highlighter
+menushortcutsnewtab = true # set true to open shortcuts links to a new tab/window
+googleAnalytics = "GTM-5HFC5MV"
+github_project_repo = "https://github.com/hofstadter-io/hof"
+github_repo = "https://github.com/hofstadter-io/hof-docs"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[[menu.shortcuts]]
+name = "Homepage"
+url = "https://hofstadter.io"
+weight = 0
+
+[[menu.shortcuts]]
+name = "GitHub"
+url = "https://github.com/hofstadter-io"
+weight = 1
+
+[[menu.shortcuts]]
+name = "Chat"
+url = "https://gitter.im/hofstadter-io"
+weight = 2
+
