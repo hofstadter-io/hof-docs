@@ -1,10 +1,11 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-primary shadow sticky-top" id="navbarMain">
+<nav class="navbar navbar-expand-md navbar-dark bg-primary shadow sticky-top" id="navbarMain">
     <div class="container-fluid">
         <div>
             <a class="navbar-brand" href="{{ .Site.BaseURL | relLangURL }}">
-                <img src="/images/logoHofstadter.svg" /> Documentation
+              <img class="" src="/images/logoHofstadter.svg" /> <span class="text-light">Documentation</span>
             </a>
         </div>
+        <!-- only add the navbar toggle button if there are elements within the toggle -->
         {{- if .Site.Menus.shortcuts}}
             <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarMainCollapse" aria-controls="navbarMainCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -15,7 +16,7 @@
                   {{- with .Site.Menus.shortcuts}}
                         {{- range sort . "Weight"}}
                             <li class="nav-item">
-                                <a class="nav-link" href="{{.URL}}" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}}>
+                                <a class="nav-link text-light" href="{{.URL}}" {{if eq $.Site.Params.menushortcutsnewtab true}}target="_blank"{{end}}>
                                   {{safeHTML .Name}}
                                 </a>
                             </li>

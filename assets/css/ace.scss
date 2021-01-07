@@ -12,7 +12,7 @@ $success:       #28a745;
 $info:          #17a2b8;
 $warning:       #ffc107;
 $danger:        #dc3545;
-$light:         #f8f9fa;
+$light:         #f5f7fd;
 $dark:          #343a40;
 
 @import "bootstrap/bootstrap";
@@ -21,18 +21,33 @@ $dark:          #343a40;
 .main > h1{
     padding-top: 2rem;
     margin-bottom: 1rem;
+    color: $primary;
 }
 
 .main > h2, .main > h3, .main > h4, .main > h5, .main > h6{
     margin-top: 1rem;
+    color: $primary;
+}
+
+.nav-link {
+  &.parent {
+    color: $primary !important;
+  }
+  &.current {
+    color: $primary !important;
+    font-weight: bold;
+  }
+}
+
+.nav-item.current {
+  color: $primary !important;
 }
 
 .haschildren ul{
-    color: gray;
     display:none;
 }
 
-.haschildren.active ul, .haschildren.parent ul{
+.haschildren.current ul, .haschildren.parent ul{
     display:block;
 }
 
@@ -42,7 +57,12 @@ $dark:          #343a40;
 
 .navbar-brand {
   img {
-      height: 1.5rem;
+    height: 1.67rem;
+    padding-bottom: 3px;
+  }
+  span {
+    font-weight: bold;
+    font-size: 1.25rem;
   }
 }
 

@@ -1,0 +1,5 @@
+module github.com/hofstadter-io/hof-docs
+
+cue v0.3.0
+
+replace github.com/hofstadter-io/cuelm => ../../cuelm

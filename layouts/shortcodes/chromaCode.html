@@ -1,9 +1,10 @@
 {{ .Scratch.Set "content" "" }}
 {{ .Scratch.Set "identifier" "" }}
 
+{{ $title := .Get "title" }}
+{{ $lang := .Get "lang" }}
 {{ $identifier := "" }}
 {{ $filepath := .Get "file"}}
-{{ $title := .Get "title"}}
 {{ if ($filepath) }}
     {{ .Scratch.Set "content" ($filepath | readFile) }}
     {{ .Scratch.Set "identifier" (first 10 (md5 (.Scratch.Get "content"))) }}
@@ -21,9 +22,7 @@
         </button>
     </div>
     <div id="{{printf "clipboard_%s" (.Scratch.Get "identifier") }}">
-      <div class="highlight">
-        {{ .Scratch.Get "content" | safeHTML }}
-      </div>
+      {{ (print "```" $lang "\n" (.Scratch.Get "content") "\n```") | markdownify }}
     </div>
 </div>
 
