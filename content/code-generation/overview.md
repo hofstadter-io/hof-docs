@@ -1,7 +1,9 @@
 ---
-title: "Code Gen"
-
-weight: 15
+title: "How Code Gen Happens"
+linkTitle: "How Code Gen Happens"
+weight: 5
+description: >
+  Overview of Code Generation.
 ---
 
 designs/ are filled in schema/ files which are the inputs to gen/ files which do some Cue magic to setup a data struct in hof, which itself just runs the Out field of generators through a process. Mostly Cue logic up front and the text/template logic in the templates/ and partials/
@@ -50,3 +52,4 @@ It was key for me to be able to write code in the output, change the design, reg
 There are edge cases around updating the generator and designs at the same time, would like to detect that situation and complain to the user more.
 
 Renaming certain things is hard too (while keeping custom code) i.e. a file name can change, which will create a new file and delete the old one. Git is your friend :]
+

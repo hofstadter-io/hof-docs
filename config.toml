@@ -25,6 +25,8 @@ googleAnalytics = "GTM-5HFC5MV"
 github_project_repo = "https://github.com/hofstadter-io/hof"
 github_repo = "https://github.com/hofstadter-io/hof-docs"
 time_format_default = "January 2, 2006"
+cuedocBase = "https://pkg.go.dev/cuelang.org/go@v0.3.0-alpha6"
+onetrust = "008b73d8-bcd7-4901-accd-6d2e78b3e0a9"
 
 [markup]
   [markup.goldmark]
@@ -47,7 +49,7 @@ url = "https://gitter.im/hofstadter-io"
 weight = 2
 
 [[menu.shortcuts]]
-name = "_hof.io"
+name = "home"
 url = "https://hofstadter.io"
 weight = 3
 

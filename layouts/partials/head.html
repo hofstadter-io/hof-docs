@@ -1,12 +1,12 @@
 <head>
 
-  <!-- OneTrust Cookies Consent Notice start for cuetorials.com -->
-  <script type="text/javascript" src="https://cdn.cookielaw.org/consent/19716938-8968-4ab3-a2c5-7861db16d497/OtAutoBlock.js" ></script>
-  <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="19716938-8968-4ab3-a2c5-7861db16d497" ></script>
+  <!-- OneTrust Cookies Consent Notice start -->
+  <script type="text/javascript" src="https://cdn.cookielaw.org/consent/{{ .Site.Params.onetrust }}/OtAutoBlock.js" ></script>
+  <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="{{ .Site.Params.onetrust }}" ></script>
   <script type="text/javascript">
   function OptanonWrapper() { }
   </script>
-  <!-- OneTrust Cookies Consent Notice end for cuetorials.com -->
+  <!-- OneTrust Cookies Consent Notice end -->
 
 
   <meta charset="utf-8">
@@ -35,7 +35,6 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','{{ .Site.Params.googleAnalytics }}');</script>
-    <script data-ad-client="ca-pub-4800102579374624" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- End Google Stuff -->
     {{ end }}
     {{ end }}

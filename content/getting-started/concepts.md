@@ -36,7 +36,7 @@ to not only update schemes, but also write code which manages rolling updates gr
 across the application technology stack.
 
 
-### Designs and Data Models++
+### Designs and Data Models
 
 The data model is core to any application.
 In __hof__ we write data models using CUE

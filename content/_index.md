@@ -4,11 +4,9 @@ description: "Hofstadter Documentation"
 ---
 
 {{< childpages page="getting-started/" >}}
-{{< childpages page="data-modeling/" >}}
 {{< childpages page="code-generation/" >}}
-{{< childpages page="testing/" >}}
-{{< childpages page="scripting/" >}}
-{{< childpages page="examples/" >}}
-{{< childpages page="mods/" >}}
-{{< childpages page="notes/" >}}
+{{< childpages page="using-generators/" >}}
+{{< childpages page="creating-generators/" >}}
+{{< childpages page="hofmod-library/" >}}
+{{< childpages page="help-and-support/" >}}
 
