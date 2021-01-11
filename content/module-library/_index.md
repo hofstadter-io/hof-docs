@@ -1,6 +1,6 @@
 ---
-title: "Hofmod Library"
-linkTitle: "Hofmod Library"
+title: "Module Library"
+linkTitle: "Module Library"
 weight: 50
 description: >
   Modules built for Hofstadter.

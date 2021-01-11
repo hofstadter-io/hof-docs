@@ -1,7 +1,7 @@
 ---
-title: "How it Works"
-linkTitle: "How it Works"
-weight: 25
+title: "Workflow"
+linkTitle: "Workflow"
+weight: 5
 description: >
   Developer experience with Hofstadter.
 ---

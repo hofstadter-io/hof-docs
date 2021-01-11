@@ -10,8 +10,9 @@ description: >
 
 Hofstadter provides support through the following channels:
 
-- [Chat on Gitter](https://gitter.im/hofstadter-io) for questions and conversations.
-- [Github Issues](https://github.com/hofstadter-io/hof/issues) to file bugs and feature requests.
+- __[Chat on Slack](https://hofstadter-io.slack.com)__ for questions and conversations. Use __[this link for an invite](https://join.slack.com/t/hofstadter-io/shared_invite/zt-e5f90lmq-u695eJur0zE~AG~njNlT1A)__.
+- __[Github Discussions](https://github.com/hofstadter-io/hof/discussions)__ are used for long-term recording of important questions and topics.
+- __[Github Issues](https://github.com/hofstadter-io/hof/issues)__ to file bugs and feature requests.
 
 
 ## Enterprise Support & SLAs
@@ -22,6 +23,6 @@ Enterprise customers have access to additional channels:
 - Prioritized support ticketing system
 - Professional services and training
 
-[Contact us](mailto://sales@hofstadter.io) to learn more.
+__[Contact us](mailto://sales@hofstadter.io)__ to learn more.
 
 
