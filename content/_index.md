@@ -3,16 +3,52 @@ title: Hofstadter Documentation
 description: "Hofstadter Documentation"
 ---
 
+### __hof__ was built to improve developer workflow
+
+<br>
+
 {{<lead>}}
-The hof tool tries to remove redundent development activities by using high level designs, code generation, and diff3 while letting you write custom code directly in the output.
+There were a few problems we encountered too often
 {{</lead>}}
 
-- Users write Single Source of Truth (SSoT) design for data models and the application generators
-- hof reads the SSoT, processes it through the code generators, and outputs directories and files
-- Users can write custom code in the output, change their designs, and regenerate code in any order
-- hof should be customizable and extensible by only editing text files and not hof source code.
-- Use your own tools, technologies, and practices, hof does not make any choices for you
-- hof is powered by Cue (https://cuelang.org & https://cuetorials.com)
+##### 1. Redundent code patterns
+
+    When writing api handlers, client libraries, and data validation.
+    When starting server setup like logging and wiring up the router.
+
+##### 2. Data models change
+
+    Requires us to make the same conceptual change across many files.
+    Manage databases, schemas, migrations, and corrdinated deployments.
+
+##### 3. Fleetwide fixes and updates
+
+    Deploying shared security and bug fixes across our app fleet should be easier.
+    This should apply equally for improvements in our code patterns and practices.
+    
+
+<br>
+
+{{<lead>}}
+We wanted a tool where we can...
+{{</lead>}}
+
+- write down our conceptual design in one place
+- run a tool to create most implementation
+- work directly in the output like writing normal code
+- update our designs and regenerate our implementation
+- keep and continue our existing custom work
+- share designs across teams and projects
+- import advanced functionality into our apps
+- extend functionality without modifying the tool
+
+<br>
+
+### This is what __hof__ helps you do
+
+<br>
+
+---
 
 {{< childpages page="getting-started/" >}}
 {{< childpages page="code-generation/" >}}
