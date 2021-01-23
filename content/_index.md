@@ -11,21 +11,20 @@ description: "Hofstadter Documentation"
 There were a few problems we encountered too often
 {{</lead>}}
 
-##### 1. Redundent code patterns
+##### 1. Redundant code patterns
 
-    When writing api handlers, client libraries, and data validation.
-    When starting server setup like logging and wiring up the router.
+When writing api handlers, client libraries, and data validation.
+When starting server setup like logging and wiring up the router.
 
 ##### 2. Data models change
 
-    Requires us to make the same conceptual change across many files.
-    Manage databases, schemas, migrations, and corrdinated deployments.
+Requires us to make the same conceptual change across many files.
+Also manage databases, schemas, migrations, and coordinated deployments.
 
-##### 3. Fleetwide fixes and updates
+##### 3. Fleet wide fixes and updates
 
-    Deploying shared security and bug fixes across our app fleet should be easier.
-    This should apply equally for improvements in our code patterns and practices.
-    
+Deploying shared security and bug fixes across our app fleet should be easier.
+This should apply equally for improvements in our code patterns and practices.
 
 <br>
 
@@ -49,6 +48,8 @@ We wanted a tool where we can...
 <br>
 
 ---
+
+# Table of Contents
 
 {{< childpages page="getting-started/" >}}
 {{< childpages page="code-generation/" >}}
