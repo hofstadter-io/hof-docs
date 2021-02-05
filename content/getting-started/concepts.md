@@ -88,7 +88,7 @@ Minium Version Selcetion (MVS)
 dependency managment algorithm popularized by Golang.
 They are polyglot because they can contain any of:
 
-- technolgy choices
+- technology choices
 - code generators
 - sub-modules and dependencies
 
