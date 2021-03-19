@@ -83,8 +83,8 @@ Typically these are grouped in a module.
 
 ### Polyglot Modules
 
-Modules in __hof__ are a flexible version of the
-Minium Version Selcetion (MVS)
+Modules in __hof__ are a flexible and reusable implementation of the
+Minium Version Selection (MVS)
 dependency managment algorithm popularized by Golang.
 They are polyglot because they can contain any of:
 

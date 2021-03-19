@@ -16,7 +16,7 @@ There were a few problems we encountered too often
 When writing api handlers, client libraries, and data validation.
 When starting server setup like logging and wiring up the router.
 
-##### 2. Data models change
+##### 2. Data model changes
 
 Requires us to make the same conceptual change across many files.
 Also manage databases, schemas, migrations, and coordinated deployments.
