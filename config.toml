@@ -21,12 +21,11 @@ disableSearch = false # default is false
 disableReadmoreNav = false # set true to hide prev/next navigation, default is false
 highlightClientSide = false # set true to use highlight.pack.js instead of the default hugo chroma highlighter
 menushortcutsnewtab = true # set true to open shortcuts links to a new tab/window
-googleAnalytics = "GTM-5HFC5MV"
+googleAnalytics = ""
 github_project_repo = "https://github.com/hofstadter-io/hof"
 github_repo = "https://github.com/hofstadter-io/hof-docs"
 time_format_default = "January 2, 2006"
 cuedocBase = "https://pkg.go.dev/cuelang.org/go@v0.3.0-alpha6"
-onetrust = "008b73d8-bcd7-4901-accd-6d2e78b3e0a9"
 
 [markup]
   [markup.goldmark]

@@ -23,7 +23,7 @@ Also manage databases, schemas, migrations, and coordinated deployments.
 
 ##### 3. Fleet wide fixes and updates
 
-Deploying shared security and bug fixes across our app fleet should be easier.
+Deploying shared security and bug fixes across many applications should be easier.
 This should apply equally for improvements in our code patterns and practices.
 
 <br>
