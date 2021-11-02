@@ -24,7 +24,12 @@ $dark:          #343a40;
     color: $primary;
 }
 
-.main > h2, .main > h3, .main > h4, .main > h5, .main > h6{
+.main > h2, .main > h3 {
+	margin-top: 3rem;
+	color: $primary;
+}
+
+.main > h4, .main > h5, .main > h6{
     margin-top: 1rem;
     color: $primary;
 }
@@ -141,4 +146,18 @@ table > tbody > tr > td, .bd-content > table > tbody > tr > th, .bd-content > ta
 
 table > thead {
   border: 1px solid #dee2e6;
+}
+
+h3.anchor {
+  padding-top: 8rem;
+  margin-top: -6rem;
+}
+
+.code-title {
+	font-family: Regular,Menlo,Monaco,Consolas,liberation mono,courier new,monospace;
+}
+
+pre.shiki {
+  // -moz-tab-size:2;-o-tab-size:2;tab-size:2;
+  -moz-tab-size:4;-o-tab-size:4;tab-size:4;
 }

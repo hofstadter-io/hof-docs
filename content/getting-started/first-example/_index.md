@@ -34,7 +34,7 @@ You can find __[the source for this example on GitHub](https://github.com/hofsta
 
 The directory layout is as follows
 
-```sh
+{{<codeInner lang="sh" title="project layout">}}
 # source location in the website repo
 code/getting-started/first-example/
 
@@ -58,12 +58,8 @@ code/getting-started/first-example/
 
   # Snippets used in the progress of this section
   tmp/
-```
+{{< /codeInner >}}
 
-<br>
-<hr>
-<br>
-
-#### Subsections
+### Subsections
 
 {{< childpages >}}

@@ -6,19 +6,19 @@ import (
 
 Install: schema.#List & {
 	items: [
-		#HofDocs.Ingress,
-		#HofDocs.Service,
-		#HofDocs.Deployment,
+		#Site.Ingress,
+		#Sit.Service,
+		#Site.Deployment,
 	]
 }
 
 Update: schema.#List & {
 	items: [
-		#HofDocs.Deployment,
+		#Site.Deployment,
 	]
 }
 
-#HofDocs: {
+#Site: {
 	_Values: {
 		name: "hof-docs"
 		namespace: "websites"
@@ -41,7 +41,6 @@ Update: schema.#List & {
 	}
 
 	Ingress: schema.#Ingress & {
-		apiVersion: "extensions/v1beta1"
 		metadata: _Values.#metadata & {
 			annotations: {
 				"kubernetes.io/tls-acme": "true"
@@ -61,8 +60,10 @@ Update: schema.#List & {
 				host: _Values.domain
 				http: paths: [{
 					backend: {
-						serviceName: Service.metadata.name
-						servicePort: Service.spec.ports[0].port
+						service: {
+							name: Service.metadata.name
+							port: "number": Service.spec.ports[0].port
+						}
 					}
 				}]
 			}]
@@ -74,7 +75,7 @@ Update: schema.#List & {
 		metadata: _Values.#metadata
 		spec: {
 			selector: _Values.#metadata.labels
-			type: "ClusterIP"
+			type: "NodePort"
 			ports: [{
 				port: _Values.port
 				targetPort: _Values.port

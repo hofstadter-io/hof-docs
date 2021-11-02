@@ -32,7 +32,7 @@ hof mod vendor cue
 
 ### 2. Start a generator definition
 
-{{<chromaHTML title="first-example/server/gen/gen.cue" file="code/getting-started/first-example/tmp/gen-def.html" >}}
+{{<codePane title="first-example/server/gen/gen.cue" file="code/getting-started/first-example/tmp/gen-def.html" >}}
 
 ### 3. The schema for a generator
 

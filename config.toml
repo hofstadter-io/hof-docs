@@ -3,13 +3,11 @@ baseURL = "https://docs.hofstadter.io/"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 title = "Hofstadter Documentation"
-# theme = ""
-
 
 enableGitInfo = true
 
 pygmentsCodeFences = true
-pygmentsStyle = "solarized-dark"
+pygmentsStyle = "github"
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
@@ -25,12 +23,17 @@ googleAnalytics = ""
 github_project_repo = "https://github.com/hofstadter-io/hof"
 github_repo = "https://github.com/hofstadter-io/hof-docs"
 time_format_default = "January 2, 2006"
-cuedocBase = "https://pkg.go.dev/cuelang.org/go@v0.3.0-alpha6"
+cuedocBase = "https://pkg.go.dev/cuelang.org/go@v0.4.0"
+keywords="hof hofstadter documentation docs"
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+  [markup.tableOfContents]
+    endLevel = 3
+    startLevel = 2
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
