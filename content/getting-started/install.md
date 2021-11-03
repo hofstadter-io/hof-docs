@@ -12,8 +12,8 @@ Download a precompiled binary from the github
 __[releases page](https://github.com/hofstadter-io/hof/releases)__.
 Then install __hof__ where you normally install tools or binaries.
 
-The latest release is __[v0.5.15](https://github.com/hofstadter-io/hof/releases/tag/v0.5.15)__
-
+The latest release is 
+<b>{{<hof-dl-link>}}</b>
 
 ## Test the installation
 

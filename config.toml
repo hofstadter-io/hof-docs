@@ -25,6 +25,7 @@ github_repo = "https://github.com/hofstadter-io/hof-docs"
 time_format_default = "January 2, 2006"
 cuedocBase = "https://pkg.go.dev/cuelang.org/go@v0.4.0"
 keywords="hof hofstadter documentation docs"
+hofver="v0.5.17"
 
 [markup]
   [markup.goldmark]
@@ -40,18 +41,18 @@ home = [ "HTML", "RSS", "JSON"]
 
 [[menu.shortcuts]]
 # name = "<i class='fab fa-github'></i> github"
-name = "github"
+name = "<i class='fab fa-github'></i> GitHub"
 url = "https://github.com/hofstadter-io"
 weight = 1
 
 [[menu.shortcuts]]
 # name = "<i class='far fa-'></i> chat"
-name = "chat"
+name = "<i class='fas fa-comments'></i> Chat"
 url = "https://join.slack.com/t/hofstadter-io/shared_invite/zt-e5f90lmq-u695eJur0zE~AG~njNlT1A"
 weight = 2
 
 [[menu.shortcuts]]
-name = "home"
+name = "<i class='fas fa-home'></i> hof.io"
 url = "https://hofstadter.io"
 weight = 3
 

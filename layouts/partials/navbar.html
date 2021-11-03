@@ -13,6 +13,10 @@
 
             <div class="collapse navbar-collapse" id="navbarMainCollapse">
               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    {{ $ver := .Site.Params.hofver }}
+                    <a class="nav-link text-light" href="https://github.com/hofstadter-io/hof/releases/tag/{{ $ver }}" target="_blank">{{ $ver }}</a>
+                  </li>
                   {{- with .Site.Menus.shortcuts}}
                         {{- range sort . "Weight"}}
                             <li class="nav-item">
