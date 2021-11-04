@@ -1,13 +1,15 @@
 ---
 title: "Getting Started"
 linkTitle: "Getting Started"
+brief: "Getting started with hof for code generation."
 weight: 5
 description: >
   These sections will get you up and running and then take you on a tour of __hof__
 ---
 
 {{<lead>}}
-Get up and running with __hof__
+This section will introduce you to __hof__,
+the concepts, and take you through some examples.
 {{</lead>}}
 
-{{< childpages >}}
+{{< childpages childBriefs="true">}}

@@ -1,5 +1,6 @@
 ---
-title: "Installation"
+title: "Install"
+brief: "the hof tool"
 weight: 3
 ---
 

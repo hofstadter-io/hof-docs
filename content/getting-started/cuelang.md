@@ -1,39 +1,40 @@
 ---
 title: "Cuelang"
+brief: "as the input to hof"
 
 weight: 9
 ---
 
-__hof__ leverages [CUE (configure, unify, execute)](https://culenag.org) throughout,
-built into the core, extended to contexts, and as the core user or developer experience.
+{{<lead>}}
+__hof__ leverages [CUE (configure, unify, execute)](https://culenag.org)
+throughout and is core to the developer experience.
+{{</lead>}}
+
 This decision was made for two initial reasons.
 
-1. we are essentially writing configuration for software and source code when we write our designs and data models.
-2. CUE is the best system for configuration tasks after our survey and attempt at writing our own.
+1. __hof is declarative code generation.__
+   We are essentially writing configuration when we write our input for code generation.
+2. __CUE is purpose built for large scale configuration.__
+   It has good theory and tooling for working with configuration spanning many files.
 
-CUE is the best for many reasons (in our opinions):
+CUE is ideal for many reasons:
 
-- philosophically sound
-- declarative through unification
-- purpose built language, system, and tools
-- shared heritage with Golang, Kubernetes, GCL/Borgcfg
+- looks like existing configuration while offering a full, logical language.
+- philosophically sound and based on a strong heritage.
+- declarative and logical, it proves that what you wrote is consistent and valid.
+- purpose built language, system, and tools for large scale configuration.
 
 You can learn more about CUE from these links:
 
+- [Cuetorials](https://cuetorials.com) (maintained by us)
 - https://cuelang.org
-- [Learn about CUE](https://cuelang.org/docs/about/)
-- [Core issues addressed by CUE](https://cuelang.org/docs/usecases/configuration/)
-- [Read about the Logic of CUE](https://cuelang.org/docs/concepts/logic/)
-- [Go through the tutorials](https://cuelang.org/docs/tutorials/)
-- [CUE GitHub Discussions](https://github.com/cuelang/cue/discussions)
-- [The CUE Language Specification](https://cuelang.org/docs/references/spec/)
+	- [Learn about CUE](https://cuelang.org/docs/about/)
+	- [Core issues addressed by CUE](https://cuelang.org/docs/usecases/configuration/)
+	- [Read about the Logic of CUE](https://cuelang.org/docs/concepts/logic/)
+	- [Go through the tutorials](https://cuelang.org/docs/tutorials/)
+	- [CUE GitHub Discussions](https://github.com/cuelang/cue/discussions)
+	- [The CUE Language Specification](https://cuelang.org/docs/references/spec/)
 
 
-## __hof__ uses CUE v0.3.0
-
-You will find additional discussions in this documentation
-which talk about CUE as we introduce new syntax and concepts.
-
-_note, Cue v0.3.0 is still in alpha stage but becoming increasingly stable.
-See https://github.com/cuelang/cue for the current status._
+## __hof__ uses CUE {{<cue-version>}}
 

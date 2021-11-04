@@ -52,6 +52,10 @@ push:
 deploy:
 	@cue export ci/cuelm.cue -t version=$(TAG) -e Install | kubectl apply -f -
 
+.PHONY: deploy-view
+deploy-view:
+	@cue export ci/cuelm.cue -t version=$(TAG) -e Install
+
 
 .PHONY: verify_code verify_code verify_diff
 verify: verify_code highlight verify_diff

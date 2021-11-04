@@ -3,58 +3,110 @@ title: Hofstadter Documentation
 description: "Hofstadter Documentation"
 ---
 
-### __hof__ was built to improve developer workflow
+{{<lead>}}
+Welcome to the __hof__ documentation site.
+{{</lead>}}
+
+
+## __hof__ is a generalized code generator
 
 <br>
 
 {{<lead>}}
-There were a few problems we encountered too often
+The __hof__ cli reads in modular generators
+and the designs which use them
+to produce technology agnostic output.
+The goal is to enable code generation
+at scale that fits into your current
+development practices.
 {{</lead>}}
 
-##### 1. Redundant code patterns
+{{<lead>}}
+__Fits in__ means you can use any set of technologies,
+work directly in and modify the generated code,
+update designs and regenerate the output,
+all without disrupting or losing your own code.
+You should also be able to integrate into
+existing applications without major changes.
+{{</lead>}}
 
-When writing api handlers, client libraries, and data validation.
+{{<lead>}}
+__At scale__ starts with generating large portions of your application
+across the many technologies and tiers of your stack.
+It also means that you should be able to share, update, and treat
+both designs and generators like any other dependency.
+{{</lead>}}
+
+
+
+<br>
+
+## What can you do with __hof__?
+
+<br>
+
+##### Use your own tools
+
+Developers have their own preferences for tools
+from IDEs, languages, and platforms.
+
+__hof__ is a cli tool that can work with any and all of these
+and will never force you to use a clunky UI to build applications.
+
+##### Consolidate the data model
+
+The same data model appears at each level of the tech stack.
+You should only have to write it down once, as a _single-source of truth_.
+More than just the shape, this should also include the rules.
+
+##### Capture common code and application patterns
+
+Whether it is writing api handlers, CRUD, client libraries, or data validation,
+there are many patterns per data model.
+There are also application wide patterns.
 When starting server setup like logging and wiring up the router.
 
-##### 2. Data model changes
+##### Manage model and application versions.
 
-Requires us to make the same conceptual change across many files.
-Also manage databases, schemas, migrations, and coordinated deployments.
+Data models evolve with an application and need management.
+From updating the code and databased to deployment updates and supporting
+older clients, you can have multiple versions being referenced.
+You latest backend will need to handle many previous versions.
 
-##### 3. Fleet wide fixes and updates
+##### Work directly in the (re)generated code
+
+With __hof__ you write custom code directly in the generated output,
+where it naturally belongs. Your final code should look the same.
+When you change your data model or designs, __hof__ uses diff3
+to ensure your code is left in place and 
+
+##### Share and control modules with dependency management
+
+Sharing models and code generation is core to __hof__
+and central to solving problems of interoperability between
+different teams and services.
+Both design and generators are managed with versions
+and dependency management.
+
+##### Apply fleet wide fixes and updates
 
 Deploying shared security and bug fixes across many applications should be easier.
 This should apply equally for improvements in our code patterns and practices.
 
+##### Extensible generators and models
+
+Both generators and models can be combined through dependencies and imports.
+You can extend, override, or otherwise customize as you need.
+They are separate from the tool so there is no need to change __hof__
+to enable new technologies or patterns.
+
 <br>
+
+
+## We call this High Code development.
 
 {{<lead>}}
-We wanted a tool where we can...
+Higher levels of abstraction, iteration, collaboration, productivity, and velocity.
 {{</lead>}}
 
-- write down our conceptual design in one place
-- run a tool to create most implementation
-- work directly in the output like writing normal code
-- update our designs and regenerate our implementation
-- keep and continue our existing custom work
-- share designs across teams and projects
-- import advanced functionality into our apps
-- extend functionality without modifying the tool
-
-<br>
-
-### This is what __hof__ helps you do
-
-<br>
-
----
-
-# Table of Contents
-
-{{< childpages page="getting-started/" >}}
-{{< childpages page="code-generation/" >}}
-{{< childpages page="using-generators/" >}}
-{{< childpages page="creating-generators/" >}}
-{{< childpages page="module-library/" >}}
-{{< childpages page="help-and-support/" >}}
 

@@ -17,6 +17,10 @@ $dark:          #343a40;
 
 @import "bootstrap/bootstrap";
 
+body, .main {
+	font-family: Roboto !important;
+}
+
 /* Typography styling */
 .main > h1{
     padding-top: 2rem;

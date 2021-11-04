@@ -7,7 +7,7 @@ import (
 Install: schema.#List & {
 	items: [
 		#Site.Ingress,
-		#Sit.Service,
+		#Site.Service,
 		#Site.Deployment,
 	]
 }
