@@ -1,15 +1,15 @@
 ---
 title: "A Full Example"
 linkTitle: "A Full Example"
-brief: "in a reusable module"
+brief: "as a reusable module"
 weight: 12
 description: >
   A hof code generator walkthrough.
 ---
 
 {{<lead>}}
-We expand our first example into __hof module__ form
-so that we can import and resuse the generator.
+We expand our first example into __hof module__ form.
+We can import and resuse the generator.
 We will also see typical workflow patterns
 when working with __hof__ code generation.
 {{</lead>}}

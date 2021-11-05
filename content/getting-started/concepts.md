@@ -6,10 +6,10 @@ weight: 6
 ---
 
 __hof__ was designed from first principles to
-enable compounding accelerations when
+enable higher productivity when.
 developing software and applications.
-This section introduces these core concepts.
-Subsequent sections dive deeper and provide examples.
+This section introduces the core concepts.
+Details can be found in later sections.
 
 
 ### Single Source of Truth
