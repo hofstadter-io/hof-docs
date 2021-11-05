@@ -10,6 +10,8 @@ for the different available rendering engines.
 
 <br>
 
+[Source on GitHub](https://github.com/hofstadter-io/hof/blob/_dev/schema/gen/template.cue)
+
 {{< codePane title="template.cue" file="code/hof-schemas/template.html" >}}
 
 

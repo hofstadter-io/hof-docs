@@ -11,6 +11,8 @@ and what `hof` iterates over and processes.
 
 <br>
 
+[Source on GitHub](https://github.com/hofstadter-io/hof/blob/_dev/schema/gen/file.cue)
+
 {{< codePane title="file.cue" file="code/hof-schemas/file.html" >}}
 
 

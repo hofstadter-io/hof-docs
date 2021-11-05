@@ -14,6 +14,8 @@ to a specific geneartor to create code.
 
 <br>
 
+[Source on GitHub](https://github.com/hofstadter-io/hof/blob/_dev/schema/gen/generator.cue)
+
 {{< codePane title="generator.cue" file="code/hof-schemas/generator.html" >}}
 
 
