@@ -8,7 +8,7 @@ Welcome to the __hof__ documentation site.
 {{</lead>}}
 
 
-## __hof__ is a generalized code generator
+## __hof__ is a code generator
 
 <br>
 
@@ -44,6 +44,12 @@ both designs and generators like any other dependency.
 ## What can you do with __hof__?
 
 <br>
+
+##### Generate anything
+
+Applications all start as files and `hof` generates directories of files.
+You can generate the source files, configuration, deployment, and CI files needed.
+If it's made of files, you can generate it with `hof`.
 
 ##### Use your own tools
 
@@ -106,7 +112,8 @@ to enable new technologies or patterns.
 ## We call this High Code development.
 
 {{<lead>}}
-Higher levels of abstraction, iteration, collaboration, productivity, and velocity.
+Higher levels of abstraction, iteration, collaboration, productivity, and velocity
+for application developers.
 {{</lead>}}
 
 
