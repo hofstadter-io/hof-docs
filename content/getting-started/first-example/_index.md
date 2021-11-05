@@ -1,15 +1,15 @@
 ---
 title: "A First Example"
 linkTitle: "A First Example"
-brief: "in a single file"
+brief: "building a simple API"
 weight: 10
 description: >
-  A simple code generator in a single file.
+  A code generator for a basic API.
 ---
 
 {{<lead>}}
 This first example will show you how to
-write a generator and use it in a single file.
+write a generator and use it to create a simple API.
 {{</lead>}}
 
 

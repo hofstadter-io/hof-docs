@@ -1,35 +1,49 @@
 ---
 title: "Install"
-brief: "the hof tool"
+description: "Install the hof cli tool"
 weight: 3
 ---
 
 __hof__ is available for all major operation systems
 and architectures. Thank you to the Golang developers, Goreleaser, and the community!
 
-## Precompiled binaries
+## Download <b>{{<hof-rel-link>}}</b>
 
-Download a precompiled binary from the github
+
+<br>
+
+{{<hof-dl-btns>}}
+
+
+##### You'll want to rename the file to `hof` and ensure it is executable and in your PATH.
+
+<br>
+
+You can also download a precompiled binary from the github
 __[releases page](https://github.com/hofstadter-io/hof/releases)__.
-Then install __hof__ where you normally install tools or binaries.
 
-The latest release is 
-<b>{{<hof-dl-link>}}</b>
+Instructions for compiling can be found on GitHub.
+
 
 ## Test the installation
 
-To make sure the tool is available, run
+To make sure the tool is available, run the following in your terminal.
 
-```sh
-hof help
-```
+{{<codeInner lang="sh">}}
+$ hof help
+
+hof - the high code framework
+
+  Learn more at https://docs.hofstadter.io
+	
+...
+{{</codeInner>}}
 
 ## Updating __hof__
 
-You will only need to manually download __hof__ once.
-The update command can be used to check and install any version.
+The builtin update command can be used to check and install any version.
 
-```sh
+{{<codeInner lang="sh">}}
 # Check for an update
 hof update --check
 
@@ -38,11 +52,6 @@ hof update
 
 # Install a specific version
 hof update --version vX.Y.Z
-```
+{{</codeInner>}}
 
-
-## Windows Users
-
-There may be issues with your anti-virus or
-trusting the binary as well as the "`$HOME/.hof`" directory.
 

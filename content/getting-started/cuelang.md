@@ -1,6 +1,6 @@
 ---
 title: "Cuelang"
-brief: "as the input to hof"
+description: "Getting started with Cuelang as the input to hof"
 
 weight: 9
 ---
