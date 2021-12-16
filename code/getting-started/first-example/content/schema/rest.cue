@@ -9,6 +9,4 @@ package schema
 	Description: string | *""
 	Help: string | *""
 
-	Port: int & >1024
-
 }

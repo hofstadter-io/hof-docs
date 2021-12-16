@@ -1,5 +1,6 @@
 ---
 title: "Schema"
+brief: "for a REST server"
 weight: 10
 ---
 

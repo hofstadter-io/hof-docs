@@ -15,4 +15,4 @@ to create and use a __hof generator__.
 {{</lead>}}
 
 
-{{<childpages>}}
+{{<childpages childBriefs="true">}}

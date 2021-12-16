@@ -1,6 +1,7 @@
 ---
 title: "Concepts"
 description: "Concepts in hof code generation"
+brief: "in hof code gen"
 
 weight: 6
 ---

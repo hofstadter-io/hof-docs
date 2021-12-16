@@ -1,5 +1,6 @@
 ---
 title: "Setup"
+brief: "a directory"
 weight: 5
 ---
 
