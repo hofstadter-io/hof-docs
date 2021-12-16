@@ -1,4 +1,4 @@
-CUE_FILES  = $(shell find code/ -type f -name *.cue  | sort)
+CUE_FILES  = $(shell git ls code/*.cue | sort)
 HTML_FILES = $(patsubst code/%.cue, code/%.html, $(CUE_FILES))
 TAG        = $(shell git rev-parse --short HEAD | tr -d "\n")
 PROJECT    = "hof-io--develop"
