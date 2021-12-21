@@ -8,12 +8,12 @@ Welcome to the __hof__ documentation site.
 {{</lead>}}
 
 
-## __hof__ is a code generator
+## __hof__ is a code generator platform
 
 <br>
 
 {{<lead>}}
-The __hof__ cli reads in modular generators
+The __hof__ cli merges modular generators
 and the designs which use them
 to produce technology agnostic output.
 The goal is to enable code generation

@@ -8,11 +8,24 @@ description: >
 ---
 
 {{<lead>}}
-We expand our first example into __hof module__ form.
+This section expands on our first-example.
 We can import and resuse the generator.
-We will also see typical workflow patterns
-when working with __hof__ code generation.
+We'll build a full-stack application
+with many extras from a unified design.
 {{</lead>}}
+
+
+- separate repo for usage, import generator
+- nested repeated
+- static & data files
+- multiple languages
+- subgenerators (cli)
+- API extras, full-stack too
+- use external repos for example code (make it real)
+
+
+---
+
 
 In our first example we will build a __hof__ generator for a simple Golang REST server.
 This subsection will take you through the steps
