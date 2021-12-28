@@ -14,11 +14,14 @@
 	// Out: [...#HofGeneratorFile] | *[...]
 	Out: [...#HofGeneratorFile] | *[]
 
-	// Base directory of partial templatess to load
-	PartialsDir: string | *"/partials"
+  // Template (top-level) TemplateConfig (globs+config)
+	Templates: [...#Templates] | *[#Templates & { Globs: ["./templates/**/*"], TrimPrefix: "./templates/" }]
 
-	// Base directory of entrypoint templates to load
-	TemplatesDir: string | *"/templates"
+  // Partial (nested) TemplateConfig (globs+config)
+	Partials: [...#Templates] | *[#Templates & { Globs: ["./partials/**/*"], TrimPrefix: "./partials/" }]
+
+	// Statics are copied directly into the output, bypassing the rendering
+	Statics: [...#Statics] | *[#Statics & { Globs: ["./static/**/*"], TrimPrefix: "./static/" }]
 
 	// ... other fields for generator writers
 }
@@ -34,9 +37,9 @@
 
 	// One of the following should be set
 	// The template contents
-	Template: string | *""
-	// Relative name from TemplatesDir
-	TemplateName: string | *""
+	TemplateContent: string | *""
+	// Path for the loaded templates
+	TemplatePath: string | *""
 
 	// ... advanced template configuration
 }

@@ -38,8 +38,8 @@ import (
 		for _, F in _RouteFiles {F},
 	]
 
-	PartialsDir: "./partials/"
-	TemplatesDir: "./templates/"
+	// Note, we can omit Templates, Partials, and Statics
+	// since the default values are sufficient for us
 
 	// Internal fields for mapping Input to templates
 	// ----------------------------------------------
@@ -47,19 +47,19 @@ import (
 	// Files that are generated once per server
 	_OnceFiles: [...gen.#HofGeneratorFile] & [
 			{
-			TemplateName: "go.mod"
+			TemplatePath: "go.mod"
 			Filepath:     "\(Outdir)/go.mod"
 		},
 			{
-			TemplateName: "server.go"
+			TemplatePath: "server.go"
 			Filepath:     "\(Outdir)/server.go"
 		},
 		{
-			TemplateName: "router.go"
+			TemplatePath: "router.go"
 			Filepath:     "\(Outdir)/router.go"
 		},
 		{
-			TemplateName: "middleware.go"
+			TemplatePath: "middleware.go"
 			Filepath:     "\(Outdir)/middleware.go"
 		},
 	]
@@ -73,7 +73,7 @@ import (
 					PackageName: "routes"
 				}
 			}
-			TemplateName: "route.go"
+			TemplatePath: "route.go"
 			Filepath:     "\(Outdir)/routes/\(In.ROUTE.Name).go"
 		},
 	]
