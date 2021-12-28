@@ -29,14 +29,13 @@ The input data used when rendering the template.
 
 The full filepath within the outdir to generate.
 
-##### Template, TemplateName
+##### TemplateContent, TemplatePath
 
 You must specify one or the other.
-`Template` is content whereas `TemplateName`
-references one of the predefined templates.
+`TemplateContent` is the listeral content as a string
+whereas `TemplatePath` references one of the predefined templates.
 
-##### TemplateConfig
+##### TemplateDelims
 
-The configuration for this template.
-Defaults to the configuration defined in the generator.
-Typically only needed when you need alternative delimitors.
+Only needed when you need alternative delimitors.
+The default is `{{` and `}}`.

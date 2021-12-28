@@ -19,7 +19,7 @@ to a specific geneartor to create code.
 {{< codePane title="generator.cue" file="code/hof-schemas/generator.html" >}}
 
 
-### User Fields
+### Generator User Fields
 
 These are fields that a user of a generator will typically fill in.
 The following fields are the default suggested user inputs
@@ -45,9 +45,11 @@ This is the base dir where the generator output will be written.
 ##### Other
 
 `#HofGenerator` was left open so you can
-specify an other inputs for your users.
+specify any other inputs for your users.
+This can be useful when you want more contextual inputs presented to the user
+or you want to transform the user input before passing into the template system.
 
-### Creator Fields
+### Generator Creator Fields
 
 ##### Out
 
@@ -58,36 +60,15 @@ This is where the conditional logic for what to generate comes in.
 More details can be found in the next section.
 
 
-##### NamedTemplates, NamedPartials, StaticFiles
+##### Templates, Partials, Statics
 
-These are maps of `filename -> content` pairs.
+These are lists of templates, partials, and statics to load from disk,
+relative to your generator module base directory.
 
+##### Embedded{Templates,Partials,Statics}
 
-##### PackageName
+These are inline or "in-cue" templates, partials, and static fils.
 
-This is the CUE module name of your generator.
-It is used for indexing into the `cue.mod` folder
-to find your templates and partials from disk.
-
-_(this will go away once CUE supports the @embed() for this purpose)_
-
-
-
-
-##### TemplatesDir, PartialsDir
-
-These are each a directory to find and load
-templates from. Filenames will be relative
-to the value.
-
-##### StaticGlobs
-
-These are file glob patterns which should be
-copied directly over into the output.
-
-##### TemplateDirConfig, TemplateConfig
-
-These are the configurations for the template rendering process.
 
 ##### Generators
 
@@ -97,3 +78,14 @@ We have used this for
 
 - Using one generator in another, for example to provide a more advanced CLI for our REST server binary.
 - Building higher level generators, for example an APP which has Client, Server, and Database subgenerators with a single input.
+
+
+##### PackageName
+
+This is the CUE module name of your generator.
+It is used for indexing into the `cue.mod` folder
+to find your templates and partials from disk.
+
+_(this will go away once CUE supports the @embed() for this purpose, and likely structural sharing will be needed as well)_
+
+

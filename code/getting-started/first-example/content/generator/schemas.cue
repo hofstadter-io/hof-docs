@@ -14,10 +14,10 @@
 	// Out: [...#HofGeneratorFile] | *[...]
 	Out: [...#HofGeneratorFile] | *[]
 
-  // Template (top-level) TemplateConfig (globs+config)
+	// Template (top-level) TemplateConfig (globs+config)
 	Templates: [...#Templates] | *[#Templates & { Globs: ["./templates/**/*"], TrimPrefix: "./templates/" }]
 
-  // Partial (nested) TemplateConfig (globs+config)
+	// Partial (nested) TemplateConfig (globs+config)
 	Partials: [...#Templates] | *[#Templates & { Globs: ["./partials/**/*"], TrimPrefix: "./partials/" }]
 
 	// Statics are copied directly into the output, bypassing the rendering

@@ -23,6 +23,8 @@ You can find the real schemas in [the hof repository](https://github.com/hofstad
 ### Mapping In to Out
 
 Your goal as a generator writer is to fill in the `Out` field from the `In` field.
+The `In` field will be passed through the templates and partials
+if they are defined in the `Out` list.
 
 ##### `In` represents the data presented to the templates. 
 
