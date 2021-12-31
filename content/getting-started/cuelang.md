@@ -3,7 +3,7 @@ title: "CUE"
 description: "Getting started with Cuelang as the input to hof"
 brief: "as the language for user and dev"
 
-weight: 9
+weight: 5
 ---
 
 {{<lead>}}

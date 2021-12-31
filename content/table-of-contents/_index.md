@@ -4,9 +4,9 @@ weight: 1
 ---
 
 {{< childpages page="getting-started/" >}}
+{{< childpages page="first-example/" >}}
 {{< childpages page="code-generation/" >}}
-{{< childpages page="using-generators/" >}}
-{{< childpages page="creating-generators/" >}}
+{{< childpages page="data-modeling/" >}}
 {{< childpages page="module-library/" >}}
 {{< childpages page="help-and-support/" >}}
 

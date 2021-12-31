@@ -7,6 +7,10 @@ PROJECT    = "hof-io--develop"
 dev:
 	@hugo serve --bind 0.0.0.0 --buildDrafts --buildFuture
 
+.PHONY: prd
+prd:
+	@hugo serve --bind 0.0.0.0
+
 .PHONY: all
 all: highlight hugo docker deploy
 
