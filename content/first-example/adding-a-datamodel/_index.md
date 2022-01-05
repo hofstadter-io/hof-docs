@@ -23,6 +23,9 @@ We will generate Go types and a simple library around a Go map for storage.
 CRUD routes are also generated from the same datamodel as a `Resource` in API terminology.
 You will see how to customize both the code and the data model.
 
+The full code for this section can be found on GitHub
+[code/first-example/adding-a-datamodel](https://github.com/hofstadter-io/hof-docs/tree/main/code/first-example/adding-a-datamodel)
+
 _Database storage and automatic CRUD handler generation
 will be covered in more advanced sections._
 

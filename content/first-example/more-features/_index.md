@@ -12,3 +12,7 @@ weight: 40
 - CI / Docker / Kubernetes / Makefile / GitHub Actions
 - CLI, show how to use subgens
 - Nested routes and resources
+
+The full code for this section can be found on GitHub
+[code/first-example/more-features](https://github.com/hofstadter-io/hof-docs/tree/main/code/first-example/more-features)
+

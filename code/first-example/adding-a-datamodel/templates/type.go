@@ -1,5 +1,9 @@
 package types
 
+import (
+	"fmt"
+)
+
 // Represents a {{ .TYPE.Name }}
 type {{ .TYPE.Name }} struct {
 	{{ range .TYPE.OrderedFields }}
@@ -44,7 +48,6 @@ func Create{{ .TYPE.Name }}(in *{{ .TYPE.Name }}) error {
 }
 
 func Read{{ .TYPE.Name }}(idx string) (*{{ .TYPE.Name }}, error) {
-	idx := in.{{ .TYPE.Index }}
 
 	// return if exists
 	if val, ok := {{ .TYPE.Name }}Store[idx]; ok {
@@ -59,7 +62,7 @@ func Update{{ .TYPE.Name }}(in *{{ .TYPE.Name }}) error {
 	idx := in.{{ .TYPE.Index }}
 
 	// replace if exists, note we are not dealing with partial updates here
-	if val, ok := {{ .TYPE.Name }}Store[idx]; ok {
+	if _, ok := {{ .TYPE.Name }}Store[idx]; ok {
 		{{ .TYPE.Name }}Store[idx] = in
 		return nil
 	}
@@ -69,10 +72,9 @@ func Update{{ .TYPE.Name }}(in *{{ .TYPE.Name }}) error {
 }
 
 func Delete{{ .TYPE.Name }}(idx string) error {
-	idx := in.{{ .TYPE.Index }}
 
 	// replace if exists, note we are not dealing with partial updates here
-	if val, ok := {{ .TYPE.Name }}Store[idx]; ok {
+	if _, ok := {{ .TYPE.Name }}Store[idx]; ok {
 		delete({{ .TYPE.Name }}Store, idx)
 		return nil
 	}
