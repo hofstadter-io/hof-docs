@@ -6,6 +6,10 @@
 *   @license https://github.com/vantagedesign/ace-documentation/blob/master/LICENSE
 * ------------------------------------------------------------------------ */
 
+$hof-blue:  #02344d; 
+$hof-gold:  gold;
+$hof-white: #f5f7fd;
+
 $primary:       #02344d;
 $secondary:     #6610f2;
 $success:       #28a745;
@@ -38,8 +42,26 @@ body, .main {
     color: $primary;
 }
 
-#main-content > p {
-	font-size: 1.25rem;
+#main-content {
+	p, ul, ol, summary {
+		font-size: 1.25rem;
+	}
+	.code-title {
+		font-size: 1rem;
+	}
+	.bottom-nav, .btn {
+		text-decoration: none !important;
+	}
+	.fas {
+		font-weight: 900;
+	}
+	a {
+		text-decoration: underline;
+		text-decoration-color: $hof-gold;
+		&:hover {
+			text-decoration-color: $hof-blue;
+		}
+	}
 }
 
 #main-content > .lead {

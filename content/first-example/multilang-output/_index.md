@@ -1,10 +1,8 @@
 ---
 title: "Multi-language Output"
-brief: "with a web client"
+brief: "by adding a web frontend"
 
-draft: true
 weight: 30
-
 ---
 
 

@@ -8,12 +8,12 @@ description: >
 ---
 
 {{<lead>}}
-This first example will show you how to
-create a generator for a Go REST server.
-You'll see all of the parts needed
+This `first-example` will show you how to
+create a generator for a full-stack application in Go and JS.
+Each section will build on the previous
+and introduce more concepts.
+By the end you'll see all of the parts needed
 to create and use a __hof generator__.
-The next section will show you
-more advanced features and patterns.
 {{</lead>}}
 
 

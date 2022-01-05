@@ -39,7 +39,7 @@ in the "full-example" section where the implementation is more complete.
 
 Here we can see the result of code generation for a sample of the files
 
-{{<codePane lang="go" title="output/middleware.go" file="code/first-example/simple-server/example/output/middleware.go">}}
-{{<codePane lang="go" title="output/router.go" file="code/first-example/simple-server/example/output/router.go">}}
-{{<codePane lang="go" title="output/routes/Hello.go" file="code/first-example/simple-server/example/output/routes/Hello.go">}}
+{{<codePane lang="go" title="output/middleware.go" file="code/first-example/simple-server/output/middleware.go">}}
+{{<codePane lang="go" title="output/router.go" file="code/first-example/simple-server/output/router.go">}}
+{{<codePane lang="go" title="output/routes/Hello.go" file="code/first-example/simple-server/output/routes/Hello.go">}}
 

@@ -9,7 +9,7 @@ Generators have a common files and a directory structure.
 {{</lead>}}
 
 {{<codeInner title="Typical directory structure">}}
-# CUE files for the schema and hof generator
+# CUE files for our schema and hof generator
 schema/
 gen/
 
@@ -22,9 +22,27 @@ static/
 examples/
 {{</codeInner>}}
 
-You will often have other files depending on the languages or technologies
-your generator is creating in. A common example is dependency management files.
-Almost every __hof  generator__ is a CUE module, so we will need those files.
+You will often have other files depending on the languages or technologies you choose.
+A common example is dependency management files.
+
+### Modules
+
+Almost every __hof  generator__ is also a CUE module.
+`hof mod` is a subcommand for working with Go style module systems.
+We use it as an iterim tool until `cue mod` is implemented upstream.
+
+For more information about `hof mod`, see
+
+- [Modules and Packages](https://cuetorials.com/first-steps/modules-and-packages/) for working with CUE modules.
+- [Futurology / Dependency Management](https://cuetorials.com/cueology/futurology/dependency-management/) to learn about `cue mod`.
+
+### Example
+
+Throught the `first-example` section,
+we will be developing a `hof` geneartor as a module.
+We will use `hof.io/docs/first-example` as the name.
+
+
 
 {{<codeInner title="Create a CUE module">}}
 mkdir example && cd example

@@ -1,10 +1,8 @@
 ---
 title: "More Features"
-brief: "or adding nice to haves"
+brief: "and other nice to haves for free"
 
-draft: true
 weight: 40
-
 ---
 
 - seed data (CUE data by user read by application)
@@ -13,4 +11,4 @@ weight: 40
 - consistent logging format
 - CI / Docker / Kubernetes / Makefile / GitHub Actions
 - CLI, show how to use subgens
-- 
+- Nested routes and resources

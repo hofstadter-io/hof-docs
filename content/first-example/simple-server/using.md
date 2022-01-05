@@ -8,11 +8,38 @@ weight: 25
 Users _design_ by filling in the schema for a __Hof Generator__.
 {{</lead>}}
 
+### ServerDesign, with the schema
+
 {{<codePane title="example/server.cue" file="code/first-example/simple-server/example/server.html">}}
+
+### Server, @gen(server)
+
 {{<codePane title="example/gen.cue" file="code/first-example/simple-server/example/gen.html">}}
 
+### Generate the Code
 
-### Working in the output
+From the root of our module, run
 
+{{<codeInner lang="sh">}}
+hof gen ./example
+{{</codeInner>}}
 
-### Regenerating the output
+You should now have an `./output` directory with the generated code.
+
+### Running the Server
+
+With our code in place, we can build and run the server
+
+{{<codeInner lang="sh">}}
+cd ./ouput
+go build -o server
+./server
+{{</codeInner>}}
+
+Call the endpoints with curl
+
+{{<codeInner lang="sh">}}
+curl localhost:8080/hello
+curl localhost:8080/echo/moo
+curl localhost:8080/internal/metrics
+{{</codeInner>}}

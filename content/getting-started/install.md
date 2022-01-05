@@ -8,7 +8,9 @@ weight: 3
 __hof__ is available for all major operation systems
 and architectures. Thank you to the Golang developers, Goreleaser, and the community!
 
-## Download <b>{{<hof-rel-link>}}</b>
+## Download
+
+Current version: <b>{{<hof-rel-link>}}</b>
 
 
 <br>

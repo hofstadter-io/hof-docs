@@ -1,15 +1,15 @@
 ---
-title: "Adding a Datamodel"
+title: "Adding a Data Model"
 brief: "and generating types"
 
-draft: true
 weight: 20
-
 ---
 
+{{<lead>}}
 Data modeling is core to the development process.
 As our understanding of the problem changes,
 so must our implementation.
+{{</lead>}}
 
 `hof` has a data modeling system where you
 
@@ -18,11 +18,12 @@ so must our implementation.
 - checkpoint the data model and maintain a history
 - have the entire history available for generating migrations and tranformations
 
-In this section, we will expand our `first-example`
-to use `hof/dm.#Datamodel` and generate it
-as a `Resource` in API terminology.
-You will create templates and partials for
-CRUD routes for managing a `Resource`.
-Normal data storage will be covered later,
+This section expands on our `simple-server` to use `hof/dm.#Datamodel`.
+We will generate Go types and a simple library around a Go map for storage.
+CRUD routes are also generated from the same datamodel as a `Resource` in API terminology.
+You will see how to customize both the code and the data model.
 
-{{< childpages >}}
+_Database storage and automatic CRUD handler generation
+will be covered in more advanced sections._
+
+{{<childpages childBriefs="true">}}
