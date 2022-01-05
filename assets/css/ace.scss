@@ -38,6 +38,14 @@ body, .main {
     color: $primary;
 }
 
+#main-content > p {
+	font-size: 1.25rem;
+}
+
+#main-content > .lead {
+	font-size: 1.5rem;
+}
+
 .nav-link {
   &.parent {
     color: $primary !important;
