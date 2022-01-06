@@ -17,6 +17,7 @@ package dm
 
 	Fields: #Fields
 
+	Relations?: #Relations
 	...
 }
 
@@ -25,6 +26,23 @@ package dm
 	@dm_field()
 	Name: string
 
+	Type: string
+
+	...
+}
+
+#Relations: [name=string]: #Relation & {Name: name, ...}
+#Relation: {
+	@dm_relation()
+
+	Name: string
+
+	// Relation to another thing
+
+	// This is the relation type
+	Reln: "BelongsTo" | "HasOne" | "HasMany" | "ManyToMany"
+
+	// This is the other type or side of the relation (a Model)
 	Type: string
 
 	...

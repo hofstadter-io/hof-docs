@@ -26,7 +26,7 @@ The following creates
 
 Create a new template called `type.go`
 
-{{< codePane title="templates/type.go" file="code/first-example/adding-a-datamodel/templates/type.go" lang="go" >}}
+{{< codePane title="templates/type.go" file="code/first-example/adding-a-datamodel/content/templates/type.go" lang="go" >}}
 
 ### Regenerate the server
 

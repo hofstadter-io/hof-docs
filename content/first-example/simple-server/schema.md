@@ -31,7 +31,9 @@ and make template writing easier.
 
 ### Routes and Handlers
 
-Routes are a main focal point of REST servers. When we generate the code, we will need handlers for each.
+Routes are a main focal point of REST servers.
+When we generate the code, we will need handlers for each.
+Here is the schema for a Route that will have a handler generated.
 
 {{<codePane title="schema/server.cue" file="code/first-example/simple-server/content/schema/routes.html">}}
 
@@ -39,6 +41,9 @@ Routes are a main focal point of REST servers. When we generate the code, we wil
 ### Extra Features
 
 These are features you may want to provide to your server users.
+While the user only has to set a boolean or flag,
+they can get advanced capabilities which are the consistent
+for every generated server.
 
 {{<codePane title="schema/server.cue" file="code/first-example/simple-server/content/schema/extra.html">}}
 

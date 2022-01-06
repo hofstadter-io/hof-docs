@@ -19,6 +19,10 @@ we can modularize even within a single module.
 (normally, we might separate the client into a separate module.
 This would make it easier to swap Vue for React, in example)
 
+We will be using [PureCSS](https://purecss.io) for styling.
+
 The full code for this section can be found on GitHub
 [code/first-example/multilang-output](https://github.com/hofstadter-io/hof-docs/tree/main/code/first-example/multilang-output)
+
+
 

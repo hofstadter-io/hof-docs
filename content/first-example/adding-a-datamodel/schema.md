@@ -33,7 +33,7 @@ field to use for the index in our types.
 
 We add a new file in our schema directory
 
-{{< codePane title="example/schema/dm.cue" file="code/first-example/adding-a-datamodel/schema/dm.html">}}
+{{< codePane title="example/schema/dm.cue" file="code/first-example/adding-a-datamodel/content/schema/dm-type.html">}}
 
 We now have an extended schema we can import to define our data models.
 

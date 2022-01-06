@@ -9,6 +9,17 @@ weight: 15
 Hof uses Go's `text/template` package (https://pkg.go.dev/text/template).
 All partials are registered with all templates for use with `{{ template "path/to/partial.ext" }}`.
 
+
+### Debugging
+
+You can use comments and the yaml helper to inspect values
+
+{{<codeInner lang="go">}}
+/*
+{{ yaml .MyValue }}
+*/
+{{</codeInner>}}
+
 ##### Helpers
 
 There are a number of additional helpers provided.
@@ -20,17 +31,6 @@ Notes:
 - Args can be literal, a .Variable, or the result of another function. See Go's documentation
 - It can be advantagous to do as many manipulations in CUE rather than in the template system.
 
-
-Concat and Join strings:
-
-- `concat2` (`{{ concat2 "foo" "bar" }}`)
-- `concat3`
-- `concat4`
-- `concat5`
-- `join2` (`{{ join2 ", " "foo" "bar" }}`)
-- `join3`
-- `join4`
-- `join5`
 
 Encode to a data format:
 
@@ -62,6 +62,8 @@ Casings conversion helpers:
 
 String processing helpers:
 
+- `concat` (`{{ concat "foo" "bar" }}`)
+- `join` (`{{ join ", " "foo" "bar" }}`)
 - `contains` (`{{ contains .String .Substr }}`)
 - `split` (`{{ split .String .Separator }}`)
 - `replace` (`{{ replace .String .Old .New .Count }}`)

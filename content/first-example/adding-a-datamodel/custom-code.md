@@ -9,9 +9,10 @@ One of `hof`'s core design choices was to
 make it possible to work directly in the output.
 {{</lead>}}
 
-We need to implement our Resource handlers.
-Here are set and get for users,
-we leave the rest to you.
+
+We need to implement our Resource handlers,
+so we add our custom code in the generated files.
+Here ar the `UserCreate` and `UserRead` handlers.
 
 
 {{<codeInner title="in output/resources/User.go" lang="go">}}
@@ -28,7 +29,7 @@ func UserCreateHandler(c echo.Context) (err error) {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
 
-	if err := types.CreateUser(&u); err != nil {
+	if err := types.UserCreate(&u); err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
 
@@ -41,7 +42,7 @@ func UserReadHandler(c echo.Context) (err error) {
 	
 	username := c.Param("username")
 
-	u, err := types.ReadUser(username)
+	u, err := types.UserRead(username)
 	if err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
 	}
@@ -49,6 +50,8 @@ func UserReadHandler(c echo.Context) (err error) {
 	return c.JSON(http.StatusOK, u)
 }
 {{</codeInner>}}
+
+We leave the other handlers as an exercise.
 
 
 ### Using the Resources
@@ -58,19 +61,20 @@ Let's create and read a user with curl.
 {{<codeInner lang="sh">}}
 curl -X POST \
   -H 'Content-Type: application/json' \
-	-d '{ "Username": "Bob", "Email": "bob@hof.io" }' \
-	localhost:8080/user
-	
-curl localhost:8080/user/Bob
+  -d '{ "Username": "bob", "Email": "bob@hof.io" }' \
+  localhost:8080/user
+
+curl localhost:8080/user/bob
 {{</codeInner>}}
 
 
 ### Iterative development
 
 `hof` enables you to both update your designs and edit the output,
-while still being able to regenerate the code base.
+while still being able to regenerate the code base and continue customizing.
 
 In the next section we will add relations to our types and data model.
-This will require changes to both and after we will rebuild and test the server.
-
+This will require changes to schemas, generators, templates, and custom code.
+Since we already have a running server with custom code,
+this will be our second iteration with `hof` in the develop cycle.
 

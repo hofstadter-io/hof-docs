@@ -75,7 +75,6 @@ import (
 				},{
 					Name: "\(M.Name)Update"
 					Path: ""
-					Params: ["\(strings.ToLower(M.Index))"]
 					Method: "PATCH"
 				},{
 					Name: "\(M.Name)Delete"
