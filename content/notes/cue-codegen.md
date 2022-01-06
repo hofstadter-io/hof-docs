@@ -12,7 +12,7 @@ It really can't capture all of the nuances in the vanilla form. We need to do so
 
 ### The Hof Method
 
-Some helpful links. (Note, these are based on the v0.6.1-beta1 release that happened earlier today)
+Some helpful links
 
 - Discussion on Slack about the data modeling prototype in the #general channel around here: https://hofstadter-io.slack.com/archives/C013WKK9W1F/p1640891812004200
 - "Adding a Datamodel" section: https://docs.hofstadter.io/first-example/adding-a-datamodel/
@@ -39,6 +39,7 @@ There are also discussion and issues on CUE GitHub.
 - https://github.com/cue-lang/cue/discussions/1038
 - https://github.com/cue-lang/cue/discussions/482
 - https://github.com/cue-lang/cue/issues/6
+- https://github.com/cue-lang/cue/issues/943#issuecomment-1006480535
 
 
 TODO, respond to
