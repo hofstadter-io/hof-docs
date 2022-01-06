@@ -12,30 +12,24 @@ Welcome to the __hof__ documentation site.
 
 <br>
 
-{{<lead>}}
 The __hof__ cli merges modular generators
 and the designs which use them
 to produce technology agnostic output.
 The goal is to enable code generation
 at scale that fits into your current
 development practices.
-{{</lead>}}
 
-{{<lead>}}
 __Fits in__ means you can use any set of technologies,
 work directly in and modify the generated code,
 update designs and regenerate the output,
 all without disrupting or losing your own code.
 You should also be able to integrate into
 existing applications without major changes.
-{{</lead>}}
 
-{{<lead>}}
 __At scale__ starts with generating large portions of your application
 across the many technologies and tiers of your stack.
 It also means that you should be able to share, update, and treat
 both designs and generators like any other dependency.
-{{</lead>}}
 
 
 
@@ -113,7 +107,7 @@ to enable new technologies or patterns.
 
 {{<lead>}}
 Higher levels of abstraction, iteration, collaboration, productivity, and velocity
-for application developers.
+for developers.
 {{</lead>}}
 
 
