@@ -61,6 +61,17 @@ func {{ $T.Name }}Read(idx string) (*{{ $T.Name }}, error) {
 	return nil, fmt.Errorf("Entry with %v does not exist", idx)
 }
 
+func {{ $T.Name }}List() ([]*{{ $T.Name }}, error) {
+	ret := []*{{ $T.Name }}{}
+
+	// return if exists
+	for _, elem := range {{ $T.Name }}Store {
+		ret = append(ret, elem)
+	}
+
+	return ret, nil
+}
+
 func {{ $T.Name }}Update(in *{{ $T.Name }}) error {
 	idx := in.{{ $T.Index }}
 
@@ -119,8 +130,13 @@ func {{ $T.Name }}ReadWith{{ $R.Name }}(idx string) (*{{ $T.Name }}, error) {
 			local.{{ $Reverse.Name }} = nil
 			ret.{{ $R.Name }} = append(ret.{{ $R.Name }}, &local)	
 		}
-		{{ else }}
+		{{ else if (eq $R.Reln "BelongsTo") }}
 		if local.{{ $M.Index }} == ret.{{ $T.Index }} {
+			ret.{{ $R.Name }} = &local
+			break
+		}
+		{{ else }}
+		if local.{{ $Reverse.Name }}.{{ $M.Index }} == ret.{{ $T.Index }} {
 			ret.{{ $R.Name }} = &local
 			break
 		}

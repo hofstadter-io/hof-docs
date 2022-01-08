@@ -73,6 +73,10 @@ import (
 					Params: ["\(strings.ToLower(M.Index))"]
 					Method: "GET"
 				},{
+					Name: "\(M.Name)List"
+					Path: ""
+					Method: "GET"
+				},{
 					Name: "\(M.Name)Update"
 					Path: ""
 					Method: "PATCH"
