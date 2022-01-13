@@ -7,7 +7,7 @@ weight: 5
 ---
 
 {{<lead>}}
-__hof__ leverages [CUE (configure, unify, execute)](https://culenag.org)
+__hof__ leverages [CUE (configure, unify, execute)](https://cuelang.org)
 throughout and is core to the developer experience.
 {{</lead>}}
 
@@ -33,7 +33,7 @@ You can learn more about CUE from these links:
 	- [Core issues addressed by CUE](https://cuelang.org/docs/usecases/configuration/)
 	- [Read about the Logic of CUE](https://cuelang.org/docs/concepts/logic/)
 	- [Go through the tutorials](https://cuelang.org/docs/tutorials/)
-	- [CUE GitHub Discussions](https://github.com/cuelang/cue/discussions)
+	- [CUE GitHub Discussions](https://github.com/cue-lang/cue/discussions)
 	- [The CUE Language Specification](https://cuelang.org/docs/references/spec/)
 
 
