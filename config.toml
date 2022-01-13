@@ -23,10 +23,10 @@ ga = "UA-103579574-2"
 github_project_repo = "https://github.com/hofstadter-io/hof"
 github_repo = "https://github.com/hofstadter-io/hof-docs"
 time_format_default = "January 2, 2006"
-cuedocBase = "https://pkg.go.dev/cuelang.org/go@v0.4.0"
+cuedocBase = "https://pkg.go.dev/cuelang.org/go@v0.4.1"
 keywords="hof hofstadter documentation docs"
-hofver="v0.6.1-beta2"
-cuever="v0.4.0"
+hofver="v0.6.1"
+cuever="v0.4.1"
 
 [markup]
   [markup.goldmark]
