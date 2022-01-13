@@ -14,6 +14,9 @@ We need to implement our Resource handlers,
 so we add our custom code in the generated files.
 Here ar the `UserCreate` and `UserRead` handlers.
 
+_Normally, A generator author would provide
+defaults for the handler body. (expand on this)
+
 
 {{<codeInner title="in output/resources/User.go" lang="go">}}
 func UserCreateHandler(c echo.Context) (err error) {

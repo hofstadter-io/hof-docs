@@ -1,6 +1,6 @@
 ---
-title: "Multi-language Output"
-brief: "by adding a web frontend"
+title: "Adding a Web Client"
+brief: "and our second technology"
 
 weight: 30
 ---
@@ -19,10 +19,15 @@ we can modularize even within a single module.
 (normally, we might separate the client into a separate module.
 This would make it easier to swap Vue for React, in example)
 
-We will be using [PureCSS](https://purecss.io) for styling.
+We will be using [Bootstrap](https://getbootstrap.com/docs) for styling.
 
 The full code for this section can be found on GitHub
-[code/first-example/multilang-output](https://github.com/hofstadter-io/hof-docs/tree/main/code/first-example/multilang-output)
+[code/first-example/adding-a-web-client](https://github.com/hofstadter-io/hof-docs/tree/main/code/first-example/adding-a-web-client)
+
+{{<childpages>}}
 
 
+bugfixes:
 
+- Todo reads with user and all todos
+- seeding, move back to previous section "adding a data model"

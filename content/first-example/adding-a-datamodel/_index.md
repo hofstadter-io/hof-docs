@@ -30,3 +30,6 @@ _Database storage and automatic CRUD handler generation
 will be covered in more advanced sections._
 
 {{<childpages childBriefs="true">}}
+
+_dev note, swap todos for CUE values?_
+- add extra section here for interesting CUE routes we could use?

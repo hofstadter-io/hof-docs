@@ -1,0 +1,9 @@
+module hof.io/docs/first-example
+
+cue v0.4.0
+
+require (
+	github.com/hofstadter-io/hof v0.6.0
+)
+
+replace github.com/hofstadter-io/hof => ../../../../../hof
