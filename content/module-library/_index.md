@@ -1,7 +1,7 @@
 ---
 title: "Module Library"
 linkTitle: "Module Library"
-weight: 80
+weight: 100
 description: >
   Modules built for Hofstadter.
 ---

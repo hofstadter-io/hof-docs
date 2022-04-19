@@ -10,13 +10,13 @@ $hof-blue:  #02344d;
 $hof-gold:  #CBA44F;
 $hof-white: #f5f7fd;
 
-$primary:       #02344d;
+$primary:       $hof-blue;
 $secondary:     #6610f2;
 $success:       #28a745;
 $info:          #17a2b8;
 $warning:       #ffc107;
 $danger:        #dc3545;
-$light:         #f5f7fd;
+$light:         $hof-white;
 $dark:          #343a40;
 
 @import "bootstrap/bootstrap";
@@ -58,7 +58,8 @@ body, .main {
 	a {
 		text-decoration: underline;
 		text-decoration-color: $hof-gold;
-		&:hover {
+		&:not(.btn):hover {
+      color: $hof-gold;
 			text-decoration-color: $hof-blue;
 		}
 	}
@@ -100,14 +101,24 @@ body, .main {
     padding:15px;
 }
 
+#navbarMain .navbar-nav {
+  li > a:not(.lang-link) {
+    color: $hof-white !important;
+  }
+  li > a:hover {
+      color: $hof-gold !important;
+  }
+}
+
 .navbar-brand {
   img {
     height: 1.67rem;
     padding-bottom: 3px;
   }
   span {
-    font-weight: bold;
-    font-size: 1.25rem;
+    color: $hof-gold
+    //font-weight: bold;
+    //font-size: 1.25rem;
   }
 }
 
@@ -200,4 +211,10 @@ h3.anchor {
 pre.shiki {
   // -moz-tab-size:2;-o-tab-size:2;tab-size:2;
   -moz-tab-size:4;-o-tab-size:4;tab-size:4;
+}
+
+#np-btn, #pp-btn {
+  &:hover {
+    background-color: $hof-gold !important;
+  }
 }

@@ -1,7 +1,7 @@
 ---
-title: "Data Modeling"
-linkTitle: "Data Modeling"
-weight: 30
+title: "hof / datamodel"
+linkTitle: "hof / datamodel"
+weight: 20
 ---
 
 

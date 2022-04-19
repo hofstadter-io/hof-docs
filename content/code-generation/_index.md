@@ -1,7 +1,7 @@
 ---
-title: "Code Generation"
-linkTitle: "Code Generation"
-weight: 25
+title: "hof / gen"
+linkTitle: "hof / gen"
+weight: 30
 ---
 
 Code generation is the core reason __hof__ was created.

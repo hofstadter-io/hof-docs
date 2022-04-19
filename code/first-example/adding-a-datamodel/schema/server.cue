@@ -2,7 +2,6 @@ package schema
 
 import (
 	"strings"
-
 )
 
 #HttpMethod: "OPTIONS" | "HEAD" | "GET" | "POST" | "PATCH" | "PUT" | "DELETE" | "CONNECT" | "TRACE"

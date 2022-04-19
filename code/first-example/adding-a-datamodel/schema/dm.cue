@@ -6,7 +6,6 @@ import (
 
 #Datamodel: dm.#Datamodel & {
 	Models: [string]: #Model
-	OrderedModels: [ for M in Models {M} ]
 }
 
 #Model: dm.#Model & {
