@@ -3,16 +3,19 @@ HTML_FILES = $(patsubst code/%.cue, code/%.html, $(CUE_FILES))
 TAG        = $(shell git rev-parse --short HEAD | tr -d "\n")
 PROJECT    = "hof-io--develop"
 
+config.yaml: config.cue
+	cue export config.cue --out yaml --outfile config.yaml --force
+
 .PHONY: dev
-dev:
+dev: config.yaml
 	@hugo serve --bind 0.0.0.0 --buildDrafts --buildFuture
 
 .PHONY: prd
-prd:
+prd: config.yaml
 	@hugo serve --bind 0.0.0.0
 
 .PHONY: all
-all: highlight hugo docker deploy
+all: config.yaml highlight hugo docker deploy
 
 .PHONY: highlight code
 highlight: $(HTML_FILES)
