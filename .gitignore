@@ -2,5 +2,8 @@
 /resources/
 /code/*.html
 /code/**/*.html
+/code/flow/examples/
+/code/flow/schemas/
 /cue.mod/pkg/
 /cue.mod/gen/
+/node_modules/

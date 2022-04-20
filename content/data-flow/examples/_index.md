@@ -5,10 +5,13 @@ weight: 900
 ---
 
 
-This is the examples section
+This is the examples section (work in progress)
 
-- from (flow-examples) (do we want to do this, and have to "import" external repo into build process?)
-- external (other repos)
+- https://github.com/hofstadter-io/hof/tree/_dev/flow/testdata
+- https://github.com/hofstadter-io/flow-examples
+- https://github.com/hofstadter-io/flows
+- https://github.com/verdverm/streamer-tools
+
 
 {{< childpages >}}
 

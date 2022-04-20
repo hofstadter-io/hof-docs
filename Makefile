@@ -1,4 +1,4 @@
-CUE_FILES  = $(shell git ls code/*.cue | sort)
+CUE_FILES  = $(shell find code/ -type f -name *.cue | grep -v 'cue.mod/' | sort)
 HTML_FILES = $(patsubst code/%.cue, code/%.html, $(CUE_FILES))
 TAG        = $(shell git rev-parse --short HEAD | tr -d "\n")
 PROJECT    = "hof-io--develop"
@@ -30,7 +30,7 @@ cleanhtml:
 
 code/%.html: code/%.cue
 	@echo highlight "$<" as "$@"
-	@NODE_PATH=/usr/lib/node_modules node ci/highlight.js < "$<" > "$@"
+	@node ci/highlight.js < "$<" > "$@"
 
 .PHONY: hugo
 hugo:

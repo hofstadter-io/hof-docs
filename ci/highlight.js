@@ -14,4 +14,3 @@ shiki
   .then(highlighter => {
     console.log(highlighter.codeToHtml(data, 'cue'))
   })
-
