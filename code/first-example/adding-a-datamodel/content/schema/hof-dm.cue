@@ -6,7 +6,7 @@ package dm
 
 	// Models in the data model, ordered
 	Models: #Models
-	OrderedModels: [ for M in Models {M} ]
+	OrderedModels: [ for M in Models {M}]
 
 	...
 }
@@ -17,7 +17,7 @@ package dm
 	Name: string
 
 	Fields: #Fields
-	OrderedFields: [ for F in Fields {F} ]
+	OrderedFields: [ for F in Fields {F}]
 
 	Relations?: #Relations
 	...

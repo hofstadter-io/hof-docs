@@ -11,16 +11,16 @@ ServerDatamodel: schema.#Datamodel & {
 		User: {
 			Index: "Username"
 			Fields: {
-				Username: { Type: "string" }
-				Email:    { Type: "string" }
+				Username: {Type: "string"}
+				Email: {Type: "string"}
 			}
 		}
 
 		Todo: {
 			Index: "Title"
 			Fields: {
-				Title:   { Type: "string" }
-				Content: { Type: "string" }
+				Title: {Type: "string"}
+				Content: {Type: "string"}
 			}
 		}
 	}

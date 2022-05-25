@@ -8,12 +8,12 @@ import (
 
 #Server: {
 	// Most schemas have a name field
-  Name: string
+	Name: string
 
 	// Some more common "optional" fields
 	// we use defaults rather than CUE optional syntax
 	Description: string | *""
-	Help: string | *""
+	Help:        string | *""
 
 	// The server routes
 	Routes: #Routes
@@ -24,24 +24,24 @@ import (
 	Prometheus: bool | *false
 
 	// various casings of the server Name
-  serverName:  strings.ToCamel(Name)
-  ServerName:  strings.ToTitle(Name)
-  SERVER_NAME: strings.ToUpper(Name)
+	serverName:  strings.ToCamel(Name)
+	ServerName:  strings.ToTitle(Name)
+	SERVER_NAME: strings.ToUpper(Name)
 }
 
 #Routes: [...#Route] | *[]
 #Route: {
-	Name: string
-	Path: string
+	Name:   string
+	Path:   string
 	Method: #HttpMethod
 
 	// Route and Query params
 	Params: [...string] | *[]
-	Query: [...string] | *[]
+	Query:  [...string] | *[]
 
 	// Fields which allow the user to write
 	// handler bodies directly in CUE
-	Body?: string
+	Body?:   string
 	Imports: [...string] | *[]
 
 	// Allows subroutes for routes
@@ -50,36 +50,36 @@ import (
 
 #Resources: [string]: #Resource
 #Resource: {
-	Model: #Model
-	Name: Model.Name
+	Model:  #Model
+	Name:   Model.Name
 	Routes: #Routes
 }
 
 #DatamodelToResources: {
 	Datamodel: #Datamodel
 	Resources: #Resources & {
-		for n,M in Datamodel.Models {
+		for n, M in Datamodel.Models {
 			"\(n)": {
 				Model: M
 				Name:  M.Name
 				Routes: [{
-					Name: "\(M.Name)Create"
-					Path: ""
+					Name:   "\(M.Name)Create"
+					Path:   ""
 					Method: "POST"
-				},{
+				}, {
 					Name: "\(M.Name)Read"
 					Path: ""
 					Params: ["\(strings.ToLower(M.Index))"]
 					Method: "GET"
-				},{
-					Name: "\(M.Name)List"
-					Path: ""
+				}, {
+					Name:   "\(M.Name)List"
+					Path:   ""
 					Method: "GET"
-				},{
-					Name: "\(M.Name)Update"
-					Path: ""
+				}, {
+					Name:   "\(M.Name)Update"
+					Path:   ""
 					Method: "PATCH"
-				},{
+				}, {
 					Name: "\(M.Name)Delete"
 					Path: ""
 					Params: ["\(strings.ToLower(M.Index))"]

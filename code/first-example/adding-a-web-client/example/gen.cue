@@ -7,12 +7,12 @@ import (
 Server: gen.#HofGenerator & {
 	@gen(server)
 
-	Outdir: "./output"
+	Outdir:   "./output"
 	GoModule: "hof.io/docs/server-example"
-	Module: "hof.io/docs/server-example"
+	Module:   "hof.io/docs/server-example"
 
 	// We write the design in a separate file 
-	Server: ServerDesign
+	Server:    ServerDesign
 	Datamodel: ServerDatamodel
 
 	// Needed because we are using the generator from within it's directory

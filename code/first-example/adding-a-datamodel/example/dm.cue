@@ -11,8 +11,8 @@ ServerDatamodel: schema.#Datamodel & {
 		User: {
 			Index: "Username"
 			Fields: {
-				Username: { Type: "string" }
-				Email:    { Type: "string" }
+				Username: {Type: "string"}
+				Email: {Type: "string"}
 			}
 			Relations: {
 				Todos: {
@@ -25,8 +25,8 @@ ServerDatamodel: schema.#Datamodel & {
 		Todo: {
 			Index: "Title"
 			Fields: {
-				Title:   { Type: "string" }
-				Content: { Type: "string" }
+				Title: {Type: "string"}
+				Content: {Type: "string"}
 			}
 			Relations: {
 				Author: {

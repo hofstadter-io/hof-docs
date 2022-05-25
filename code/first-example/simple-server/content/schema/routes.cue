@@ -8,17 +8,17 @@
 
 #Routes: [...#Route] | *[]
 #Route: {
-	Name: string
-	Path: string
+	Name:   string
+	Path:   string
 	Method: #HttpMethod
 
 	// Route and Query params
 	Params: [...string] | *[]
-	Query: [...string] | *[]
+	Query:  [...string] | *[]
 
 	// Fields which allow the user to write
 	// handler bodies directly in CUE
-	Body?: string
+	Body?:   string
 	Imports: [...string] | *[]
 
 	// Allows subroutes for routes

@@ -4,7 +4,7 @@ package gen
 #Statics: {
 	Globs: [...string]
 	TrimPrefix?: string
-	OutPrefix?: string
+	OutPrefix?:  string
 }
 
 // #Template is used for embedded or named templates or partials
@@ -17,7 +17,7 @@ package gen
 #Templates: {
 	Globs: [...string]
 	TrimPrefix?: string
-	Delims?: #TemplateDelims
+	Delims?:     #TemplateDelims
 }
 
 #TemplateDelims: {

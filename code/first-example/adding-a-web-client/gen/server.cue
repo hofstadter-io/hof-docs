@@ -34,7 +34,7 @@ import (
 		SERVER:    Server
 		DM:        Datamodel
 		Module:    GoModule
-		Resources: (schema.#DatamodelToResources & { "Datamodel": Datamodel }).Resources
+		Resources: (schema.#DatamodelToResources & {"Datamodel": Datamodel}).Resources
 	}
 
 	Statics: [{
@@ -46,9 +46,9 @@ import (
 	Out: [...gen.#HofGeneratorFile] & All
 
 	All: [
-		for _, F in OnceFiles     {F},
-		for _, F in RouteFiles    {F},
-		for _, F in TypeFiles     {F},
+		for _, F in OnceFiles {F},
+		for _, F in RouteFiles {F},
+		for _, F in TypeFiles {F},
 		for _, F in ResourceFiles {F},
 	]
 
@@ -60,7 +60,7 @@ import (
 
 	// Files that are generated once per server
 	OnceFiles: [...gen.#File] & [
-		{
+			{
 			TemplatePath: "go.mod"
 			Filepath:     "\(Outdir)/go.mod"
 		},
@@ -84,7 +84,7 @@ import (
 
 	// Routes, we create a file per route in the Server
 	RouteFiles: [...gen.#File] & [
-		for _, R in Server.Routes {
+			for _, R in Server.Routes {
 			In: {
 				ROUTE: {
 					R
@@ -96,45 +96,44 @@ import (
 	]
 
 	TypeFiles: [...gen.#File] & [
-		for _, M in Datamodel.Models {
+			for _, M in Datamodel.Models {
 			In: {
 				TYPE: {
 					M
-					OrderedFields: [ for _,F in M.Fields { F } ]
+					OrderedFields: [ for _, F in M.Fields {F}]
 				}
 			}
 			TemplatePath: "type.go"
-			Filepath:	    "\(Outdir)/types/\(In.TYPE.Name).go"
-		}
+			Filepath:     "\(Outdir)/types/\(In.TYPE.Name).go"
+		},
 	]
 
 	ResourceFiles: [...gen.#File] & [
-		// REST handlers
-		for _, R in In.Resources {
+			// REST handlers
+			for _, R in In.Resources {
 			In: {
 				RESOURCE: R
 			}
 			TemplatePath: "resource.go"
-			Filepath:	    "\(Outdir)/resources/\(In.RESOURCE.Name).go"
-		}
+			Filepath:     "\(Outdir)/resources/\(In.RESOURCE.Name).go"
+		},
 		// HTML content
 		for _, R in In.Resources {
 			In: {
 				RESOURCE: R
 			}
 			TemplatePath: "resource.html"
-			Filepath:	    "\(Outdir)/client/\(strings.ToLower(In.RESOURCE.Name))"
-		}
+			Filepath:     "\(Outdir)/client/\(strings.ToLower(In.RESOURCE.Name))"
+		},
 		// HTML content
 		for _, R in In.Resources {
 			In: {
 				RESOURCE: R
 			}
 			TemplatePath: "resource.js"
-			Filepath:	    "\(Outdir)/client/\(strings.ToLower(In.RESOURCE.Name)).js"
-		}
+			Filepath:     "\(Outdir)/client/\(strings.ToLower(In.RESOURCE.Name)).js"
+		},
 	]
-
 
 	// We'll see how to handle nested or sub-routes in the "full-example" section
 

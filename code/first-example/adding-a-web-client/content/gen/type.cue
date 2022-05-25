@@ -5,17 +5,17 @@
 
 	// Added to the template input
 	In: {
-		DM:        Datamodel
+		DM: Datamodel
 	}
 
 	// include the type files for rendering
 	All: [
-		for _, F in TypeFiles     {F},
+		for _, F in TypeFiles {F},
 	]
 
 	// Define the files generated from our models
 	TypeFiles: [...gen.#File] & [
-		for _, M in Datamodel.Models {
+			for _, M in Datamodel.Models {
 			In: {
 				TYPE: {
 					// embed the model fields
@@ -27,13 +27,12 @@
 					// We don't want to sort, rather we want to maintain the order the user specifies
 					// While CUE has consistent ordering, the internal Go maps do not
 					// the mapping from CUE -> Go -> template rendering can misorder
-					OrderedFields: [ for _,F in M.Fields { F } ]
+					OrderedFields: [ for _, F in M.Fields {F}]
 				}
 			}
 			TemplatePath: "type.go"
 			// We name each file the same as the Model name and 
-			Filepath:	    "\(Outdir)/types/\(In.TYPE.Name).go"
-		}
+			Filepath: "\(Outdir)/types/\(In.TYPE.Name).go"
+		},
 	]
 }
-

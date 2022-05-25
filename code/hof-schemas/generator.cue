@@ -7,22 +7,22 @@ package gen
 
 	// Generater wide input value to templates.
 	// Unified with any template or file level In values
-	In: { ... }
+	In: {...}
 
 	// TODO, Generator wide cue.Value for writing incomplete values
-	Val: { ... }
+	Val: {...}
 
 	// The list fo files for hof to generate
 	Out: [...#HofGeneratorFile]
 
 	// Template (top-level) TemplateConfig (globs+config)
-	Templates: [...#Templates] | *[#Templates & { Globs: ["./templates/**/*"], TrimPrefix: "./templates/" }]
+	Templates: [...#Templates] | *[#Templates & {Globs: ["./templates/**/*"], TrimPrefix: "./templates/"}]
 
 	// Partial (nested) TemplateConfig (globs+config)
-	Partials: [...#Templates] | *[#Templates & { Globs: ["./partials/**/*"], TrimPrefix: "./partials/" }]
+	Partials: [...#Templates] | *[#Templates & {Globs: ["./partials/**/*"], TrimPrefix: "./partials/"}]
 
 	// Statics are copied directly into the output, bypassing the rendering
-	Statics: [...#Statics] | *[#Statics & { Globs: ["./static/**/*"], TrimPrefix: "./static/" }]
+	Statics: [...#Statics] | *[#Statics & {Globs: ["./static/**/*"], TrimPrefix: "./static/"}]
 
 	// TODO, CUE files
 
@@ -30,9 +30,9 @@ package gen
 	// however they have the content as a string in CUE
 	// For templates and partials, Name is the path to reference
 	EmbeddedTemplates: [Name=string]: #Template
-	EmbeddedPartials:  [Name=string]: #Template
+	EmbeddedPartials: [Name=string]:  #Template
 	// For statics, Name is the path to write the content
-	EmbeddedStatics:   [Name=string]: string
+	EmbeddedStatics: [Name=string]: string
 
 	// TODO, consider adding 'Override*' for templates, partials, statics
 
@@ -52,4 +52,4 @@ package gen
 
 	// Note, open so you can have any extra fields
 	...
-} 
+}

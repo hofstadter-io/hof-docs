@@ -50,7 +50,7 @@ import (
 			TemplatePath: "go.mod"
 			Filepath:     "\(Outdir)/go.mod"
 		},
-			{
+		{
 			TemplatePath: "server.go"
 			Filepath:     "\(Outdir)/server.go"
 		},

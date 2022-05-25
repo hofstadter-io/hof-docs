@@ -18,4 +18,3 @@ ServerDatamodel: schema.#Datamodel & {
 		}
 	}
 }
-

@@ -6,12 +6,12 @@ import "strings"
 
 #Server: {
 	// Most schemas have a name field
-  Name: string
+	Name: string
 
 	// Some more common "optional" fields
 	// we use defaults rather than CUE optional syntax
 	Description: string | *""
-	Help: string | *""
+	Help:        string | *""
 
 	// The server routes
 	Routes: #Routes
@@ -22,27 +22,26 @@ import "strings"
 	Prometheus: bool | *false
 
 	// various casings of the server Name
-  serverName:  strings.ToCamel(Name)
-  ServerName:  strings.ToTitle(Name)
-  SERVER_NAME: strings.ToUpper(Name)
+	serverName:  strings.ToCamel(Name)
+	ServerName:  strings.ToTitle(Name)
+	SERVER_NAME: strings.ToUpper(Name)
 }
 
 #Routes: [...#Route] | *[]
 #Route: {
-	Name: string
-	Path: string
+	Name:   string
+	Path:   string
 	Method: #HttpMethod
 
 	// Route and Query params
 	Params: [...string] | *[]
-	Query: [...string] | *[]
+	Query:  [...string] | *[]
 
 	// Fields which allow the user to write
 	// handler bodies directly in CUE
-	Body?: string
+	Body?:   string
 	Imports: [...string] | *[]
 
 	// Allows subroutes for routes
 	Routes: [...#Route]
 }
-
