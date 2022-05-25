@@ -27,16 +27,15 @@ params: {
   time_format_default: "January 2, 2006"
   keywords: "hof hofstadter documentation docs"
   hofver: "v0.6.2-beta.1"
-  cuever: "v0.4.3-beta.2"
+  cuever: "v0.4.3"
   cuedocBase: "https://pkg.go.dev/cuelang.org/go@\(cuever)"
 }
 
-markup: goldmark: renderer:
-  unsafe: true
+markup: goldmark: renderer: unsafe: true
 
 markup: tableOfContents: {
-  endLevel: 3
   startLevel: 2
+  endLevel: 3
 }
 
 outputs: home: ["HTML", "RSS", "JSON"]
