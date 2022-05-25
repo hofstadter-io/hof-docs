@@ -17,6 +17,10 @@ Current version: <b>{{<hof-rel-link>}}</b>
 
 {{<hof-dl-btns>}}
 
+<br>
+
+Container images are also available on [docker hub](https://hub.docker.com/r/hofstadter/hof/tags).
+
 
 ##### You'll want to rename the file to `hof` and ensure it is executable and in your PATH.
 
