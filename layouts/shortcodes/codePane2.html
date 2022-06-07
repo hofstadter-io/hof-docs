@@ -10,10 +10,6 @@
 {{ else }}
     "missing content1"
 {{ end}}
-{{ if (.Get "play1") }}
-  {{ $codepath := replace $file1 ".html" ".cue" }}
-  {{ .Scratch.Set "code1" ($codepath | readFile) }}
-{{ end}}
 
 {{ .Scratch.Set "content2" "" }}
 {{ .Scratch.Set "ident2" "" }}
@@ -26,10 +22,6 @@
 {{ else }}
     "missing content2"
 {{ end}}
-{{ if (.Get "play2") }}
-  {{ $codepath := replace $file2 ".html" ".cue" }}
-  {{ .Scratch.Set "code2" ($codepath | readFile) }}
-{{ end}}
 
 <div class="d-flex flex-column flex-sm-row flex-wrap" style="overflow-x: auto; overflow-y: hidden">
 
@@ -39,11 +31,6 @@
     {{ end }}
     <div class="position-relative border flex-fill" id="{{printf "clipboard_%s" (.Scratch.Get "ident1") }}">
       <div class="position-absolute pt-1 pr-1" style="right:0;">
-        {{ if (.Get "play1") }}
-          <button class="btn btn-light" onclick="playground({{printf "playground_%s" (.Scratch.Get "ident1") }})">
-          <i class="fas fa-play"></i>
-          </button>
-        {{ end}}
         <button class="btn btn-light" data-clipboard-target="#{{printf "clipboard_%s" (.Scratch.Get "ident1") }}">
           <i class="far fa-copy"></i>
         </button>
@@ -55,11 +42,6 @@
           {{ .Scratch.Get "content1" | safeHTML }}
         </div>
       {{ end }}
-{{ if (.Get "play1") }}
-<textarea class="invisible position-absolute" style="height:0" id="{{printf "playground_%s" (.Scratch.Get "ident1") }}">
-{{ .Scratch.Get "code1" | htmlUnescape }}
-</textarea>
-{{ end}}
     </div>
   </div>
 
@@ -69,11 +51,6 @@
     {{ end }}
     <div class="position-relative border flex-fill" id="{{printf "clipboard_%s" (.Scratch.Get "ident2") }}">
       <div class="position-absolute pt-1 pr-1" style="right:0;">
-        {{ if (.Get "play2") }}
-          <button class="btn btn-light" onclick="playground({{printf "playground_%s" (.Scratch.Get "ident2") }})">
-          <i class="fas fa-play"></i>
-          </button>
-        {{ end}}
           <button class="btn btn-light" data-clipboard-target="#{{printf "clipboard_%s" (.Scratch.Get "ident2") }}">
           <i class="far fa-copy"></i>
           </button>
@@ -85,11 +62,6 @@
           {{ .Scratch.Get "content2" | safeHTML }}
         </div>
       {{ end }}
-{{ if (.Get "play2") }}
-<textarea class="invisible position-absolute" style="height:0" id="{{printf "playground_%s" (.Scratch.Get "ident2") }}">
-{{ .Scratch.Get "code2" | htmlUnescape }}
-</textarea>
-{{ end}}
 
     </div>
   </div>
