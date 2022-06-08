@@ -60,7 +60,7 @@ by formatting or collecting values.
 ### Language Fields
 
 There are typically language specifics which may need to be configured.
-You will likely need to make some accessiblble to your users.
+You will likely need to make some accessible to your users.
 
 {{<codePane title="schema/server.cue" file="code/first-example/simple-server/content/schema/lang.html">}}
 
