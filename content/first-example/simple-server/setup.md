@@ -23,7 +23,8 @@ examples/
 {{</codeInner>}}
 
 You will often have other files depending on the languages or technologies you choose.
-A common example is dependency management files.
+A common example are the files for dependency management like `package.json` and `go.mod`.
+There are no restrictions or limits on what you can include.
 
 ### Modules
 
@@ -38,17 +39,49 @@ For more information about `hof mod`, see
 
 ### Example
 
-Throught the `first-example` section,
+Through the `first-example` section,
 we will be developing a `hof` geneartor as a module.
-We will use `hof.io/docs/first-example` as the name.
+The following steps will get your project setup.
 
-
-
-{{<codeInner title="Create a CUE module">}}
-mkdir example && cd example
-hof mod init cue hof.io/example
+{{<codeInner title="1. Start a CUE module">}}
+mkdir first-example && cd first-example
+hof mod init cue hof.io/docs/first-example
 {{</codeInner>}}
 
-{{<codeInner title="Create the common directories">}}
+{{<codeInner title="2. In cue.mods - add hof as a dependency">}}
+require github.com/hofstadter-io/hof v0.6.2
+{{</codeInner>}}
+
+{{<codeInner title="3. Fetch CUE dependencies">}}
+hof mod vendor cue
+{{</codeInner>}}
+
+{{<codeInner title="4. Create common sub-directories">}}
 mkdir schema gen templates partials static examples
 {{</codeInner>}}
+
+Your working directory should now look like:
+
+{{<codeInner title="Module layout">}}
+first-example/
+|
+├── examples/
+├── gen/
+├── partials/
+├── schema/
+├── static/
+├── templates/
+|
+├── cue.mods
+├── cue.sums
+└── cue.mod/
+    ├── module.cue
+    └── pkg/
+        └── github.com/
+            └── hofstadter-io/
+                ├── ghacue/...
+                ├── hof/...
+                ├── hofmod-cli/...
+                └── hofmod-cuefig/...
+{{</codeInner>}}
+
