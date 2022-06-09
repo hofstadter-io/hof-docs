@@ -34,7 +34,7 @@ It will still be available in our template input though.
 We specify that a User has many Todos
 and that a Todo belongs to a User.
 
-{{<codePane title="example/dm.cue" file="code/first-example/adding-a-datamodel/content/example/dm-reln.html">}}
+{{<codePane title="example/dm.cue" file="code/first-example/adding-a-datamodel/content/examples/dm-reln.html">}}
 
 
 ### Type Template
@@ -111,7 +111,7 @@ We leave addition of this query paramater as a thought experiment.
 
 ### Regen, Rebuild, Rerun
 
-We can now `hof gen ./example`.
+We can now `hof gen ./examples/server.cue`.
 If you see any merge conflicts, you will need to fix those first.
 
 Try rebuilding, rerunning, and making calls to the server to create users and todos.
