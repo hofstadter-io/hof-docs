@@ -8,20 +8,25 @@ weight: 25
 Users _design_ by filling in the schema for a __Hof Generator__.
 {{</lead>}}
 
-### ServerDesign, with the schema
-
-{{<codePane title="example/server.cue" file="code/first-example/simple-server/examples/server.html">}}
-
 ### Server, @gen(server)
 
-{{<codePane title="example/gen.cue" file="code/first-example/simple-server/examples/gen.html">}}
+This is the block which defines an entrypoint to `hof gen`,
+using `@gen(tags...)` and unifying with our generator `gen.#HofGenerator`.
+
+{{<codePane title="examples/gen.cue" file="code/first-example/simple-server/examples/gen.html">}}
+
+### ServerDesign, with the schema
+
+This is the user created design for our server generator.
+
+{{<codePane title="examples/server.cue" file="code/first-example/simple-server/examples/server.html">}}
 
 ### Generate the Code
 
 From the root of our module, run
 
 {{<codeInner lang="sh">}}
-hof gen ./example
+hof gen ./examples
 {{</codeInner>}}
 
 You should now have an `./output` directory with the generated code.
@@ -32,6 +37,7 @@ With our code in place, we can build and run the server
 
 {{<codeInner lang="sh">}}
 cd ./ouput
+go mod tidy
 go build -o server
 ./server
 {{</codeInner>}}

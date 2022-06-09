@@ -26,9 +26,10 @@ func setupRouter(e *echo.Echo) error {
 	})
 	{{ end }}
 
-	// Explicit routes
+	// Application routes group
 	g := e.Group("")
 
+  // Register the routes
 	{{ range $ROUTE := .SERVER.Routes -}}
 	routes.{{ $ROUTE.Name }}Routes(g)
 	{{ end }}

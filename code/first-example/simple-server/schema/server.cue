@@ -13,13 +13,16 @@ import "strings"
 	Description: string | *""
 	Help:        string | *""
 
+	// language fields
+	GoModule:  string
+
 	// The server routes
 	Routes: #Routes
 
 	// list of file globs to be embedded into the server when built
 	EmbedGlobs: [...string]
 	// enable prometheus metrics
-	Prometheus: bool | *false
+	Prometheus: bool
 
 	// various casings of the server Name
 	serverName:  strings.ToCamel(Name)

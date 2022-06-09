@@ -13,7 +13,8 @@ import "strings"
 	Description: string | *""
 	Help:        string | *""
 
-	Port: int & >1024
+	// language fields
+	GoModule:  string
 
 	// The server routes
 	Routes: #Routes
@@ -22,10 +23,6 @@ import "strings"
 	EmbedGlobs: [...string]
 	// enable prometheus metrics
 	Prometheus: bool
-
-	// language fields
-	GoModule:  string
-	GoPackage: string
 
 	// various casings of the server Name
 	serverName:  strings.ToCamel(Name)

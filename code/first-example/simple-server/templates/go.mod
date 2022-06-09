@@ -1,4 +1,4 @@
-module {{ .Module }}
+module {{ .SERVER.GoModule }}
 
 go 1.17
 
