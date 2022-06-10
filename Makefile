@@ -3,19 +3,30 @@ HTML_FILES = $(patsubst code/%.cue, code/%.html, $(CUE_FILES))
 TAG        = $(shell git rev-parse --short HEAD | tr -d "\n")
 PROJECT    = "hof-io--develop"
 
-config.yaml: config.cue
-	cue export config.cue --out yaml --outfile config.yaml --force
-
+# run locally in dev mode
 .PHONY: dev
 dev: config.yaml
 	@hugo serve --bind 0.0.0.0 --buildDrafts --buildFuture
 
+# run locally in prd mode
 .PHONY: prd
 prd: config.yaml
 	@hugo serve --bind 0.0.0.0
 
+# build the world and push to production
 .PHONY: all
-all: config.yaml highlight hugo docker deploy
+all: config.yaml cmdhelp highlight hugo docker deploy
+
+config.yaml: config.cue
+	cue export config.cue --out yaml --outfile config.yaml --force
+
+.PHONY: cmdhelp
+cmdhelp:
+	hof      -h > code/cmd-help/hof
+	hof mod  -h > code/cmd-help/mod
+	hof flow -h > code/cmd-help/flow
+	hof dm   -h > code/cmd-help/dm
+	hof gen  -h > code/cmd-help/gen
 
 .PHONY: highlight code
 highlight: $(HTML_FILES)

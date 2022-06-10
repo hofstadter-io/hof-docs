@@ -1,0 +1,17 @@
+  generate all the things, from code to data to config...
+
+Usage:
+  hof gen [files...] [flags]
+
+Aliases:
+  gen, G
+
+Flags:
+  -g, --generator strings   Generators to run, default is all discovered
+  -h, --help                help for gen
+  -s, --stats               Print generator statistics
+
+Global Flags:
+  -p, --package string   the Cue package context to use during execution
+  -q, --quiet            turn off output and assume defaults at prompts
+  -v, --verbose int      set the verbosity of output

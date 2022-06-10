@@ -1,0 +1,29 @@
+hof - the high code framework
+
+  Learn more at https://docs.hofstadter.io
+
+Usage:
+  hof [flags] [command] [args]
+
+Main commands:
+  datamodel             create, view, diff, calculate / migrate, and manage your data models
+  flow                  run file(s) through the hof/flow DAG engine
+  gen                   generate code, data, and config from your data models and designs
+  mod                   mod subcmd is a polyglot dependency management tool based on go mods
+
+Additional commands:
+  help                  help about any command
+  update                check for new versions and run self-updates
+  version               print detailed version information
+  completion            generate completion helpers for your terminal
+  feedback              send feedback, bug reports, or any message
+
+Flags:
+  -h, --help             help for hof
+  -p, --package string   the Cue package context to use during execution
+  -q, --quiet            turn off output and assume defaults at prompts
+  -v, --verbose int      set the verbosity of output
+
+Use "hof [command] --help / -h" for more information about a command.
+Use "hof topic [subject]"  for more information about a subject.
+
