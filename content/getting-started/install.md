@@ -13,6 +13,14 @@ and architectures. Thank you to the Golang developers, Goreleaser, and the commu
 Current version: <b>{{<hof-rel-link>}}</b>
 
 
+{{<codeInner lang="sh">}}
+go install github.com/hofstadter-io/hof/cmd/hof@latest
+
+or
+
+go install github.com/hofstadter-io/hof/cmd/hof@v0.6.2
+{{</codeInner>}}
+
 <br>
 
 {{<hof-dl-btns>}}
