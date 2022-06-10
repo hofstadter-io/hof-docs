@@ -22,11 +22,11 @@ config.yaml: config.cue
 
 .PHONY: cmdhelp
 cmdhelp:
-	hof      -h > code/cmd-help/hof
-	hof mod  -h > code/cmd-help/mod
-	hof flow -h > code/cmd-help/flow
-	hof dm   -h > code/cmd-help/dm
-	hof gen  -h > code/cmd-help/gen
+	@hof      -h > code/cmd-help/hof
+	@hof mod  -h > code/cmd-help/mod
+	@hof flow -h > code/cmd-help/flow
+	@hof dm   -h > code/cmd-help/dm
+	@hof gen  -h > code/cmd-help/gen
 
 .PHONY: highlight code
 highlight: $(HTML_FILES)
