@@ -21,6 +21,8 @@ Top level commands and help message
 
 Used for data model management (dm for short)
 
+See [the datamodel docs](/data-modeling) to learn more
+
 {{<codePane file="code/cmd-help/dm" title="$ hof help datamodel" lang="text">}}
 
 See the [Data Modeling section](/data-modeling) for details.
@@ -28,31 +30,34 @@ See the [Data Modeling section](/data-modeling) for details.
 
 ### hof / flow
 
-Build workflows and script with CUE and a DAG engine
+Build workflows and scripts with CUE and a DAG engine
+
+See [the flow docs](/data-flow) to learn more
 
 {{<codePane file="code/cmd-help/flow" title="$ hof help flow" lang="text">}}
 
 ### hof / gen
 
-Code generation
+A polyglot code generation framework for module authors and users
 
 {{<codePane file="code/cmd-help/gen" title="$ hof help gen" lang="text">}}
 
+See [the code gen docs](/code-generation) to learn more
+
 ### hof / mod
 
-Used for managing Hof and CUE modules.
+Manage a MVS (Golang) style modules and dependencies.
+Create custom module systems with a single config file.
 
-```sh
-# start a module
+Also, more typically, used as a stop gap for CUE modules until `cue mod` is implemented.
+
+{{<codeInner title="typical usage">}}
+# initialize a new module
 hof mod init cue hof.io/docs/example
 
-# update the dependencies
+# download dependencies
 hof mod vendor cue
-```
-
+{{</codeInner>}}
 
 {{<codePane file="code/cmd-help/mod" title="$ hof help mod" lang="text">}}
-
-See [GitHub Issues](https://github.com/hofstadter-io/hof/issues?q=is%3Aissue+is%3Aopen+label%3A%22area+%2F+mod%22)
-for upcoming features.
 
