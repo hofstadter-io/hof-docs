@@ -22,7 +22,7 @@ This would make it easier to swap Vue for React, in example)
 We will be using [Bootstrap](https://getbootstrap.com/docs) for styling.
 
 The full code for this section can be found on GitHub
-[code/first-example/adding-a-web-client](https://github.com/hofstadter-io/hof-docs/tree/main/code/first-example/adding-a-web-client)
+[code/first-example/web-client](https://github.com/hofstadter-io/hof-docs/tree/main/code/first-example/web-client)
 
 {{<childpages>}}
 

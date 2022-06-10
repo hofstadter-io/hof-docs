@@ -1,5 +1,5 @@
 ---
-title: "Adding a Data Model"
+title: "Adding a Data Layer"
 brief: "and generating types"
 
 weight: 20
@@ -24,7 +24,7 @@ CRUD routes are also generated from the same datamodel as a `Resource` in API te
 You will see how to customize both the code and the data model.
 
 The full code for this section can be found on GitHub
-[code/first-example/adding-a-datamodel](https://github.com/hofstadter-io/hof-docs/tree/main/code/first-example/adding-a-datamodel)
+[code/first-example/data-layer](https://github.com/hofstadter-io/hof-docs/tree/main/code/first-example/data-layer)
 
 _Database storage and automatic CRUD handler generation
 will be covered in more advanced sections._
