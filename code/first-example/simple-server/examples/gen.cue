@@ -8,7 +8,6 @@ Server: gen.#HofGenerator & {
 	@gen(server)
 
 	Outdir:   "./output"
-	GoModule: "hof.io/docs/server-example"
 
 	// We write the design in a separate file 
 	Server: ServerDesign

@@ -6,6 +6,8 @@ import (
 
 // A concrete value of the Server schem
 ServerDesign: schema.#Server & {
+	GoModule: "hof.io/docs/first-example"
+
 	Name:        "Example"
 	Description: "An example server"
 

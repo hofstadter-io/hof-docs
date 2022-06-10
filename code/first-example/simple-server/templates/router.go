@@ -7,7 +7,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
 	{{ if gt (len .SERVER.Routes ) 1 }}
-	"{{ .Module }}/routes"
+	"{{ .SERVER.GoModule }}/routes"
 	{{ end }}
 )
 
@@ -29,7 +29,7 @@ func setupRouter(e *echo.Echo) error {
 	// Application routes group
 	g := e.Group("")
 
-  // Register the routes
+	// Register the routes
 	{{ range $ROUTE := .SERVER.Routes -}}
 	routes.{{ $ROUTE.Name }}Routes(g)
 	{{ end }}
