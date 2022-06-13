@@ -1,6 +1,6 @@
 ---
 title: Checkpointing
-brief: the Data Model
+brief: and Data Model history
 weight: 60
 ---
 

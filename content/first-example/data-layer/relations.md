@@ -1,6 +1,6 @@
 ---
 title: Relations
-brief: "between types"
+brief: "between types and how to handle them"
 
 weight: 50
 ---

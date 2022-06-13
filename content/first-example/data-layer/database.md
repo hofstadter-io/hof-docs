@@ -1,9 +1,7 @@
 ---
-title: "Using a Database"
-brief: "and updating the code"
-description: "Switching the type storage to a database"
-
-weight: 60
+title: Database
+brief: upgrading the storage
+weight: 100
 ---
 
 Our initial data store was a Go map and overly simplistic.
@@ -28,4 +26,5 @@ We will be using [GORM](https://gorm.io/docs/) ~ "The fantastic ORM library for 
 
 The full code for this section can be found on GitHub
 [code/first-example/more-features](https://github.com/hofstadter-io/hof-docs/tree/main/code/first-example/using-a-database)
+
 

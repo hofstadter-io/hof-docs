@@ -1,6 +1,6 @@
 ---
-title: "Adding a Web Client"
-brief: "and our second technology"
+title: "Web Client"
+brief: "and JS library"
 
 weight: 30
 ---
@@ -14,10 +14,6 @@ Throughout this section, we will generate a simple web client.
 In addition to seeing multi-language code generation,
 we will also see how to use static files and how
 we can modularize even within a single module.
-
-
-(normally, we might separate the client into a separate module.
-This would make it easier to swap Vue for React, in example)
 
 We will be using [Bootstrap](https://getbootstrap.com/docs) for styling.
 

@@ -1,6 +1,6 @@
 ---
 title: "Custom Code"
-brief: "for Implementing Resource Handlers"
+brief: "and iterative development with code gen"
 weight: 40
 ---
 

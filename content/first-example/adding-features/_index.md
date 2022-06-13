@@ -1,9 +1,14 @@
 ---
-title: "More Features"
-brief: "and other nice to haves for free"
+title: "Adding Features"
+brief: "and other nice to haves"
 
 weight: 40
 ---
+
+{{<lead>}}
+In this section, we add many extras and nice to haves to our application,
+showing off the compounding capabilities of code generation.
+{{</lead>}}
 
 - seed data (CUE data by user read by application)
 - configuration & secrets (using hof gen CUE writing capability) (0.6.1)

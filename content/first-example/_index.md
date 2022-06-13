@@ -1,6 +1,6 @@
 ---
-title: "A First Example"
-linkTitle: "A First Example"
+title: "First Example"
+linkTitle: "First Example"
 brief: "generating a simple API"
 weight: 10
 description: >
