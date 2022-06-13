@@ -14,18 +14,22 @@ and each has a dedicated section for the topic as well.
 
 Top level commands and help message
 
+<details>
+<summary>hof help</summary>
 {{<codePane file="code/cmd-help/hof" title="$ hof help" lang="text">}}
+</details>
 
 
 ### hof / datamodel
 
 Used for data model management (dm for short)
 
-See [the datamodel docs](/data-modeling) to learn more
-
-{{<codePane file="code/cmd-help/dm" title="$ hof help datamodel" lang="text">}}
-
 See the [Data Modeling section](/data-modeling) for details.
+
+<details>
+<summary>hof help datamodel</summary>
+{{<codePane file="code/cmd-help/dm" title="$ hof help datamodel" lang="text">}}
+</details>
 
 
 ### hof / flow
@@ -34,15 +38,22 @@ Build workflows and scripts with CUE and a DAG engine
 
 See [the flow docs](/data-flow) to learn more
 
+<details>
+<summary>hof help flow</summary>
 {{<codePane file="code/cmd-help/flow" title="$ hof help flow" lang="text">}}
+</details>
+
 
 ### hof / gen
 
 A polyglot code generation framework for module authors and users
 
-{{<codePane file="code/cmd-help/gen" title="$ hof help gen" lang="text">}}
-
 See [the code gen docs](/code-generation) to learn more
+
+<details>
+<summary>hof help flow</summary>
+{{<codePane file="code/cmd-help/gen" title="$ hof help gen" lang="text">}}
+</details>
 
 ### hof / mod
 
@@ -59,5 +70,8 @@ hof mod init cue hof.io/docs/example
 hof mod vendor cue
 {{</codeInner>}}
 
+<details>
+<summary>hof help mod</summary>
 {{<codePane file="code/cmd-help/mod" title="$ hof help mod" lang="text">}}
+</details>
 

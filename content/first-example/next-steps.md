@@ -1,5 +1,6 @@
 ---
 title: Next Steps
+brief: "for building with hof"
 
 draft: true
 ---
