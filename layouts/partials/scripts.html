@@ -10,10 +10,10 @@
 
 {{ $JS := slice
   ( resources.Get "js/pv.js" | minify )
-  ( resources.Get "lib/vue.min.js" )
   ( resources.Get "lib/jquery.min.js" )
   ( resources.Get "lib/popper.min.js" )
   ( resources.Get "lib/bootstrap.min.js" )
+  ( resources.Get "lib/vue.min.js" )
   ( resources.Get "plugins/lunr.min.js" )
   ( resources.Get "plugins/auto-complete.js" | minify )
   ( resources.Get "plugins/search.js" | minify )
