@@ -9,9 +9,11 @@
                 <input class="form-control mr-sm-2 w-100" data-search-input id="search-by" type="text" placeholder="Search">
             </form>
         {{- end}}
-         <ul class="navbar-nav flex-column pt-3">
-            {{ partial "vue-test.html" . }}
-        </ul>
+        <div id="site-menu">
+           <ul class="navbar-nav flex-column pt-3">
+              {{ partial "vue-test.html" . }}
+          </ul>
+        </div>
     </div>
 </nav>
 

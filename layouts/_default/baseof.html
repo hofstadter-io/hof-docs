@@ -10,9 +10,7 @@
         <div class="row">
 
             <div class="docs-sidenav order-0 col-12 col-md-3 col-lg-2 col-xl-2 position-sticky border-right">
-              <div id="site-menu">
                 {{- partial "menu.html" . -}}
-              </div>
             </div>
 
             {{- if and (ne .Site.Params.toc false) (ne .Params.toc false) }}
