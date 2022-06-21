@@ -13,7 +13,6 @@
   ( resources.Get "lib/jquery.min.js" )
   ( resources.Get "lib/popper.min.js" )
   ( resources.Get "lib/bootstrap.min.js" )
-  ( resources.Get "lib/vue.min.js" )
   ( resources.Get "plugins/lunr.min.js" )
   ( resources.Get "plugins/auto-complete.js" | minify )
   ( resources.Get "plugins/search.js" | minify )
@@ -24,4 +23,5 @@
   ( resources.Get "js/tocc.js" | minify )
   | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" }}
 
+<script src="https://unpkg.com/vue@3"></script>
 <script type="text/javascript" src="{{ $JS.RelPermalink }}" integrity="{{ $JS.Data.Integrity }}"></script>
