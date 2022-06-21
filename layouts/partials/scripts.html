@@ -4,23 +4,25 @@
   {{ else }}
       var baseurl = "{{.Site.BaseURL}}";
   {{ end }}
+  let menuCurr = "{{ partial "menu-curr.html" . }}"
+  let currItems = menuCurr.split('|').map(element => element.trim()).filter(e =>  e);;
 </script>
 
-{{ $js1 := resources.Get "js/pv.js" | minify }}
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-{{ $js3 := resources.Get "lib/jquery.min.js" }}
-{{ $js4 := resources.Get "lib/popper.min.js" }}
-{{ $js5 := resources.Get "js/bootstrap.min.js" }}
-
-{{ $js6 := resources.Get "plugins/lunr.min.js" }}
-{{ $js7 := resources.Get "plugins/auto-complete.js" | minify }}
-{{ $js8 := resources.Get "plugins/search.js" | minify }}
-{{ $js9 := resources.Get "plugins/clipboard.js" | minify }}
-
-{{ $js10 := resources.Get "js/clipboard.js" | minify }}
-{{ $js11 := resources.Get "js/header-links.js" | minify }}
-
-{{ $js := slice $js1 $js3 $js4 $js5 $js6 $js7 $js8 $js9 $js10 $js11 | resources.Concat "js/bundle.js" }}
-{{ $JS := $js | resources.Fingerprint "sha512" }}
+{{ $JS := slice
+  ( resources.Get "js/pv.js" | minify )
+  ( resources.Get "lib/jquery.min.js" )
+  ( resources.Get "lib/popper.min.js" )
+  ( resources.Get "lib/bootstrap.min.js" )
+  ( resources.Get "plugins/lunr.min.js" )
+  ( resources.Get "plugins/auto-complete.js" | minify )
+  ( resources.Get "plugins/search.js" | minify )
+  ( resources.Get "plugins/clipboard.js" | minify )
+  ( resources.Get "js/clipboard.js" | minify )
+  ( resources.Get "js/header-links.js" | minify )
+  ( resources.Get "js/toc.js" | minify )
+  ( resources.Get "js/tocc.js" | minify )
+  | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" }}
 
 <script type="text/javascript" src="{{ $JS.RelPermalink }}" integrity="{{ $JS.Data.Integrity }}"></script>

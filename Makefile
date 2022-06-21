@@ -50,6 +50,9 @@ code/%.html: code/%.cue
 hugo:
 	@rm -rf dist
 	@hugo --baseURL https://docs.hofstadter.io/ -d dist
+	@cp dist/toc.json assets/js/toc.js
+	@hugo --baseURL https://docs.hofstadter.io/ -d dist
+
 
 .PHONY: docker
 docker: image push

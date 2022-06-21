@@ -10,12 +10,7 @@
             </form>
         {{- end}}
          <ul class="navbar-nav flex-column pt-3">
-             {{- $currentNode := . }}
-             {{- $showvisitedlinks := .Site.Params.showVisitedLinks -}}
-
-             {{- range .Site.Home.Sections.ByWeight}}
-             {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode}}
-             {{- end}}
+            {{ partial "vue-test.html" . }}
         </ul>
     </div>
 </nav>
@@ -38,7 +33,8 @@
         <a class="nav-link p-0 foo
           {{- if eq .RelPermalink $currentNode.RelPermalink}} current
           {{- else if .IsAncestor $currentNode}} parent{{end}}" href="{{.RelPermalink}}"><h6>{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</h6></a>
-        {{- if ne $numberOfPages 0 }}{{ if (or (eq .RelPermalink $currentNode.RelPermalink) (.IsAncestor $currentNode)) }}
+        {{- if ne $numberOfPages 0 }}
+        {{/* if (or (eq .RelPermalink $currentNode.RelPermalink) (.IsAncestor $currentNode)) */}}
         <ul class="list-unstyled ml-2 mb-2">
           {{- .Scratch.Set "pages" .Pages }}
           {{- if .Sections}}
@@ -53,14 +49,13 @@
             {{- end}}
           {{- end}}
         </ul>
-      {{- end}}
-      {{- end}}
+        {{- end}}
     </li>
 {{- else}}
     {{- if not .Params.Hidden }}
         <li data-nav-id="{{.RelPermalink}}" class="nav-item my-1 {{- if eq .RelPermalink $currentNode.RelPermalink}} current{{end -}}">
                 <!-- I'm the params hidden -->
-                 <a href="{{.RelPermalink}}" class="nav-link p-0 {{- if eq .RelPermalink $currentNode.RelPermalink}} current{{end -}}">
+                 <a href="{{.RelPermalink}}" class="nav-link py-0 px-1 {{- if eq .RelPermalink $currentNode.RelPermalink}} current{{end -}}">
                     {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
                 </a>
         </li>

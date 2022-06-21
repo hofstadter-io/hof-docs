@@ -39,3 +39,6 @@ You can learn more about CUE from these links:
 
 ## __hof__ uses CUE {{<cue-version>}}
 
+
+1. Purpose built language for config, use as a DSL, lift much of the logic to CUE 
+1. Module aware, we get packages and dependenices for free, can combine schemas and generators in interesting ways

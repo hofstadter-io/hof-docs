@@ -34,6 +34,13 @@ outputs:
     - HTML
     - RSS
     - JSON
+    - TOC
+outputFormats:
+  TOC:
+    baseName: toc
+    mediaType: application/json
+    isPlainText: true
+    notAlternative: true
 menu:
   shortcuts:
     - name: <i class='fab fa-github'></i> GitHub
