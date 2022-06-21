@@ -8,10 +8,9 @@
   let currItems = menuCurr.split('|').map(element => element.trim()).filter(e =>  e);;
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
 {{ $JS := slice
   ( resources.Get "js/pv.js" | minify )
+  ( resources.Get "lib/vue.min.js" )
   ( resources.Get "lib/jquery.min.js" )
   ( resources.Get "lib/popper.min.js" )
   ( resources.Get "lib/bootstrap.min.js" )
