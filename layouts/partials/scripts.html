@@ -20,8 +20,17 @@
   ( resources.Get "js/clipboard.js" | minify )
   ( resources.Get "js/header-links.js" | minify )
   ( resources.Get "js/toc.js" | minify )
-  ( resources.Get "js/tocc.js" | minify )
   | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" }}
 
-<script src="https://unpkg.com/vue@3"></script>
 <script type="text/javascript" src="{{ $JS.RelPermalink }}" integrity="{{ $JS.Data.Integrity }}"></script>
+<script type="importmap">
+  {
+    "imports": {
+      "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+    }
+  }
+</script>
+{{ $VUE := slice
+  ( resources.Get "js/tocc.js" )
+  | resources.Concat "js/components.js" | resources.Fingerprint "sha512" }}
+<script type="module" src="{{ $VUE.RelPermalink }}" integrity="{{ $VUE.Data.Integrity }}"></script>

@@ -1,3 +1,5 @@
+import { createApp } from 'vue';
+
 const MenuItem = {
   name: "MenuItem",
   template: `
@@ -77,12 +79,8 @@ const MenuComponent = {
   }
 }
 
-const app = new Vue({
-  el: '#site-menu',
+createApp({
   components : {
     'vue-menu': MenuComponent
   },
-  render: (h) => {
-    return h(MenuComponent)
-  }
-})
+}).mount("#site-menu")
