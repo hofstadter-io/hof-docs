@@ -81,5 +81,8 @@ const app = new Vue({
   el: '#site-menu',
   components : {
     'vue-menu': MenuComponent
+  },
+  render: (h) => {
+    return h(MenuComponent)
   }
 })
