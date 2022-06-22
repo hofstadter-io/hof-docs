@@ -32,7 +32,6 @@
           {{- if eq .RelPermalink $currentNode.RelPermalink}} current
           {{- else if .IsAncestor $currentNode}} parent{{end}}" href="{{.RelPermalink}}"><h6>{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</h6></a>
         {{- if ne $numberOfPages 0 }}
-        {{/* if (or (eq .RelPermalink $currentNode.RelPermalink) (.IsAncestor $currentNode)) */}}
         <ul class="list-unstyled ml-2 mb-2">
           {{- .Scratch.Set "pages" .Pages }}
           {{- if .Sections}}

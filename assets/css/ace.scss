@@ -97,10 +97,6 @@ body, .main {
   color: $hof-blue !important;
 }
 
-//.haschildren.current ul, .haschildren.parent ul{
-    //display:block;
-//}
-
 .highlight > pre {
     padding:15px;
 }
@@ -120,9 +116,7 @@ body, .main {
     padding-bottom: 3px;
   }
   span {
-    color: $hof-gold
-    //font-weight: bold;
-    //font-size: 1.25rem;
+    color: $hof-gold;
   }
 }
 
