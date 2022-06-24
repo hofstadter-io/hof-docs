@@ -1,4 +1,8 @@
-  generate all the things, from code to data to config...
+render directories of code using modular generators
+
+  https://docs.hofstadter.io/first-example/
+
+hof gen app.cue -g frontend -g backend -g migrations
 
 Usage:
   hof gen [files...] [flags]

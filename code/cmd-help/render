@@ -1,0 +1,59 @@
+hof render joins CUE with Go's text/template system and diff3
+  create on-liners to generate any file from any data
+  edit and regenerate those files while keeping changes
+
+# Render a template
+hof render data.cue -T template.txt
+hof render data.yaml schema.cue -T template.txt > output.txt
+
+# Add partials to the template context
+hof render data.cue -T template.txt -P partial.txt
+
+# The template flag
+hof render data.cue ...
+
+  # Multiple templates
+  -T templateA.txt -T templateB.txt
+
+  # Cuepath to select sub-input values
+  -T 'templateA.txt;foo'
+  -T 'templateB.txt;sub.val'
+
+  # Writing to file
+  -T 'templateA.txt;;a.txt'
+  -T 'templateB.txt;sub.val;b.txt'
+
+  # Templated output path 
+  -T 'templateA.txt;;{{ .name | ToLower }}.txt'
+
+  # Repeated templates when input is a list
+  #   The template will be processed per item
+  #   This also requires using a templated outpath
+  -T 'template.txt;items;out/{{ .filepath }}.txt'
+
+# Learn about writing templates, with extra functions and helpers
+  https://docs.hofstadter.io/code-generation/template-writing/
+
+# Check the tests for complete examples
+  https://github.com/hofstadter-io/hof/tree/_dev/test/render
+
+# Want to use and compose code gen modules and dependencies?
+  hof gen is a scaled out version of this command
+  hof gen app.cue -g frontend -g backend -g migrations
+
+Usage:
+  hof render [flags] [entrypoints...]
+
+Aliases:
+  render, R
+
+Flags:
+  -D, --diff3              enable diff3 support, requires the .hof shadow directory
+  -h, --help               help for render
+  -P, --partial strings    file globs to partial templates to register with the templates
+  -T, --template strings   Template mappings to render with data from entrypoint as: <filepath>;<?cuepath>;<?outpath>
+
+Global Flags:
+  -p, --package string   the Cue package context to use during execution
+  -q, --quiet            turn off output and assume defaults at prompts
+  -v, --verbose int      set the verbosity of output

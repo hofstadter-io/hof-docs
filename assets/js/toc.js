@@ -329,6 +329,11 @@ let toc = [{
     "section": true
 
 },{
+    "RelPermalink": "/hof-render/",
+    "Title": "hof / render",
+    "section": true
+
+},{
     "RelPermalink": "/code-generation/",
     "Title": "hof / gen",
 
@@ -347,7 +352,7 @@ let toc = [{
           },{
     
     "RelPermalink": "/code-generation/template-writing/",
-    "Title": "Template",
+    "Title": "Template Writing",
     "section": false
           
           },{

@@ -1,4 +1,4 @@
-run file(s) through the hof/flow DAG engine
+run CUE pipelines with the hof/flow DAG engine
 
 Use hof/flow to transform data, call APIs, work with DBs,
 read and write files, call any program, handle events,
