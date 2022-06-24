@@ -26,10 +26,41 @@ let toc = [{
     "section": false
           
           },{
+    "RelPermalink": "/getting-started/test-drive/",
+    "Title": "Test Drive",
+
+      "children": [{
     
-    "RelPermalink": "/getting-started/commands/",
-    "Title": "Commands",
+    "RelPermalink": "/getting-started/test-drive/datamodel/",
+    "Title": "datamodel",
     "section": false
+          
+          },{
+    
+    "RelPermalink": "/getting-started/test-drive/render/",
+    "Title": "render",
+    "section": false
+          
+          },{
+    
+    "RelPermalink": "/getting-started/test-drive/gen/",
+    "Title": "gen",
+    "section": false
+          
+          },{
+    
+    "RelPermalink": "/getting-started/test-drive/flow/",
+    "Title": "flow",
+    "section": false
+          
+          },{
+    
+    "RelPermalink": "/getting-started/test-drive/help/",
+    "Title": "Command Help",
+    "section": false
+          
+      }],
+    "section": true
           
       }],
     "section": true

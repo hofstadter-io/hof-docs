@@ -6,39 +6,44 @@ brief: "in hof code gen"
 weight: 6
 ---
 
-__hof__ was designed from first principles to
-enable higher productivity when.
+`hof` was designed from first principles to
+enable higher productivity when
 developing software and applications.
-This section introduces the core concepts.
-Details can be found in later sections.
+
+...
 
 
-### Single Source of Truth
+## Single Source of Truth
 
-Most of what we write as developers is largely redundent.
-From frontend forms, to api handlers, to database tables,
-there are many things that are very similar even with the
-fantastic libraries out there today.
+There is a lot of repeatedness in writing code.
+From databases, to APIs, to frontends,
+we have to replicate and move our data models
+through the layers. At each layer, many of the parts
+look the same with different names and values.
 
-Imagine when you need to add a field to a user's profile.
-You need to alter the data model and code base in many places.
-The database, server code, and frontend forms are just three posible areas
-likely involving multiple files, tests, and devops for each.
+___What if we could write down our data model once
+and generate the majority of the code to support it?___
 
-With __hof__ we write down the conceptual data model once
-using Cuelang, purpose built for configuration.
-We call this the _"design"_ and it is combined with
-parameterized modules, which have schemas, extensions, and code generators.
-You can leverage existing modules, create your own, or even combine and extend both.
+With `hof`, we write down our conceptural model once using CUE.
+We call this the _"design"_, which fits a schema,
+and is combined with text templates to create the output.
+You can leverage existing designs and modules
+or create your own without modifying `hof`.
+The idea is to use the singular application design
+to automatically create the majority of the implemenetation
+across the many technologies and languages.
 
-We say "Single Source of Truth" because we only want to express ourselves once, in one place.
+___How does this work when I change my design or need to write custom code?___
+
+...
+
 From here we can create all the things and write our own code intermixed with the generated code.
 We can be iterative as well, __hof__ understands the changes and updates it's part
 to not only update schemes, but also write code which manages rolling updates gracefully
 across the application technology stack.
 
 
-### Designs and Data Models
+## Designs and Data Models
 
 The data model is core to any application.
 In __hof__ we write data models using CUE
@@ -65,7 +70,7 @@ Designs are merged with modules and code generators when you run the __hof__ CLI
 The modules and code generators will use your designs to generate applications and their pieces.
 
 
-### Code (re)Generation
+## Code (re)Generation
 
 __hof__ was born from the dream that we ought
 to be able to write our idea down once
@@ -83,7 +88,7 @@ the schema and template files define what is possible.
 Typically these are grouped in a module.
 
 
-### Polyglot Modules
+## Polyglot Modules
 
 Modules in __hof__ are a flexible and reusable implementation of the
 Minium Version Selection (MVS)
@@ -102,7 +107,7 @@ A common workflow for using a module is:
 4. run __hof__ to generate code and use the module
 
 
-### Customization
+## Customization
 
 __hof__'s core is designed to enable
 customization and enhancement in all concepts.

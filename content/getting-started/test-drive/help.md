@@ -1,9 +1,9 @@
 ---
-title: "Commands"
-description: "Main commands when using hof for code generation"
+title: "Command Help"
+description: "Help text for hof's main commands"
 brief: "of the hof CLI"
 
-weight: 10
+weight: 100
 ---
 
 `hof` has several commands typically run during daily development.

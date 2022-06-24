@@ -4,15 +4,14 @@ description: "Hofstadter Documentation"
 ---
 
 {{<lead>}}
-Welcome to the __hof__ documentation site.
+Welcome to the documentation site.
 {{</lead>}}
 
-
-## __hof__ is a code generator platform
+# `hof` is a data model and code gen framework
 
 <br>
 
-The __hof__ cli merges modular generators
+The `hof` cli merges modular generators
 and the designs which use them
 to produce technology agnostic output.
 The goal is to enable code generation
@@ -31,27 +30,38 @@ across the many technologies and tiers of your stack.
 It also means that you should be able to share, update, and treat
 both designs and generators like any other dependency.
 
+<!--
+Just a CLI tool for now, we have some prototypes for collaborative interfaces
+-->
 
+
+## We call this High Code development.
+
+{{<lead>}}
+Creating code with higher levels of reuse, implementation, and velocity
+{{</lead>}}
+
+
+
+## What can you do with `hof`?
 
 <br>
 
-## What can you do with __hof__?
+##### Use your own tools
 
-<br>
+`hof` is a tool you will add to your workflow.
+We know developers have their own preferences for tools
+from IDEs, languages, and platforms,
+and `hof` can work with them 
+
+`hof` is a cli tool that can work with any and all of these
+and will never force you to use a clunky UI to build applications.
 
 ##### Generate anything
 
 Applications all start as files and `hof` generates directories of files.
 You can generate the source files, configuration, deployment, and CI files needed.
 If it's made of files, you can generate it with `hof`.
-
-##### Use your own tools
-
-Developers have their own preferences for tools
-from IDEs, languages, and platforms.
-
-__hof__ is a cli tool that can work with any and all of these
-and will never force you to use a clunky UI to build applications.
 
 ##### Consolidate the data model
 
@@ -75,14 +85,14 @@ You latest backend will need to handle many previous versions.
 
 ##### Work directly in the (re)generated code
 
-With __hof__ you write custom code directly in the generated output,
+With `hof` you write custom code directly in the generated output,
 where it naturally belongs. Your final code should look the same.
-When you change your data model or designs, __hof__ uses diff3
+When you change your data model or designs, `hof` uses diff3
 to ensure your code is left in place and 
 
 ##### Share and control modules with dependency management
 
-Sharing models and code generation is core to __hof__
+Sharing models and code generation is core to `hof`
 and central to solving problems of interoperability between
 different teams and services.
 Both design and generators are managed with versions
@@ -97,17 +107,6 @@ This should apply equally for improvements in our code patterns and practices.
 
 Both generators and models can be combined through dependencies and imports.
 You can extend, override, or otherwise customize as you need.
-They are separate from the tool so there is no need to change __hof__
+They are separate from the tool so there is no need to change `hof` 
 to enable new technologies or patterns.
-
-<br>
-
-
-## We call this High Code development.
-
-{{<lead>}}
-Higher levels of abstraction, iteration, collaboration, productivity, and velocity
-for developers.
-{{</lead>}}
-
 
