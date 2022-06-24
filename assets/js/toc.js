@@ -279,6 +279,54 @@ let toc = [{
     "section": true
 
 },{
+    "RelPermalink": "/hof-render/",
+    "Title": "hof / render",
+    "section": true
+
+},{
+    "RelPermalink": "/code-generation/",
+    "Title": "hof / gen",
+
+      "children": [{
+    
+    "RelPermalink": "/code-generation/with_cue/",
+    "Title": "With CUE",
+    "section": false
+          
+          },{
+    
+    "RelPermalink": "/code-generation/how-hof-works/",
+    "Title": "How hof works",
+    "section": false
+          
+          },{
+    
+    "RelPermalink": "/code-generation/template-writing/",
+    "Title": "Template Writing",
+    "section": false
+          
+          },{
+    
+    "RelPermalink": "/code-generation/using-generators/",
+    "Title": "Using Generators",
+    "section": false
+          
+          },{
+    
+    "RelPermalink": "/code-generation/creating-generators/",
+    "Title": "Creating Generators",
+    "section": false
+          
+          },{
+    
+    "RelPermalink": "/code-generation/the-schemas/",
+    "Title": "The Schemas",
+    "section": false
+          
+      }],
+    "section": true
+
+},{
     "RelPermalink": "/data-flow/",
     "Title": "hof / flow",
 
@@ -355,54 +403,6 @@ let toc = [{
           
       }],
     "section": true
-          
-      }],
-    "section": true
-
-},{
-    "RelPermalink": "/hof-render/",
-    "Title": "hof / render",
-    "section": true
-
-},{
-    "RelPermalink": "/code-generation/",
-    "Title": "hof / gen",
-
-      "children": [{
-    
-    "RelPermalink": "/code-generation/with_cue/",
-    "Title": "With CUE",
-    "section": false
-          
-          },{
-    
-    "RelPermalink": "/code-generation/how-hof-works/",
-    "Title": "How hof works",
-    "section": false
-          
-          },{
-    
-    "RelPermalink": "/code-generation/template-writing/",
-    "Title": "Template Writing",
-    "section": false
-          
-          },{
-    
-    "RelPermalink": "/code-generation/using-generators/",
-    "Title": "Using Generators",
-    "section": false
-          
-          },{
-    
-    "RelPermalink": "/code-generation/creating-generators/",
-    "Title": "Creating Generators",
-    "section": false
-          
-          },{
-    
-    "RelPermalink": "/code-generation/the-schemas/",
-    "Title": "The Schemas",
-    "section": false
           
       }],
     "section": true

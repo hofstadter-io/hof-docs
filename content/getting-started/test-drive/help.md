@@ -32,17 +32,16 @@ See the [Data Modeling section](/data-modeling) for details.
 </details>
 
 
-### hof / flow
+### hof / render
 
-Build workflows and scripts with CUE and a DAG engine
+One-liners to generate files with data, CUE, and templates
 
-See [the flow docs](/data-flow) to learn more
+See [the render docs](/hof-render) to learn more
 
 <details>
 <summary>hof help flow</summary>
-{{<codePane file="code/cmd-help/flow" title="$ hof help flow" lang="text">}}
+{{<codePane file="code/cmd-help/render" title="$ hof help render" lang="text">}}
 </details>
-
 
 ### hof / gen
 
@@ -54,6 +53,18 @@ See [the code gen docs](/code-generation) to learn more
 <summary>hof help flow</summary>
 {{<codePane file="code/cmd-help/gen" title="$ hof help gen" lang="text">}}
 </details>
+
+### hof / flow
+
+Build workflows and scripts with CUE and a DAG engine
+
+See [the flow docs](/data-flow) to learn more
+
+<details>
+<summary>hof help flow</summary>
+{{<codePane file="code/cmd-help/flow" title="$ hof help flow" lang="text">}}
+</details>
+
 
 ### hof / mod
 
