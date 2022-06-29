@@ -31,31 +31,25 @@ let toc = [{
 
       "children": [{
     
-    "RelPermalink": "/getting-started/test-drive/datamodel/",
-    "Title": "datamodel",
+    "RelPermalink": "/getting-started/test-drive/template-rendering/",
+    "Title": "Template Rendering",
     "section": false
           
           },{
     
-    "RelPermalink": "/getting-started/test-drive/render/",
-    "Title": "render",
+    "RelPermalink": "/getting-started/test-drive/data-modeling/",
+    "Title": "Data Modeling",
     "section": false
           
           },{
     
-    "RelPermalink": "/getting-started/test-drive/gen/",
-    "Title": "gen",
+    "RelPermalink": "/getting-started/test-drive/data-flow/",
+    "Title": "Data Flow",
     "section": false
           
           },{
     
-    "RelPermalink": "/getting-started/test-drive/flow/",
-    "Title": "flow",
-    "section": false
-          
-          },{
-    
-    "RelPermalink": "/getting-started/test-drive/help/",
+    "RelPermalink": "/getting-started/test-drive/command-help/",
     "Title": "Command Help",
     "section": false
           

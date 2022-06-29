@@ -10,15 +10,14 @@ const MenuItem = {
       <span class="d-flex justify-content-start">
       <i 
         @click="toggleChildren"
-        class="fas fa-lg"
+        class="fas fa-lg p-0 m-0"
         :class="{ 'fa-caret-down': hasChildren && showChildren, 'fa-caret-right': hasChildren && !showChildren, 'ml-2': !hasChildren }"></i>
       <a
         :href="item.RelPermalink"
         class="nav-link py-0 px-2"
         :class="{ 'current': isCurr }"
       >
-        <h6 v-if="item.section || hasChildren">{{ item.Title }}</h6>
-        <span v-else>{{ item.Title }}</span> 
+        <span>{{ item.Title }}</span> 
       </a>
       </span>
       <ul v-if="showChildren" class="list-unstyled ml-2 mb-0">

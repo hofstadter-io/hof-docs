@@ -11,36 +11,47 @@ Welcome to the documentation site.
 
 <br>
 
-The `hof` cli merges modular generators
-and the designs which use them
-to produce technology agnostic output.
+The `hof` cli combines modular generators
+and a language agnostic data model
+to create code for any language or technology.
 The goal is to enable code generation
-at scale that fits into your current
-development practices.
+that fits into your current development practices.
+This means you can also customize the generated code
+or use it for a small piece of an existing project.
+`hof` knows what files it creates, if you
+have modified them, and handles the details for you.
 
-__Fits in__ means you can use any set of technologies,
-work directly in and modify the generated code,
-update designs and regenerate the output,
-all without disrupting or losing your own code.
-You should also be able to integrate into
-existing applications without major changes.
+With `hof` you get living boilerplate or scaffolding.
+Rather than a one-time bootstrapping at the beginning of development,
+you can update your designs or data model and regenerate code.
+This means when you add new types
 
-__At scale__ starts with generating large portions of your application
-across the many technologies and tiers of your stack.
-It also means that you should be able to share, update, and treat
-both designs and generators like any other dependency.
+- API endpoints will be created
+- Database migrations will be calculated
+- libraries and clients will be updated
 
-<!--
-Just a CLI tool for now, we have some prototypes for collaborative interfaces
--->
+`hof`'s code generation reaches deeper into the application code
+to remove more of the repetative tasks and code patterns.
+When using generator modules, you can combine them to
+create sophisticated applications from a declarative design.
 
 
 ## We call this High Code development.
 
 {{<lead>}}
-Creating code with higher levels of reuse, implementation, and velocity
+Creating code with higher levels of design, reuse, and implementation
 {{</lead>}}
 
+
+## Why `hof`?
+
+We wanted to
+
+- stop writing repetative code found both within and across applications
+- be language & technology agnostic
+- have code gen that continued to help, rather than an upfront bootstrap
+- reuse and combine code generation modules
+- enable an ecosystem with generators authored and used by anyone
 
 
 ## What can you do with `hof`?
@@ -109,4 +120,5 @@ Both generators and models can be combined through dependencies and imports.
 You can extend, override, or otherwise customize as you need.
 They are separate from the tool so there is no need to change `hof` 
 to enable new technologies or patterns.
+
 
