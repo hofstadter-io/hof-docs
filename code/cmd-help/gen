@@ -1,8 +1,8 @@
-render directories of code using modular generators
+render directories of code with reusable, modular generators
+
+  hof gen app.cue -g frontend -g backend -g migrations
 
   https://docs.hofstadter.io/first-example/
-
-hof gen app.cue -g frontend -g backend -g migrations
 
 Usage:
   hof gen [files...] [flags]
