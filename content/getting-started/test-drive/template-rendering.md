@@ -24,3 +24,4 @@ the process of creating and using a generator module with `hof gen`.
 The concepts and processing are the same,
 in fact `hof render` creates a generator behind the scenes.
 
+

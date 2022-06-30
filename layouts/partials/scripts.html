@@ -4,12 +4,12 @@
   {{ else }}
       var baseurl = "{{.Site.BaseURL}}";
   {{ end }}
-  let menuCurr = "{{ partial "menu-curr.html" . }}"
   let currItems = menuCurr.split('|').map(element => element.trim()).filter(e =>  e);;
 </script>
 
 {{ $JS := slice
   ( resources.Get "js/pv.js" | minify )
+  ( resources.Get "js/menu.js" | minify )
   ( resources.Get "lib/jquery.min.js" )
   ( resources.Get "lib/popper.min.js" )
   ( resources.Get "lib/bootstrap.min.js" )
@@ -19,18 +19,6 @@
   ( resources.Get "plugins/clipboard.js" | minify )
   ( resources.Get "js/clipboard.js" | minify )
   ( resources.Get "js/header-links.js" | minify )
-  ( resources.Get "js/toc.js" | minify )
   | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" }}
 
 <script type="text/javascript" src="{{ $JS.RelPermalink }}" integrity="{{ $JS.Data.Integrity }}"></script>
-<script type="importmap">
-  {
-    "imports": {
-      "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
-    }
-  }
-</script>
-{{ $VUE := slice
-  ( resources.Get "js/tocc.js" )
-  | resources.Concat "js/components.js" | resources.Fingerprint "sha512" }}
-<script type="module" src="{{ $VUE.RelPermalink }}" integrity="{{ $VUE.Data.Integrity }}"></script>

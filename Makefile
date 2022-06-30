@@ -47,13 +47,8 @@ code/%.html: code/%.cue
 	@echo highlight "$<" as "$@"
 	@node ci/highlight.js < "$<" > "$@"
 
-menu:
-	@rm -rf dist
-	@hugo --baseURL https://docs.hofstadter.io/ -d dist
-	@cp dist/toc.json assets/js/toc.js
-
 .PHONY: hugo
-hugo: menu
+hugo:
 	@rm -rf dist
 	@hugo --baseURL https://docs.hofstadter.io/ -d dist
 

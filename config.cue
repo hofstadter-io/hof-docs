@@ -38,15 +38,7 @@ markup: tableOfContents: {
 	endLevel:   3
 }
 
-outputs: home: ["HTML", "RSS", "JSON", "TOC"]
-
-outputFormats: TOC: {
-  baseName: "toc"
-  mediaType: "application/json"
-  isPlainText: true
-  notAlternative: true
-}
-
+outputs: home: ["HTML", "RSS", "JSON"]
 
 menu: shortcuts: [{
 	name:   "<i class='fab fa-github'></i> GitHub"
