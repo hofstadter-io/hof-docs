@@ -24,6 +24,15 @@ the process of creating and using a generator module with `hof gen`.
 The concepts and processing are the same,
 in fact `hof render` creates a generator behind the scenes.
 
+{{<alert style="success">}}
+The `hof render` command is available in the next beta.
+
+```
+go install github.com/hofstadter-io/hof/cmd/hof@v0.6.3-beta.1
+```
+
+[Download binaries on GitHub](https://github.com/hofstadter-io/hof/releases/tag/v0.6.3-beta.1)
+{{</alert>}}
 
 ### Data + Templates
 

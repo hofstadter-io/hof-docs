@@ -10,8 +10,18 @@ weight: 11
 One of the common questions for CUE is
 how to generate the matching types in a given language.
 We will introduce the ideas and complexities with type generation
-while also showing concrete examples of `hof render -T` variaions.
+while also showing concrete examples of `hof render -T` variations.
 {{</lead>}}
+
+{{<alert style="success">}}
+The `hof render` command is available in the next beta.
+
+```
+go install github.com/hofstadter-io/hof/cmd/hof@v0.6.3-beta.1
+```
+
+[Download binaries on GitHub](https://github.com/hofstadter-io/hof/releases/tag/v0.6.3-beta.1)
+{{</alert>}}
 
 ### Generating Types
 
@@ -32,10 +42,12 @@ What are these complications?
 - Public, private, and protected visibilty
 - Default values, when and where they are setup
 
-It would be a burden to put this all on CUE to figure out and maintain.
+It would be a burden to put this all on CUE developers to figure out and maintain.
 By using text interpolation, we can generate types without modifying CUE.
+_Note, CUE does intend to support some language targets, but there
+is no timeline for when this will happen yet or what it will look like._
 
-### A Type DSL
+### Type DSLs
 
 We believe that using a DSL, rather than native CUE expressions,
 is the better option. There are many things which we cannot
@@ -57,6 +69,35 @@ This will give the community a way to combine and specialize them as needed.
 With `hof`, we are building some resuable data model schemas.
 This subsection will show you a simplified version for demonstration.
 
+- schema
+- example types used
+
+
+### Go Structs
+
+- single file template
+- repeated templates
+
+### SQL & TypeScript
+
+- multiple templates
+- non-cue type ID (uuid, etc...)
+
+### Protobuf
+
+Show issue with indexing, consistent ordering
+
+(turn Ordered* into a default calculation, so user can always write their own)
+
+### More than types
+
+1. REST & DB lib stubs (not just types)
+
+- partials, introduce here, or earlier and expand here
+
+### Generator Module
+
+Show how to convert to a generator module
 
 ---
 
@@ -64,12 +105,7 @@ This subsection will show you a simplified version for demonstration.
 
 More advanced walkthrough and discussion in...
 
-1. CUE, Schema, and some types
-1. Generating Go types
-1. SQL & TS (multiple languages)
-1. REST & DB lib stubs (not just types)
 
-(show how to convert to a generator module)
 
 Briefly mention and link to
 

@@ -13,11 +13,13 @@ edit and regenerate those files while keeping changes.
 <br>
 
 {{<alert style="success">}}
-This command is only available on tip and requires building from source.
+The `hof render` command is available in the next beta.
 
 ```
-go install github.com/hofstadter-io/hof/cmd/hof@_dev
+go install github.com/hofstadter-io/hof/cmd/hof@v0.6.3-beta.1
 ```
+
+[Download binaries on GitHub](https://github.com/hofstadter-io/hof/releases/tag/v0.6.3-beta.1)
 {{</alert>}}
 
 <br>
