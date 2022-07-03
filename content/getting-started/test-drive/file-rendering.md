@@ -40,9 +40,25 @@ This can be helpful when you want to render
 an API response or process output.
 
 {{<codeInner lang="sh" title="pipe data into hof">}}
+# send response to hof
 curl api.com  | hof render -T template.txt -
-cat data.json | hof render -T template.txt -
+
+# mix piped input with other entrypoints
+cat data.json | hof render - schema.cue -T template.txt
 {{</codeInner>}}
+
+
+### Template Format
+
+`hof` use and extended version of Go's `text/template` package.
+You can find the extensions in the [template writing](/code-generation/template-writing/) section.
+
+Partial templates can be used from other templates,
+are registered with every template, and loaded with the `-P` flag.
+We'll see these in the next section.
+
+Alternate template delimiters are supported in `hof gen`.
+
 
 ### Using CUE
 
