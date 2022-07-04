@@ -13,6 +13,15 @@ dev: config.yaml
 prd: config.yaml
 	@hugo serve --bind 0.0.0.0
 
+# https://github.com/stevenvachon/broken-link-checker
+BLC_EXCLUDES=--exclude 'https://github.com/hofstadter-io/hof-docs/issues/new' \
+	--exclude 'https://github.com/hofstadter-io/hof-docs/edit'
+blc: blc.dev
+blc.dev:
+	blc -ro http://localhost:1313 ${BLC_EXCLUDES}
+blc.prd:
+	blc -ro https://docs.hofstadter.io ${BLC_EXCLUDEDS}
+
 # build the world and push to production
 .PHONY: all
 all: config.yaml cmdhelp highlight hugo docker deploy

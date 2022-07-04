@@ -21,10 +21,7 @@ This is the best example right now: https://github.com/hofstadter-io/hofmod-cli 
 
 These generators basically use the Go text/template package behind the scenes
 
-The bleeding edge stuff is here:
-https://github.com/hofstadter-io/hof/blob/_dev/schema/datamodel.cue
-https://github.com/hofstadter-io/hof/blob/_dev/schema/datatypes.cue
-https://github.com/hofstadter-io/hof/tree/_dev/test/datamodel
+Schemas can be found in [./hof/schema/...](https://github.com/hofstadter-io/hof/tree/_dev/schema)
 
 Using a DSL on top of Cue will enable more context, and thus capabilities, for code generation.
 A DSL is equivalent to the Schema found in the generators, which is the data input to the template rendering

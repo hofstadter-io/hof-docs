@@ -18,7 +18,7 @@ you can write to generate any file from any data.
 
 #### Learn about writing templates, with extra functions and helpers
 
-https://docs.hofstadter.io/code-generation/template-writing/
+[Template writing docs](/reference/template-writing/)
 
 <br>
 
@@ -30,9 +30,11 @@ https://github.com/hofstadter-io/hof/tree/_dev/test/render
 
 #### Want to use and compose code gen modules and dependencies?
 
-hof gen is a scaled out version of this command
+Create and use generator modules.
 
 `hof gen app.cue -G frontend -G backend -G migrations`
+
+See the [first-example](/first-example/) to learn how.
 
 <br>
 

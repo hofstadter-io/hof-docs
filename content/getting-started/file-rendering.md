@@ -53,7 +53,7 @@ cat data.json | hof gen - schema.cue -T template.txt
 ### Template Format
 
 `hof` use and extended version of Go's `text/template` package.
-You can find the extensions in the [template writing](/code-generation/template-writing/) section.
+You can find the extensions in the [template writing](/reference/template-writing/) section.
 
 Partial templates can be used from other templates,
 are registered with every template, and loaded with the `-P` flag.

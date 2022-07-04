@@ -11,7 +11,7 @@ with data from the schema.
 {{</lead>}}
 
 
-- Based on Go `text/template` with [extra helpers](/code-generation/template-writing/)
+- Based on Go `text/template` with [extra helpers](/reference/template-writing/)
 - Support for partial templates for reuse and separate of concerns
 - Typically in files, can also be a string in your CUE
 

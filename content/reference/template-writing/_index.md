@@ -1,6 +1,6 @@
 ---
 title: "Template Writing"
-weight: 15
+weight: 10
 ---
 
 
