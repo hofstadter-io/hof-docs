@@ -1,14 +1,18 @@
 function addHeaderLinks() {
   var content = document.getElementById("main-content");
-  var h3s = content.querySelectorAll("h3");
 
-  h3s.forEach(h3 => {
-    if (h3.parentNode == content) {
+  var h2s = content.querySelectorAll("h2");
+  var h3s = content.querySelectorAll("h3");
+	
+	elems = [...h2s, ...h3s];
+
+  elems.forEach(elem => {
+    if (elem.parentNode == content) {
       var a = document.createElement("a");
       a.className = "ml-2 fas fa-link fa-xs";
-      a.href = window.location.pathname + "#" + h3.id
-      h3.className = "anchor"
-      h3.appendChild(a);
+      a.href = window.location.pathname + "#" + elem.id
+      elem.className = "anchor"
+      elem.appendChild(a);
     }
   })
 }

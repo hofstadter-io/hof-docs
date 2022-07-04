@@ -23,7 +23,7 @@ go install github.com/hofstadter-io/hof/cmd/hof@v0.6.3-beta.1
 [Download binaries on GitHub](https://github.com/hofstadter-io/hof/releases/tag/v0.6.3-beta.1)
 {{</alert>}}
 
-### Generating Types
+## Generating Types
 
 CUE is a great language for defining types and their validations,
 but how do we turn them into the structs, classes, and other
@@ -47,7 +47,16 @@ By using text interpolation, we can generate types without modifying CUE.
 _Note, CUE does intend to support some language targets, but there
 is no timeline for when this will happen yet or what it will look like._
 
-### Type DSLs
+If we want to have a single-source of truth, we need two things
+
+1. An abstract representation, DSLs are a natural fit
+1. Mappings to our target languages and technologies
+
+CUE happens to be a good language and model for
+writing and validating both the represenation and mappings.
+
+
+## Type DSLs
 
 We believe that using a DSL, rather than native CUE expressions,
 is the better option. There are many things which we cannot
@@ -72,22 +81,80 @@ This subsection will show you a simplified version for demonstration.
 - schema
 - example types used
 
+{{<codePane title="A Type Schema" file="code/getting-started/test-drive/type-rendering/schema.html">}}
+
+### Example Types
+
+Let's use a blogging site as our example.
+
+{{<codePane title="types.cue" file="code/getting-started/test-drive/type-rendering/data.html">}}
+
+Run `cue eval types.cue schema.cue --out yaml` to see it's final form
+
+{{<codePane title="types.cue" file="code/getting-started/test-drive/type-rendering/data.yaml" lang="yaml">}}
+
+
+## The Templates
+
+Now we have to implement the above schema
+in our target languages and technologies.
+
+We will run all of the following with `hof render types.cue schema.cue -T ...`
+
+Output will be put into the `out/` directory.
+
 
 ### Go Structs
 
-- single file template
-- repeated templates
+We can start with a single template and file for all types.
+
+Run `hof render types.cue schema.cue -T types.go`
+
+or `hof render ... -T "types.go;out/types.go"` to write to file
+
+{{<codePane2
+	title1="types.go" file1="code/getting-started/test-drive/type-rendering/types.go" lang1="go"
+	title2="out/types.go" file2="code/getting-started/test-drive/type-rendering/out/types.go" lang2="go"
+>}}
+
+We can render with __repeated templates__, which are processed
+for each element of an iterable (list or struct fields).
+
+Run `hof render types.cue schema.cue -T "type.go;[]out/{{.Name}}.go"`
+
+{{<codePane3
+	title1="type.go" file1="code/getting-started/test-drive/type-rendering/type.go" lang1="go"
+	title2="out/User.go" file2="code/getting-started/test-drive/type-rendering/out/User.go" lang2="go"
+	title3="out/Post.go" file3="code/getting-started/test-drive/type-rendering/out/Post.go" lang3="go"
+>}}
+
+Use __partial templates__ for repetitious template content within a single file.
+Let's extract field generation into its own template, where we _could_ make it complex.
+We won't here, but an example is struct tags for our Go fields.
+We can also use template helpers in the output filepath.
+
+Run `hof render types.cue schema.cue -P field.go -T "typeP.go;[]out/{{ lower .Name }}.go"`
+
+{{<codePane3
+	title1="typeP.go" file1="code/getting-started/test-drive/type-rendering/typeP.go" lang1="go"
+	title2="field.go" file2="code/getting-started/test-drive/type-rendering/field.go" lang2="go"
+	title3="out/user.go" file3="code/getting-started/test-drive/type-rendering/out/user.go" lang3="go"
+>}}
 
 ### SQL & TypeScript
 
 - multiple templates
 - non-cue type ID (uuid, etc...)
 
+
 ### Protobuf
 
 Show issue with indexing, consistent ordering
 
-(turn Ordered* into a default calculation, so user can always write their own)
+2 options
+
+1. 
+
 
 ### More than types
 

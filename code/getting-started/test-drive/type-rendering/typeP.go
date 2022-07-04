@@ -1,7 +1,6 @@
 package types
 
 type {{ .Name }} struct {
-	{{ range .Fields }}
-	{{ camelT .Name }} {{ .Type }}
+	{{ range .Fields }}{{ template "field.go" . }}
 	{{ end }}
 }
