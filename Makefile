@@ -20,7 +20,7 @@ blc: blc.dev
 blc.dev:
 	blc -ro http://localhost:1313 ${BLC_EXCLUDES}
 blc.prd:
-	blc -ro https://docs.hofstadter.io ${BLC_EXCLUDEDS}
+	blc -ro https://docs.hofstadter.io ${BLC_EXCLUDES}
 
 # build the world and push to production
 .PHONY: all

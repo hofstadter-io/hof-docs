@@ -19,7 +19,7 @@ template based code generation.
 2. `hof gen -G` is based on composable modules
 
 We will only be covering `hof gen -T` in this section.
-The [first example](/first-example) takes you through
+The [first example](/first-example/) takes you through
 the process of creating and using a generator module with `hof gen -G`.
 The concepts and processing are the same,
 in fact `hof gen -T` creates a generator behind the scenes
