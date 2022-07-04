@@ -27,7 +27,6 @@ cmdhelp:
 	@hof flow    -h > code/cmd-help/flow
 	@hof dm      -h > code/cmd-help/dm
 	@hof gen     -h > code/cmd-help/gen
-	@hof render  -h > code/cmd-help/render
 
 .PHONY: highlight code
 highlight: $(HTML_FILES)

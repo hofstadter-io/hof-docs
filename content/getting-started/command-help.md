@@ -31,23 +31,12 @@ See the [Data Modeling section](/data-modeling) for details.
 {{<codePane file="code/cmd-help/dm" title="$ hof help datamodel" lang="text">}}
 </details>
 
-
-### hof / render
-
-One-liners to generate files with data, CUE, and templates
-
-See [the render docs](/hof-render) to learn more
-
-<details>
-<summary>hof help flow</summary>
-{{<codePane file="code/cmd-help/render" title="$ hof help render" lang="text">}}
-</details>
-
 ### hof / gen
 
-A polyglot code generation framework for module authors and users
+Create one-liners to generate files with data, CUE, and templates
+or use composable generators to build out advanced applications.
 
-See [the code gen docs](/code-generation) to learn more
+See [the code gen docs](/reference/hof-gen/) to learn more
 
 <details>
 <summary>hof help flow</summary>

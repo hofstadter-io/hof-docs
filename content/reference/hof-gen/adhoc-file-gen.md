@@ -1,13 +1,13 @@
 ---
-title: "hof / render"
-linkTitle: "hof / render"
+title: "Adhoc File Gen"
+linkTitle: "Adhoc File Gen"
 weight: 25
 ---
 
 {{<lead>}}
-`hof render` joins CUE with Go's text/template system and diff3.
-Create on-liners to generate any file from any data,
-edit and regenerate those files while keeping changes.
+`hof gen` joins CUE with Go's text/template system and diff3.
+This section focuses on the adhoc, one-liners
+you can write to generate any file from any data.
 {{</lead>}}
 
 <br>
@@ -32,7 +32,7 @@ https://github.com/hofstadter-io/hof/tree/_dev/test/render
 
 hof gen is a scaled out version of this command
 
-`hof gen app.cue -g frontend -g backend -g migrations`
+`hof gen app.cue -G frontend -G backend -G migrations`
 
 <br>
 
@@ -40,7 +40,7 @@ hof gen is a scaled out version of this command
 
 <br>
 
-{{<codePane file="code/cmd-help/render" title="$ hof help render" lang="text">}}
+{{<codePane file="code/cmd-help/gen" title="$ hof help gen" lang="text">}}
 
 {{< childpages >}}
 

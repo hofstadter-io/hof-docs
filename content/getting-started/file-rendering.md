@@ -12,40 +12,41 @@ By rendering templates with data,
 we can generate any file for any language or framework.
 {{</lead>}}
 
-`hof` has two commands for
+`hof gen` has two modes for
 template based code generation.
 
-1. `hof render` handles simple or adhoc cases
-2. `hof gen` is based on composable modules
+1. `hof gen -T` handles simple or adhoc cases
+2. `hof gen -G` is based on composable modules
 
-We will only be covering `hof render` in this section.
+We will only be covering `hof gen -T` in this section.
 The [first example](/first-example) takes you through
-the process of creating and using a generator module with `hof gen`.
+the process of creating and using a generator module with `hof gen -G`.
 The concepts and processing are the same,
-in fact `hof render` creates a generator behind the scenes.
+in fact `hof gen -T` creates a generator behind the scenes
+and can be layered on top of modular generators.
 
 {{<beta style="success">}}
 
 ### Data + Templates
 
-`hof render`, in the simplest form, is just rendering templates with data.
+`hof gen -T`, in the simplest form, is just rendering templates with data.
 
 {{<codePane3
-	title1="hof render interlude.json -T interlude.template" file1="code/getting-started/file-rendering/interlude.txt" lang1="txt"
+	title1="hof gen interlude.json -T interlude.template" file1="code/getting-started/file-rendering/interlude.txt" lang1="txt"
 	title2="interlude.json" file2="code/getting-started/file-rendering/interlude.json" lang2="json"
 	title3="interlude.template" file3="code/getting-started/file-rendering/interlude.template" lang3="txt"
 >}}
 
-You can also pipe any data into `hof render` by using a "`-`" (hyphen).
+You can also pipe any data into `hof gen` by using a "`-`" (hyphen).
 This can be helpful when you want to render
 an API response or process output.
 
 {{<codeInner lang="sh" title="pipe data into hof">}}
 # send response to hof
-curl api.com  | hof render -T template.txt -
+curl api.com  | hof gen -T template.txt -
 
 # mix piped input with other entrypoints
-cat data.json | hof render - schema.cue -T template.txt
+cat data.json | hof gen - schema.cue -T template.txt
 {{</codeInner>}}
 
 
@@ -63,7 +64,7 @@ Alternate template delimiters are supported in `hof gen`.
 
 ### Using CUE
 
-`hof render` arguments are CUE entrypoints, same as `cue export`.
+`hof gen` arguments are CUE entrypoints, same as `cue export`.
 We can use this to enforce a schema or transform the data.
 
 {{<codePane2
@@ -71,7 +72,7 @@ We can use this to enforce a schema or transform the data.
 	title2="data.yaml" file2="code/getting-started/file-rendering/data.yaml" lang2="yaml"
 >}}
 
-If we run `hof render data.yaml schema.cue -T stories.md`,
+If we run `hof gen data.yaml schema.cue -T stories.md`,
 we will get an error message:
 
 `0.points: incomplete value >0 & int`
@@ -81,7 +82,7 @@ Oops, we forgot to set the points on a story.
 
 ### T Flag Mappings
 
-The `-T` flag for `hof render` has a flexible format:
+The `-T` flag for `hof gen` has a flexible format:
 
 `-T "<template-path>:<input-path>[@schema-path];<out-path>"`
 
@@ -97,7 +98,7 @@ This enables you to
 <br>
 
 {{<codeInner title="-T variations" lang="txt">}}
-hof render input.cue ...
+hof gen input.cue ...
 
   # Generate multiple templates at once
   -T templateA.txt -T templateB.txt

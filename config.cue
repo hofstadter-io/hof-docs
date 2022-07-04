@@ -31,13 +31,13 @@ params: {
 	cuedocBase:          "https://pkg.go.dev/cuelang.org/go@\(cuever)"
 
 	beta: #"""
-	The `hof render` command is available in the next beta.
+	The `hof gen` adhoc feature (`-T`) is only available in the next beta.
 
 	```
-	go install github.com/hofstadter-io/hof/cmd/hof@v0.6.3-beta.2
+	go install github.com/hofstadter-io/hof/cmd/hof@v0.6.3-beta.3
 	```
 
-	[Download binaries on GitHub](https://github.com/hofstadter-io/hof/releases/tag/v0.6.3-beta.2)
+	[Download binaries on GitHub](https://github.com/hofstadter-io/hof/releases/tag/v0.6.3-beta.3)
 	"""#
 }
 

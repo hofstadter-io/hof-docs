@@ -10,7 +10,7 @@ weight: 11
 One of the common questions for CUE is
 how to generate the matching types in a given language.
 We will introduce the ideas and complexities with type generation
-while also showing concrete examples of `hof render -T` variations.
+while also showing concrete examples of `hof gen -T` variations.
 {{</lead>}}
 
 {{<beta style="success">}}
@@ -91,7 +91,7 @@ Run `cue eval types.cue schema.cue --out yaml` to see it's final form
 Now we have to implement the above schema
 in our target languages and technologies.
 
-We will run all of the following with `hof render types.cue schema.cue -T ...`
+We will run all of the following with `hof gen types.cue schema.cue -T ...`
 
 Output will be put into the `out/` directory.
 
@@ -100,9 +100,9 @@ Output will be put into the `out/` directory.
 
 We can start with a single template and file for all types.
 
-Run `hof render types.cue schema.cue -T types.go`
+Run `hof gen types.cue schema.cue -T types.go`
 
-or `hof render ... -T "types.go;out/types.go"` to write to file
+or `hof gen ... -T "types.go;out/types.go"` to write to file
 
 {{<codePane2
 	title1="types.go" file1="code/getting-started/type-rendering/types.go" lang1="go"
@@ -112,7 +112,7 @@ or `hof render ... -T "types.go;out/types.go"` to write to file
 We can render with __repeated templates__, which are processed
 for each element of an iterable (list or struct fields).
 
-Run `hof render types.cue schema.cue -T "type.go;[]out/{{.Name}}.go"`
+Run `hof gen types.cue schema.cue -T "type.go;[]out/{{.Name}}.go"`
 
 {{<codePane3
 	title1="type.go" file1="code/getting-started/type-rendering/type.go" lang1="go"
@@ -125,7 +125,7 @@ Let's extract field generation into its own template, where we _could_ make it c
 We won't here, but an example is struct tags for our Go fields.
 We can also use template helpers in the output filepath.
 
-Run `hof render types.cue schema.cue -P field.go -T "typeP.go;[]out/{{ lower .Name }}.go"`
+Run `hof gen types.cue schema.cue -P field.go -T "typeP.go;[]out/{{ lower .Name }}.go"`
 
 {{<codePane3
 	title1="typeP.go" file1="code/getting-started/type-rendering/typeP.go" lang1="go"
