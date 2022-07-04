@@ -73,17 +73,17 @@ This subsection will show you a simplified version for demonstration.
 - schema
 - example types used
 
-{{<codePane title="A Type Schema" file="code/getting-started/test-drive/type-rendering/schema.html">}}
+{{<codePane title="A Type Schema" file="code/getting-started/type-rendering/schema.html">}}
 
 ### Example Types
 
 Let's use a blogging site as our example.
 
-{{<codePane title="types.cue" file="code/getting-started/test-drive/type-rendering/data.html">}}
+{{<codePane title="types.cue" file="code/getting-started/type-rendering/data.html">}}
 
 Run `cue eval types.cue schema.cue --out yaml` to see it's final form
 
-{{<codePane title="types.cue" file="code/getting-started/test-drive/type-rendering/data.yaml" lang="yaml">}}
+{{<codePane title="types.cue" file="code/getting-started/type-rendering/data.yaml" lang="yaml">}}
 
 
 ## The Templates
@@ -105,8 +105,8 @@ Run `hof render types.cue schema.cue -T types.go`
 or `hof render ... -T "types.go;out/types.go"` to write to file
 
 {{<codePane2
-	title1="types.go" file1="code/getting-started/test-drive/type-rendering/types.go" lang1="go"
-	title2="out/types.go" file2="code/getting-started/test-drive/type-rendering/out/types.go" lang2="go"
+	title1="types.go" file1="code/getting-started/type-rendering/types.go" lang1="go"
+	title2="out/types.go" file2="code/getting-started/type-rendering/out/types.go" lang2="go"
 >}}
 
 We can render with __repeated templates__, which are processed
@@ -115,9 +115,9 @@ for each element of an iterable (list or struct fields).
 Run `hof render types.cue schema.cue -T "type.go;[]out/{{.Name}}.go"`
 
 {{<codePane3
-	title1="type.go" file1="code/getting-started/test-drive/type-rendering/type.go" lang1="go"
-	title2="out/User.go" file2="code/getting-started/test-drive/type-rendering/out/User.go" lang2="go"
-	title3="out/Post.go" file3="code/getting-started/test-drive/type-rendering/out/Post.go" lang3="go"
+	title1="type.go" file1="code/getting-started/type-rendering/type.go" lang1="go"
+	title2="out/User.go" file2="code/getting-started/type-rendering/out/User.go" lang2="go"
+	title3="out/Post.go" file3="code/getting-started/type-rendering/out/Post.go" lang3="go"
 >}}
 
 Use __partial templates__ for repetitious template content within a single file.
@@ -128,9 +128,9 @@ We can also use template helpers in the output filepath.
 Run `hof render types.cue schema.cue -P field.go -T "typeP.go;[]out/{{ lower .Name }}.go"`
 
 {{<codePane3
-	title1="typeP.go" file1="code/getting-started/test-drive/type-rendering/typeP.go" lang1="go"
-	title2="field.go" file2="code/getting-started/test-drive/type-rendering/field.go" lang2="go"
-	title3="out/user.go" file3="code/getting-started/test-drive/type-rendering/out/user.go" lang3="go"
+	title1="typeP.go" file1="code/getting-started/type-rendering/typeP.go" lang1="go"
+	title2="field.go" file2="code/getting-started/type-rendering/field.go" lang2="go"
+	title3="out/user.go" file3="code/getting-started/type-rendering/out/user.go" lang3="go"
 >}}
 
 ### SQL & TypeScript

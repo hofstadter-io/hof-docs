@@ -31,9 +31,9 @@ in fact `hof render` creates a generator behind the scenes.
 `hof render`, in the simplest form, is just rendering templates with data.
 
 {{<codePane3
-	title1="hof render interlude.json -T interlude.template" file1="code/getting-started/test-drive/file-rendering/interlude.txt" lang1="txt"
-	title2="interlude.json" file2="code/getting-started/test-drive/file-rendering/interlude.json" lang2="json"
-	title3="interlude.template" file3="code/getting-started/test-drive/file-rendering/interlude.template" lang3="txt"
+	title1="hof render interlude.json -T interlude.template" file1="code/getting-started/file-rendering/interlude.txt" lang1="txt"
+	title2="interlude.json" file2="code/getting-started/file-rendering/interlude.json" lang2="json"
+	title3="interlude.template" file3="code/getting-started/file-rendering/interlude.template" lang3="txt"
 >}}
 
 You can also pipe any data into `hof render` by using a "`-`" (hyphen).
@@ -67,8 +67,8 @@ Alternate template delimiters are supported in `hof gen`.
 We can use this to enforce a schema or transform the data.
 
 {{<codePane2
-	title1="schema.cue" file1="code/getting-started/test-drive/file-rendering/schema.html"
-	title2="data.yaml" file2="code/getting-started/test-drive/file-rendering/data.yaml" lang2="yaml"
+	title1="schema.cue" file1="code/getting-started/file-rendering/schema.html"
+	title2="data.yaml" file2="code/getting-started/file-rendering/data.yaml" lang2="yaml"
 >}}
 
 If we run `hof render data.yaml schema.cue -T stories.md`,
