@@ -13,15 +13,7 @@ We will introduce the ideas and complexities with type generation
 while also showing concrete examples of `hof render -T` variations.
 {{</lead>}}
 
-{{<alert style="success">}}
-The `hof render` command is available in the next beta.
-
-```
-go install github.com/hofstadter-io/hof/cmd/hof@v0.6.3-beta.1
-```
-
-[Download binaries on GitHub](https://github.com/hofstadter-io/hof/releases/tag/v0.6.3-beta.1)
-{{</alert>}}
+{{<beta style="success">}}
 
 ## Generating Types
 

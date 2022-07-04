@@ -12,15 +12,7 @@ edit and regenerate those files while keeping changes.
 
 <br>
 
-{{<alert style="success">}}
-The `hof render` command is available in the next beta.
-
-```
-go install github.com/hofstadter-io/hof/cmd/hof@v0.6.3-beta.1
-```
-
-[Download binaries on GitHub](https://github.com/hofstadter-io/hof/releases/tag/v0.6.3-beta.1)
-{{</alert>}}
+{{<beta style="success">}}
 
 <br>
 
