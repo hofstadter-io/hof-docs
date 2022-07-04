@@ -1,8 +1,6 @@
 ---
-Title: Walkthroughs
-draft: true
-weight: 80
-
+title: Walkthroughs
+weight: 50
 ---
 
 {{< childpages >}}
