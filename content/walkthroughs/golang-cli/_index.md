@@ -1,5 +1,6 @@
 ---
-title: Hof CLI
+title: Golang CLI
+linkTitle: Golang CLI
 
 weight: 5
 ---

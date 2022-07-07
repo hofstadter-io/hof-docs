@@ -1,5 +1,5 @@
 ---
-title: Full Stack Application
+title: Full Stack App
 
 weight: 10
 ---
