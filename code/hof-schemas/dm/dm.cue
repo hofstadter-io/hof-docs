@@ -6,6 +6,8 @@ package dm
 
 	// Models in the data model, ordered
 	Models: #Models
+	// (turn Ordered* into a default calculation, so user can always write their own)
+	OrderedModels: [ for M in Models {M}]
 
 	// Custom views not tied to a specific model
 	Views?: #Views
@@ -22,6 +24,8 @@ package dm
 	Name: string
 
 	Fields: #Fields
+	// (turn Ordered* into a default calculation, so user can always write their own)
+	OrderedFields: [ for F in Fields {F}]
 
 	Relations?: #Relations
 	Views?:     #Views
@@ -34,6 +38,7 @@ package dm
 	@dm_field()
 	Name: string
 
+	// this should be a string you can use within your templates
 	Type: string
 
 	...
@@ -45,22 +50,12 @@ package dm
 	Name: string
 
 	Models: #Models
+	// (turn Ordered* into a default calculation, so user can always write their own)
 	Fields: #Fields
+	OrderedFields: [ for F in Fields {F}]
 
 	...
 }
-
-// TODO, can we get this to work?
-#MakeRelnType: {
-	In:  _
-	Out: "\(In.DM).\(In.Name)"
-}
-
-#RelnType:  or([#BelongsTo, #HasOne, #HasMany, #Many2Many])
-#BelongsTo: "BelongsTo"
-#HasOne:    "HasOne"
-#HasMany:   "HasMany"
-#Many2Many: "ManyToMany"
 
 #Relations: [name=string]: #Relation & {Name: name, ...}
 #Relation: {
@@ -70,8 +65,8 @@ package dm
 
 	// Relation to another thing
 
-	// This is the relation type
-	Reln: #RelnType
+	// This is the relation type, open for debate on what this could or should be
+	Reln: "BelongsTo" | "HasOne" | "HasMany" | "ManyToMany" | string
 
 	// This is the other type or side of the relation
 	// It is left open so it can be a string or CUE reference

@@ -11,7 +11,7 @@ dev: config.yaml
 # run locally in prd mode
 .PHONY: prd
 prd: config.yaml
-	@hugo serve --bind 0.0.0.0
+	@hugo serve --bind 0.0.0.0 --disableFastRender
 
 # https://github.com/stevenvachon/broken-link-checker
 BLC_EXCLUDES=--exclude 'https://github.com/hofstadter-io/hof-docs/issues/new' \
@@ -24,10 +24,20 @@ blc.prd:
 
 # build the world and push to production
 .PHONY: all
-all: config.yaml cmdhelp highlight hugo docker deploy
+all: config.yaml extern highlight hugo docker deploy
 
 config.yaml: config.cue
 	cue export config.cue --out yaml --outfile config.yaml --force
+
+# files copied from outside the repo
+extern: cmdhelp schemas
+
+schemas:
+	# todo, get from github @ version
+	rm -rf code/hof-schemas/
+	cp -r ~/hof/hof/schema code/hof-schemas
+
+
 
 .PHONY: cmdhelp
 cmdhelp:

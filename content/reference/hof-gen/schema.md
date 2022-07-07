@@ -1,6 +1,6 @@
 ---
-title: "The Schemas"
-weight: 40
+title: "Schema"
+weight: 1
 ---
 
 {{<lead>}}
@@ -24,7 +24,7 @@ to a specific geneartor to create code.
 
 [Source on GitHub](https://github.com/hofstadter-io/hof/blob/_dev/schema/gen/generator.cue)
 
-{{< codePane title="generator.cue" file="code/hof-schemas/generator.html" >}}
+{{< codePane title="gen.#Generator" file="code/hof-schemas/gen/generator.html" >}}
 
 
 #### Generator User Fields
@@ -109,7 +109,7 @@ and what `hof` iterates over and processes.
 
 [Source on GitHub](https://github.com/hofstadter-io/hof/blob/_dev/schema/gen/file.cue)
 
-{{< codePane title="file.cue" file="code/hof-schemas/file.html" >}}
+{{< codePane title="gen.#File" file="code/hof-schemas/gen/file.html" >}}
 
 
 #### Creator Fields
@@ -148,7 +148,7 @@ for the different available rendering engines.
 
 [Source on GitHub](https://github.com/hofstadter-io/hof/blob/_dev/schema/gen/template.cue)
 
-{{< codePane title="template.cue" file="code/hof-schemas/template.html" >}}
+{{< codePane title="gen.#Template" file="code/hof-schemas/gen/template.html" >}}
 
 
 #### #Statics
