@@ -60,12 +60,15 @@ Aliases:
   gen, G
 
 Flags:
-  -D, --diff3               enable diff3 support for adhoc render, generators are configured in code
-  -G, --generator strings   Generators to run, default is all discovered
-  -h, --help                help for gen
-  -P, --partial strings     file globs to partial templates to register with the templates
-  -s, --stats               Print generator statistics
-  -T, --template strings    Template mappings to render as '<filepath>;<?cuepath>;<?outpath>'
+  -D, --diff3                 enable diff3 support for adhoc render, generators are configured in code
+  -G, --generator strings     Generators to run, default is all discovered
+  -h, --help                  help for gen
+  -P, --partial strings       file globs to partial templates to register with the templates
+  -s, --stats                 Print generator statistics
+  -T, --template strings      Template mappings to render as '<filepath>;<?cuepath>;<?outpath>'
+  -w, --watch                 run in watch mode, regenerating when files change
+  -W, --watch-globs strings   filepath globs to watch for changes and regen
+  -X, --watch-xcue strings    like watch, but skips CUE reload, useful when working on templates, can be used with watch
 
 Global Flags:
   -p, --package string   the Cue package context to use during execution

@@ -1,7 +1,7 @@
 ---
-title: Data Modeling
+title: Notes
 
-weight: 50
+weight: 100
 ---
 
 Data Lenses:
@@ -19,11 +19,13 @@ Similar:
 Questions:
 
 - how to checkpoint with a semver attached while also having a tag in git?
-    - Does this need to be done? (see next question)
-		- To automate, require clean git workspace and make a commit and tag after the checkpoint is written?
-		- What we probably don't want is version skew and/or matrix
+	- Does this need to be done? (see next question)
+	- To automate, require clean git workspace and make a commit and tag after the checkpoint is written?
+	- What we probably don't want is version skew and/or matrix
 - Would it make sense for larger orgs to keep their datamodels in a dedicated repos?
-    - This would aid reuse and sharing
-		- here we might want to connect checkpoint and git tags
-		- otherwise, possibly not
+	- This would aid reuse and sharing
+	- here we might want to connect checkpoint and git tags
+	- otherwise, possibly not
 
+- Single source of Truth
+	- https://news.ycombinator.com/item?id=32010699

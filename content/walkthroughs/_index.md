@@ -1,6 +1,6 @@
 ---
 title: Walkthroughs
-weight: 20
+weight: 80
 ---
 
 {{< childpages >}}
