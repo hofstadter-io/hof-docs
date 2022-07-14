@@ -62,4 +62,4 @@ Flags:
 Global Flags:
   -p, --package string   the Cue package context to use during execution
   -q, --quiet            turn off output and assume defaults at prompts
-  -v, --verbose int      set the verbosity of output
+  -v, --verbosity int    set the verbosity of output
