@@ -13,8 +13,6 @@ We will introduce the ideas and complexities with type generation
 while also showing concrete examples of `hof gen -T` variations.
 {{</lead>}}
 
-{{<beta style="success">}}
-
 ## Generating Types
 
 CUE is a great language for defining types and their validations,

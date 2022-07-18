@@ -12,10 +12,6 @@ you can write to generate any file from any data.
 
 <br>
 
-{{<beta style="success">}}
-
-<br>
-
 #### Learn about writing templates, with extra functions and helpers
 
 [Template writing docs](/reference/template-writing/)

@@ -9,64 +9,75 @@ Welcome to the documentation site.
 
 # `hof` is a data model and code gen framework
 
+`hof` combines data models, code generation, and modules
+to help you write and maintain large amounts of code.
+
+1. __data model__ - define & manage data models - the source of truth
+2. __code generation__ - data + template = _ (anything) - technology agnostic
+3. __modules__ - composable data models & generators - an ecosystem
+
+<br>
 <br>
 
-The `hof` cli combines modular generators
-and a language agnostic data model
-to create code for any language or technology.
-The goal is to enable code generation
-that fits into your current development practices.
-This means you can also customize the generated code
-or use it for a small piece of an existing project.
-`hof` knows what files it creates, if you
-have modified them, and handles the details for you.
+<img src="/diagrams/how-hof-works.svg" alt="how hof works"
+ width="100%" height="auto" style="max-width:600px">
 
-With `hof` you get living boilerplate or scaffolding.
+<br>
+
+#### There are two modes to use `hof`
+
+1. creating applications (green boxes)
+1. building reusable modules (blue boxes)
+
+Like most languages and frameworks, there are two types of users.
+Most will build applications for some purpose, filling in the green boxes.
+A smaller number will build reusable modules, like the packages and libraries you use today.
+These are the blue boxes, the ecosystem created by and for the community.
+
+## Designed to augment your workflows
+
+__`hof` is a CLI tool you will add to your workflows.__
+We know developers have their own preferences
+for tools, languages, and platforms.
+`hof` can work with any of them.
+You will typically use `hof` at development time,
+committing the generated code to git.
+
+__`hof` is technology agnostic.__
+You can generate code for any language or technology,
+and more often than not you will generate several together.
+From your data models, the source of truth,
+`hof` can generate consistent code across the stack.
+
+__`hof` captures common patterns and boilerplate.__
+Through the templates and code generation modules,
+so we can remove much of the repetitive tasks and coding effort.
+
+__`hof` modules span technologies.__
+With composable modules, we can create full-stack applications
+and the infrastructure to run them by importing from the ecosystem.
+Logical application features can be composed
+as bigger building blocks from any language, framework, or tool.
+
+__`hof` continues to work as your model evolves.__
 Rather than a one-time bootstrapping at the beginning of development,
 you can update your designs or data model and regenerate code.
-This means when you add new types
-
-- API endpoints will be created
-- Database migrations will be calculated
-- libraries and clients will be updated
-
-`hof`'s code generation reaches deeper into the application code
-to remove more of the repetative tasks and code patterns.
-When using generator modules, you can combine them to
-create sophisticated applications from a declarative design.
+Think of code generated with `hof` as living boilerplate or scaffolding.
+You can also add custom code directly in the output
+and `hof` will ensure it stays as you regenerate your application.
 
 
-## We call this High Code development.
+# We call this High Code development.
 
 {{<lead>}}
 Creating code with higher levels of design, reuse, and implementation
 {{</lead>}}
 
 
-## Why `hof`?
-
-We wanted to
-
-- stop writing repetative code found both within and across applications
-- be language & technology agnostic
-- have code gen that continued to help, rather than an upfront bootstrap
-- reuse and combine code generation modules
-- enable an ecosystem with generators authored and used by anyone
-
 
 ## What can you do with `hof`?
 
 <br>
-
-##### Use your own tools
-
-`hof` is a tool you will add to your workflow.
-We know developers have their own preferences for tools
-from IDEs, languages, and platforms,
-and `hof` can work with them 
-
-`hof` is a cli tool that can work with any and all of these
-and will never force you to use a clunky UI to build applications.
 
 ##### Generate anything
 

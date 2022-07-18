@@ -19,7 +19,7 @@ client: filesystem: ".": {
 
 actions: {
 	versions: testers.Versions
-	versions: hof: "v0.6.2-beta.1"
+	versions: hof: "v0.6.3"
 
 	code: git.#Pull & {
 		remote:     "https://github.com/hofstadter-io/hof"

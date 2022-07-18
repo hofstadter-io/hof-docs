@@ -25,8 +25,6 @@ The concepts and processing are the same,
 in fact `hof gen -T` creates a generator behind the scenes
 and can be layered on top of modular generators.
 
-{{<beta style="success">}}
-
 ### Data + Templates
 
 `hof gen -T`, in the simplest form, is just rendering templates with data.
