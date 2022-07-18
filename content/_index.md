@@ -52,6 +52,7 @@ From your data models, the source of truth,
 __`hof` captures common patterns and boilerplate.__
 Through the templates and code generation modules,
 so we can remove much of the repetitive tasks and coding effort.
+Updates to the data model can be replicated instantly through the stack.
 
 __`hof` modules span technologies.__
 With composable modules, we can create full-stack applications
