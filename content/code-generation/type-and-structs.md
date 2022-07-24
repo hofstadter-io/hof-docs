@@ -1,5 +1,5 @@
 ---
-title: "Type Rendering"
+title: "Type and Structs"
 description: "Render types in multiple languages from CUE with hof"
 brief: "with CUE + text/template"
 
@@ -12,6 +12,12 @@ how to generate the matching types in a given language.
 We will introduce the ideas and complexities with type generation
 while also showing concrete examples of `hof gen -T` variations.
 {{</lead>}}
+
+Types are central to the languages we program in.
+`hof` enables us to specify the shape and rules for
+our types in CUE and then generate them in one or more languages.
+The schemas and generators for types are the foundation
+for many other generators and are important to understand.
 
 ## Generating Types
 

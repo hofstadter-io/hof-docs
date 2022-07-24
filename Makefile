@@ -34,7 +34,6 @@ extern: cmdhelp schemas
 
 schemas:
 	# todo, get from github @ version
-	rm -rf code/hof-schemas/
 	cp -r ~/hof/hof/schema code/hof-schemas
 
 
