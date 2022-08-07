@@ -34,9 +34,7 @@ extern: cmdhelp schemas
 
 schemas:
 	# todo, get from github @ version
-	cp -r ~/hof/hof/schema code/hof-schemas
-
-
+	cp -r ~/hof/hof/schema/* code/hof-schemas
 
 .PHONY: cmdhelp
 cmdhelp:
@@ -45,6 +43,7 @@ cmdhelp:
 	@hof flow    -h > code/cmd-help/flow
 	@hof dm      -h > code/cmd-help/dm
 	@hof gen     -h > code/cmd-help/gen
+	@hof fmt     -h > code/cmd-help/fmt
 
 .PHONY: highlight code
 highlight: $(HTML_FILES)

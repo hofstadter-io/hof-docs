@@ -60,19 +60,19 @@ import (
 	OnceFiles: [...gen.#File] & [
 			{
 			TemplatePath: "go.mod"
-			Filepath:     "\(Outdir)/go.mod"
+			Filepath:     "go.mod"
 		},
 		{
 			TemplatePath: "server.go"
-			Filepath:     "\(Outdir)/server.go"
+			Filepath:     "server.go"
 		},
 		{
 			TemplatePath: "router.go"
-			Filepath:     "\(Outdir)/router.go"
+			Filepath:     "router.go"
 		},
 		{
 			TemplatePath: "middleware.go"
-			Filepath:     "\(Outdir)/middleware.go"
+			Filepath:     "middleware.go"
 		},
 	]
 
@@ -85,7 +85,7 @@ import (
 				}
 			}
 			TemplatePath: "route.go"
-			Filepath:     "\(Outdir)/routes/\(In.ROUTE.Name).go"
+			Filepath:     "routes/\(In.ROUTE.Name).go"
 		},
 	]
 
@@ -98,7 +98,7 @@ import (
 				}
 			}
 			TemplatePath: "type.go"
-			Filepath:     "\(Outdir)/types/\(In.TYPE.Name).go"
+			Filepath:     "types/\(In.TYPE.Name).go"
 		},
 	]
 
@@ -108,7 +108,7 @@ import (
 				RESOURCE: R
 			}
 			TemplatePath: "resource.go"
-			Filepath:     "\(Outdir)/resources/\(In.RESOURCE.Name).go"
+			Filepath:     "resources/\(In.RESOURCE.Name).go"
 		},
 	]
 

@@ -62,23 +62,23 @@ import (
 	OnceFiles: [...gen.#File] & [
 			{
 			TemplatePath: "go.mod"
-			Filepath:     "\(Outdir)/go.mod"
+			Filepath:     "go.mod"
 		},
 		{
 			TemplatePath: "server.go"
-			Filepath:     "\(Outdir)/server.go"
+			Filepath:     "server.go"
 		},
 		{
 			TemplatePath: "router.go"
-			Filepath:     "\(Outdir)/router.go"
+			Filepath:     "router.go"
 		},
 		{
 			TemplatePath: "middleware.go"
-			Filepath:     "\(Outdir)/middleware.go"
+			Filepath:     "middleware.go"
 		},
 		{
 			TemplatePath: "index.html"
-			Filepath:     "\(Outdir)/client/index.html"
+			Filepath:     "client/index.html"
 		},
 	]
 
@@ -91,7 +91,7 @@ import (
 				}
 			}
 			TemplatePath: "route.go"
-			Filepath:     "\(Outdir)/routes/\(In.ROUTE.Name).go"
+			Filepath:     "routes/\(In.ROUTE.Name).go"
 		},
 	]
 
@@ -104,7 +104,7 @@ import (
 				}
 			}
 			TemplatePath: "type.go"
-			Filepath:     "\(Outdir)/types/\(In.TYPE.Name).go"
+			Filepath:     "types/\(In.TYPE.Name).go"
 		},
 	]
 
@@ -115,7 +115,7 @@ import (
 				RESOURCE: R
 			}
 			TemplatePath: "resource.go"
-			Filepath:     "\(Outdir)/resources/\(In.RESOURCE.Name).go"
+			Filepath:     "resources/\(In.RESOURCE.Name).go"
 		},
 		// HTML content
 		for _, R in In.Resources {
@@ -123,7 +123,7 @@ import (
 				RESOURCE: R
 			}
 			TemplatePath: "resource.html"
-			Filepath:     "\(Outdir)/client/\(strings.ToLower(In.RESOURCE.Name))"
+			Filepath:     "client/\(strings.ToLower(In.RESOURCE.Name))"
 		},
 		// HTML content
 		for _, R in In.Resources {
@@ -131,7 +131,7 @@ import (
 				RESOURCE: R
 			}
 			TemplatePath: "resource.js"
-			Filepath:     "\(Outdir)/client/\(strings.ToLower(In.RESOURCE.Name)).js"
+			Filepath:     "client/\(strings.ToLower(In.RESOURCE.Name)).js"
 		},
 	]
 

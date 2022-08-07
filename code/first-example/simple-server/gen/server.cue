@@ -44,19 +44,19 @@ import (
 	_OnceFiles: [...gen.#HofGeneratorFile] & [
 			{
 			TemplatePath: "go.mod"
-			Filepath:     "\(Outdir)/go.mod"
+			Filepath:     "go.mod"
 		},
 		{
 			TemplatePath: "server.go"
-			Filepath:     "\(Outdir)/server.go"
+			Filepath:     "server.go"
 		},
 		{
 			TemplatePath: "router.go"
-			Filepath:     "\(Outdir)/router.go"
+			Filepath:     "router.go"
 		},
 		{
 			TemplatePath: "middleware.go"
-			Filepath:     "\(Outdir)/middleware.go"
+			Filepath:     "middleware.go"
 		},
 	]
 
@@ -69,7 +69,7 @@ import (
 				}
 			}
 			TemplatePath: "route.go"
-			Filepath:     "\(Outdir)/routes/\(In.ROUTE.Name).go"
+			Filepath:     "routes/\(In.ROUTE.Name).go"
 		},
 	]
 

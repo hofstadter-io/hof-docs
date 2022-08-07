@@ -26,7 +26,7 @@ params: {
 	github_repo:         "https://github.com/hofstadter-io/hof-docs"
 	time_format_default: "January 2, 2006"
 	keywords:            "hof hofstadter documentation docs"
-	hofver:              "v0.6.4"
+	hofver:              "v0.6.5"
 	cuever:              "v0.4.3"
 	cuedocBase:          "https://pkg.go.dev/cuelang.org/go@\(cuever)"
 
@@ -55,7 +55,7 @@ menu: shortcuts: [{
 	url:    "https://github.com/hofstadter-io"
 	weight: 1
 }, {
-	name:   "<i class='fas fa-comments'></i> Chat"
+	name:   "<i class='fas fa-comments'></i> Slack"
 	url:    "https://join.slack.com/t/hofstadter-io/shared_invite/zt-e5f90lmq-u695eJur0zE~AG~njNlT1A"
 	weight: 2
 }, {
