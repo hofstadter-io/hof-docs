@@ -26,5 +26,4 @@ Flags:
   -v, --verbosity int    set the verbosity of output
 
 Use "hof [command] --help / -h" for more information about a command.
-Use "hof topic [subject]"  for more information about a subject.
 
