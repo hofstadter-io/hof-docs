@@ -5,21 +5,21 @@ weight: 5
 ---
 
 {{<lead>}}
-Generators have a common files and a directory structure.
+Generators have common files and directories.
 {{</lead>}}
 
 {{<codeInner title="Typical directory structure">}}
-# CUE files for our schema and hof generator
+# files for your schema and generators
 schema/
 generators/
 creators/
 
-# files used by the hof generator
+# files for the code gen system
 templates/
 partials/
 statics/
 
-# sample usage of our generator
+# sample usage of your generator
 examples/
 {{</codeInner>}}
 
@@ -27,19 +27,17 @@ You will often have other files depending on the languages or technologies you c
 A common example are the files for dependency management like `package.json` and `go.mod`.
 There are no restrictions or limits on what you can include.
 
-### Modules
+### Hof Generator Modules
 
-Every __generator__ is also a CUE __module__, 
+Every __hof generator__ is also a CUE __module__, 
 
 "`hof mod`" is the subcommand for working with the module system.
 You will see how to use it as we go through this first example.
 
-You can learn more about `hof mod` from in
+You can learn more about `hof mod` from the
+[Modules and Packages](https://cuetorials.com/first-steps/modules-and-packages/) section on Cuetorials.
 
-- [Modules and Packages](https://cuetorials.com/first-steps/modules-and-packages/) for working with CUE modules.
-- [Futurology / Dependency Management](https://cuetorials.com/cueology/futurology/dependency-management/) to learn about `cue mod`.
-
-### Bootstrap
+### Bootstraping Your Geneartor
 
 Throughout the `first-example` section,
 we will be developing a `hof` geneartor as a module.
