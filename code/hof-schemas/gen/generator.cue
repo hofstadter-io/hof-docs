@@ -1,9 +1,17 @@
 package gen
 
+import (
+  "github.com/hofstadter-io/hof/schema/common"
+  "github.com/hofstadter-io/hof/schema/create"
+)
+
 // Definition for a generator
 #Generator: {
 	// Base directory for the output
 	Outdir: string | *"./"
+
+	// Name of the generator, will default to kebab(label) where defined
+	Name: common.NameLabel
 
 	// Generater wide input value to templates.
 	// Merged with any template or file level In values
@@ -60,15 +68,18 @@ package gen
 	// The following mirror their non-embedded versions
 	// however they have the content as a string in CUE
 	// For templates and partials, Name is the path to reference
-	EmbeddedTemplates: [Name=string]: #Template
-	EmbeddedPartials: [Name=string]:  #Template
+	EmbeddedTemplates: [name=string]: #Template
+	EmbeddedPartials: [name=string]:  #Template
 	// For statics, Name is the path to write the content
-	EmbeddedStatics: [Name=string]: string
+	EmbeddedStatics: [name=string]: string
 
 	// TODO, consider adding 'Override*' for templates, partials, statics
 
 	// For subgenerators so a generator can leverage and design for other hofmods
-	Generators: [Name=string]: #Generator
+	Generators: [name=string]: #Generator & { Name: name }
+
+	// Embed the creator to get creator fields
+	create.#Creator
 
 	// This should be set to default to the module name
 	//   (i.e. 'string | *"github.com/<org>/<repo>"')
@@ -80,6 +91,9 @@ package gen
 	// set to the empty string ("") as a generator writer who is making an example in the same module
 	PackageName: string | *""
 	// TODO, hof, can we introspect the generator / example packages and figure this out?
+
+	// print debug info during load & gen
+	Debug: bool | *false
 
 	// Note, open so you can have any extra fields
 	...

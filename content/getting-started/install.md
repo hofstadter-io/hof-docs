@@ -5,59 +5,59 @@ brief: "the hof cli"
 weight: 3
 ---
 
-__hof__ is available for all major operation systems
-and architectures. Thank you to the Golang developers, Goreleaser, and the community!
+{{<lead>}}
+__hof__ is available for all major operation systems and architectures.
+{{</lead>}}
 
-## Download
+git & docker should be available, but are also optional
+
+## Installation
+
+<br>
 
 Current version: <b>{{<hof-rel-link>}}</b>
 
-{{<codeInner lang="sh">}}
-hof update --check
+<br>
 
-or
+{{<codeInner title="installation commands" lang="text">}}
+// with homebrew
+brew install hof
 
+
+// as a binary
+{{<hof-curl>}}
+
+// or from source
 go install github.com/hofstadter-io/hof/cmd/hof@latest
-
-or
-
-go install github.com/hofstadter-io/hof/cmd/hof@{{<hof-version>}}
 {{</codeInner>}}
 
 <br>
+
+#### Binary downloads, rename the file to `hof` and place it in your PATH.
+
+these are the same links for curl
 
 {{<hof-dl-btns>}}
 
 <br>
 
-Container images are also available on [docker hub](https://hub.docker.com/r/hofstadter/hof/tags).
+[All Releases](https://github.com/hofstadter-io/hof/releases)
+
+[Container Images](https://hub.docker.com/r/hofstadter/hof/tags)
 
 
-##### You'll want to rename the file to `hof` and ensure it is executable and in your PATH.
-
-<br>
-
-You can also download a precompiled binary from the github
-__[releases page](https://github.com/hofstadter-io/hof/releases)__.
-
-Instructions for compiling can be found on GitHub.
 
 
-## Test the installation
+## Testing __hof__
 
-To make sure the tool is available, run the following in your terminal.
+Run `hof help` in your terminal.
 
-{{<codeInner lang="sh">}}
-$ hof help
+{{<codePane file="code/cmd-help/hof" title="$ hof help" lang="text">}}
 
-hof - the high code framework
 
-  Learn more at https://docs.hofstadter.io
-	
-...
-{{</codeInner>}}
 
 ## Updating __hof__
+
 
 The builtin update command can be used to check and install any version.
 

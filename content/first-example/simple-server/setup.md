@@ -11,12 +11,13 @@ Generators have a common files and a directory structure.
 {{<codeInner title="Typical directory structure">}}
 # CUE files for our schema and hof generator
 schema/
-gen/
+generators/
+creators/
 
 # files used by the hof generator
 templates/
 partials/
-static/
+statics/
 
 # sample usage of our generator
 examples/
@@ -28,60 +29,47 @@ There are no restrictions or limits on what you can include.
 
 ### Modules
 
-Almost every __hof  generator__ is also a CUE module.
-`hof mod` is a subcommand for working with Go style module systems.
-We use it as an iterim tool until `cue mod` is implemented upstream.
+Every __generator__ is also a CUE __module__, 
 
-For more information about `hof mod`, see
+"`hof mod`" is the subcommand for working with the module system.
+You will see how to use it as we go through this first example.
+
+You can learn more about `hof mod` from in
 
 - [Modules and Packages](https://cuetorials.com/first-steps/modules-and-packages/) for working with CUE modules.
 - [Futurology / Dependency Management](https://cuetorials.com/cueology/futurology/dependency-management/) to learn about `cue mod`.
 
-### Example
+### Bootstrap
 
-Through the `first-example` section,
+Throughout the `first-example` section,
 we will be developing a `hof` geneartor as a module.
-The following steps will get your project setup.
+The following commands will bootstrap your generator.
 
-{{<codeInner title="1. Start a CUE module">}}
+{{<codeInner title="Setup Commands">}}
+// create a directory
 mkdir first-example && cd first-example
-hof mod init cue hof.io/docs/first-example
-{{</codeInner>}}
+git init   // (optional)
 
-{{<codeInner title="2. In cue.mods - add hof as a dependency">}}
-require github.com/hofstadter-io/hof v0.6.2
-{{</codeInner>}}
-
-{{<codeInner title="3. Fetch CUE dependencies">}}
-hof mod vendor cue
-{{</codeInner>}}
-
-{{<codeInner title="4. Create common sub-directories">}}
-mkdir schema gen templates partials static examples
+// initialize a generator module
+hof gen --init hof.io/docs/first-example
 {{</codeInner>}}
 
 Your working directory should now look like:
 
 {{<codeInner title="Module layout">}}
 first-example/
-|
+|  // default directories
+├── creators/
 ├── examples/
-├── gen/
+├── generators/
 ├── partials/
 ├── schema/
-├── static/
+├── statics/
 ├── templates/
 |
+|  // dependency files
 ├── cue.mods
 ├── cue.sums
 └── cue.mod/
-    ├── module.cue
-    └── pkg/
-        └── github.com/
-            └── hofstadter-io/
-                ├── ghacue/...
-                ├── hof/...
-                ├── hofmod-cli/...
-                └── hofmod-cuefig/...
 {{</codeInner>}}
 

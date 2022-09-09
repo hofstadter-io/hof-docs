@@ -1,0 +1,6 @@
+{{ $ver := .Site.Params.hofver -}}
+{{ $sem := substr $ver 1 -}}
+{{ $base := printf "https://github.com/hofstadter-io/hof/releases/download/%s" $ver -}}
+{{ $nix_x64 := printf "%s/hof_%s_Linux_x86_64" $base $sem -}}
+curl -L "{{ $nix_x64}}" -o hof
+chmod +x hof && sudo mv hof /usr/local/bin

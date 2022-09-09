@@ -44,6 +44,7 @@ cmdhelp:
 	@hof dm      -h > code/cmd-help/dm
 	@hof gen     -h > code/cmd-help/gen
 	@hof fmt     -h > code/cmd-help/fmt
+	@hof create  -h > code/cmd-help/create
 
 .PHONY: highlight code
 highlight: $(HTML_FILES)
