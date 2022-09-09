@@ -12,6 +12,7 @@ Data Lenses:
 
 Similar:
 
+- [Atlas](https://atlasgo.io/) & [Ent](https://entgo.io/)
 - [Prisma](https://www.prisma.io/docs/concepts/components/prisma-schema/data-model)
 - [Hasura](https://hasura.io/docs/latest/graphql/core/databases/postgres/schema/index.html)
 
@@ -29,3 +30,4 @@ Questions:
 
 - Single source of Truth
 	- https://news.ycombinator.com/item?id=32010699
+

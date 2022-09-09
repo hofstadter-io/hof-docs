@@ -19,6 +19,14 @@ our types in CUE and then generate them in one or more languages.
 The schemas and generators for types are the foundation
 for many other generators and are important to understand.
 
+## CUE Discussions
+
+More has been written and discussed at the following links.
+Keep these handy as you read through.
+
+- https://github.com/cue-lang/cue/discussions/1865
+- https://github.com/cue-lang/cue/discussions/1889
+
 ## Generating Types
 
 CUE is a great language for defining types and their validations,
