@@ -1,6 +1,8 @@
 {{ $style := .Get "style" }}
-{{ if .Site.Params.beta }}
 <div class="alert alert-{{ $style }}" role="alert">
-    {{ .Site.Params.beta | markdownify }}
+	{{ if .Inner }}
+	{{ print .Inner | markdownify }}
+	{{ else }}
+	{{ .Site.Params.beta | markdownify }}
+	{{ end }}
 </div>
-{{ end }}
