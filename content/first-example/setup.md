@@ -1,6 +1,6 @@
 ---
 title: "Setup"
-brief: "a directory"
+brief: "a new hof generator"
 weight: 5
 ---
 
