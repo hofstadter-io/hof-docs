@@ -1,6 +1,6 @@
 package example
 
-// here we are applying a schema to our data input data
+// here we are applying a schema to our input data
 // note how the label is the same in both files
 Input: #Input
 
