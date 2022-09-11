@@ -35,7 +35,7 @@ After we will see `hof`'s code __re__generation capabilites by
 1. Regenerating our application 
 1. Inspecting and discussing the result
 
-Finally, we will look at how to upgrade our genertor to use a database.
+Finally, we will look at how to upgrade our generator to use a database.
 Automatic migrations are covered in the [model history section](/first-example/model-history/).
 
 The full code for this section can be found on GitHub

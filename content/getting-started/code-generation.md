@@ -168,6 +168,8 @@ We can use `cue` to see what the full data looks like
 	title2="> terminal" file2="code/getting-started/code-generation/out/types.go" lang2="text"
 />}}
 
+`hof`'s templates are built on Go's `text/template` package
+with [extra helpers](/code-generation/template-writing/) added.
 
 
 ## Controlling Code Generation

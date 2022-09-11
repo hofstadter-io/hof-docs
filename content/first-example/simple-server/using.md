@@ -36,7 +36,7 @@ You should now have an `./output` directory with the generated code.
 With our code in place, we can build and run the server
 
 {{<codeInner lang="sh">}}
-cd ./ouput
+cd ./output
 go mod tidy
 go build -o server
 ./server
