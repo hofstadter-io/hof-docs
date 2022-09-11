@@ -141,7 +141,7 @@ The inputs hold CUE values, which can be intermixed with your data to
 apply schemas, enrich the data, or transform before rendering.
 When running commands, the CUE entrypoints are combined into one large CUE value.
 The final data passed to a template must be concrete, or fully specified.
-This means the value needs to be like JSON data before template rendring will accept them.
+This means the value needs to be like JSON data before template rendering will accept them.
 As you will see, `hof` provides you flexibility and control
 for how the CUE values are selected, combined, and mapped to templates.
 
