@@ -3,7 +3,7 @@ title: "Concepts"
 description: "Overview of the main concepts in Hofstadter around code generation, source-of-truth, reusability."
 brief: "in Hofstadter, a quick overview"
 
-weight: 6
+weight: 90
 ---
 
 `hof` was designed from first principles to
