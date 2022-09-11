@@ -53,6 +53,10 @@ Combine any data source with any template.
 	title3="> terminal" file3="code/getting-started/code-generation/interlude.txt" lang3="txt"
 />}}
 
+#### `hof`'s templates are built on Go's `text/template` package with [extra helpers](/code-generation/template-writing/) added.
+
+<br>
+
 You can also pipe any data into `hof gen` by using a "`-`" (hyphen).
 This can be helpful when you want to render
 an API response or process command output.
@@ -113,6 +117,18 @@ $ hof gen data.cue schema.cue -T template.txt -O out/ --watch
 {{</codeInner>}}
 
 
+### Diff3 Mode for Customizing Output
+
+`hof` has a diff engine so you can add custom code
+to the outputs, regenerate, and not lose your work.
+
+Add `--diff3` to enable this rendering mode.
+
+{{<codeInner title="> terminal" lang="sh">}}
+$ hof gen data.cue schema.cue -T template.txt -O out/ --diff3
+{{</codeInner>}}
+
+
 
 ## On Using CUE
 
@@ -157,8 +173,6 @@ We can use `cue` to see what the full data looks like
 {{<codePane title="> terminal" file="code/getting-started/code-generation/full-data.json" lang="text">}}
 </details>
 
-
-
 <br>
 
 #### Starting Template
@@ -167,9 +181,6 @@ We can use `cue` to see what the full data looks like
 	title1="types.go" file1="code/getting-started/code-generation/types.go" lang1="go"
 	title2="> terminal" file2="code/getting-started/code-generation/out/types.go" lang2="text"
 />}}
-
-`hof`'s templates are built on Go's `text/template` package
-with [extra helpers](/code-generation/template-writing/) added.
 
 
 ## Controlling Code Generation
