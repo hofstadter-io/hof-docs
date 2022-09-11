@@ -1,8 +1,0 @@
----
-- name: task1
-  description: "do stuff"
-  state: "Open"
-- name: task2
-  description: "other stuff"
-  state: "InReview"
-  points: 3

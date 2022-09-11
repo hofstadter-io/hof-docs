@@ -1,8 +1,8 @@
 ---
 title: "Next Steps"
 description: "Next steps to get started with hof"
-brief: "to get started with hof"
-weight: 10
+brief: "to learn and use hof"
+weight: 100
 ---
 
 {{<lead>}}

@@ -7,14 +7,14 @@ weight: 5
 ---
 
 {{<lead>}}
-__hof__ leverages [CUE (configure, unify, execute)](https://cuelang.org)
-throughout and is core to the developer experience.
+`hof` uses CUE (configure, unify, execute) for specifying inputs, schemas, and generators.
+CUE is a proper language for configuration and is core to	`hof`'s developer experience.
 {{</lead>}}
 
 This decision was made for two initial reasons.
 
 1. __hof is declarative code generation.__
-   We are essentially writing configuration when we write our input for code generation.
+   A generator is configuration for how to combine CUE and templates during code generation.
 2. __CUE is purpose built for large scale configuration.__
    It has good theory and tooling for working with configuration spanning many files.
 
@@ -24,21 +24,16 @@ CUE is ideal for many reasons:
 - philosophically sound and based on a strong heritage.
 - declarative and logical, it proves that what you wrote is consistent and valid.
 - purpose built language, system, and tools for large scale configuration.
-
-You can learn more about CUE from these links:
-
-- [Cuetorials](https://cuetorials.com) (maintained by us)
-- https://cuelang.org
-	- [Learn about CUE](https://cuelang.org/docs/about/)
-	- [Core issues addressed by CUE](https://cuelang.org/docs/usecases/configuration/)
-	- [Read about the Logic of CUE](https://cuelang.org/docs/concepts/logic/)
-	- [Go through the tutorials](https://cuelang.org/docs/tutorials/)
-	- [CUE GitHub Discussions](https://github.com/cue-lang/cue/discussions)
-	- [The CUE Language Specification](https://cuelang.org/docs/references/spec/)
+- you get modules, packages, and dependenices for data, schemas, and configuration
 
 
-## __hof__ uses CUE {{<cue-version>}}
+Bitfield Consulting has a quick
+[introduction to CUE from a JSON perspective](https://bitfieldconsulting.com/golang/cuelang-exciting).
+This article is worth skimming through if you are unfamiliar with CUE.
+You will see the basics of CUE that are used when working with `hof`.
 
+For indepth CUE learning resources, use these sites:
 
-1. Purpose built language for config, use as a DSL, lift much of the logic to CUE 
-1. Module aware, we get packages and dependenices for free, can combine schemas and generators in interesting ways
+- [CUE documentation](https://cuelang.org) (CUE Team)
+- [Cuetorials](https://cuetorials.com) (Hofstadter)
+
