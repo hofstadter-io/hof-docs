@@ -15,7 +15,8 @@ we can generate any file for any language or framework.
 
 `hof gen` accepts CUE, Yaml, and JSON arguments
 and combines them with templates to generate files and directories of code.
-This process is highly flexable and controlled through flags and configuration.
+This process is highly flexable and controlled through flags and configuration,
+or what we call generators.
 
 {{<codeInner lang="sh">}}
 hof gen <cue, data, config>... [--flags...]

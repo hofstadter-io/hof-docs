@@ -7,14 +7,23 @@ description: "Hofstadter Documentation"
 Welcome to the documentation site.
 {{</lead>}}
 
-# `hof` is a data model and code gen framework
+# `hof` is a code generation framework
 
-`hof` combines data models, code generation, and modules
+`hof` combines CUE, data, and templates to generate any file.
+Reusable and modular generators can be created
 to help you write and maintain large amounts of code.
+The data layer helps you manage configuration and models so
+you create code which is resilent to version skew.
+Creators enable you to provide one-line commands to your users,
+and they will get an interactive prompt for getting started with your projects.
+The module system will help you manage dependencies
+and make your hof projects easily available to others.
 
-1. __data model__ - define & manage data models - the source of truth
-2. __code generation__ - data + template = _ (anything) - technology agnostic
-3. __modules__ - composable data models & generators - an ecosystem
+1. __code generation__ - data + template = _ (anything) - technology agnostic
+1. __generators__ - reusable and modular code generation configuration
+1. __data layer__ - define, manage, and migrate data models
+1. __creators__ - interactive prompts for bootstrapping projects
+1. __modules__ - dependency management for CUE and your hof code
 
 <br>
 <br>
@@ -30,9 +39,11 @@ to help you write and maintain large amounts of code.
 1. building reusable modules (blue boxes)
 
 Like most languages and frameworks, there are two types of users.
-Most will build applications for some purpose, filling in the green boxes.
+Most users will build applications for some purpose, using libraries written by others.
 A smaller number will build reusable modules, like the packages and libraries you use today.
-These are the blue boxes, the ecosystem created by and for the community.
+`hof` has the same for same relationship for code generators modules.
+All modules exist outside of the `hof` tool and just need to be a git repository.
+
 
 ## Designed to augment your workflows
 
