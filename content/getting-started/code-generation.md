@@ -308,7 +308,8 @@ You can find more examples in the
 
 ## What are Generators and Modules
 
-Generators are `hof gen` flags as configuration in a CUE file, often in reusable and sharable modules.
+Generators are `hof gen` flags as configuration in a CUE file,
+often in reusable and sharable modules, covered next.
 
 To turn your adhoc `hof gen ... -T ...` commands into a generator
 simply add `--as-module <module name>` after what you already have
