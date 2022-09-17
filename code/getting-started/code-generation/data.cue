@@ -2,7 +2,7 @@ package example
 
 // This is our input data, written as CUE
 // The schema will be applied to validate
-// the inputs and enriched the data model
+// the inputs and enrich the data model
 
 Input: {
 	User: {
