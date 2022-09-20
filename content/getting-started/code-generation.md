@@ -1,5 +1,6 @@
 ---
 title: "Code Generation"
+linkTitle: "Code Gen"
 description: "Render any file from data and templates"
 brief: "with hof via CUE and templates"
 
@@ -115,18 +116,6 @@ Use `-w`/`--watch` to watch for changes and re-render output.
 
 {{<codeInner title="> terminal" lang="sh">}}
 $ hof gen data.cue schema.cue -T template.txt -O out/ --watch
-{{</codeInner>}}
-
-
-### Diff3 Mode for Customizing Output
-
-`hof` has a diff engine so you can add custom code
-to the outputs, regenerate, and not lose your work.
-
-Add `--diff3` to enable this rendering mode.
-
-{{<codeInner title="> terminal" lang="sh">}}
-$ hof gen data.cue schema.cue -T template.txt -O out/ --diff3
 {{</codeInner>}}
 
 
@@ -309,35 +298,23 @@ You can find more examples in the
 
 ## What are Generators and Modules
 
-Generators are `hof gen` flags as configuration in a CUE file,
-often in reusable and sharable modules, covered next.
+Generators are `hof gen` flags as configuration,
+often in CUE modules and git repositories.
+The next page will overview modules more generally.
 
 To turn your adhoc `hof gen ... -T ...` commands into a generator
-simply add `--as-module <module name>` after what you already have
+by adding `--as-module <module name>` after the current flags.
 
-{{<codeInner title="turn flags into a generator">}}
-hof gen ... --as-module github.com/username/foo
+{{<codeInner title="> terminal">}}
+$ hof gen ... --as-module github.com/username/foo
 {{</codeInner>}}
 
-The [first-example](/first-example/) covers creating this file in detail,
-here is a snippet of what the result looks like:
+You will see a few files created.
+There will be a CUE file that contains your generator
+and a few others for setting up a CUE module.
 
-{{<codeInner title="generator snippet">}}
-package example
+{{<codePane file="code/getting-started/code-generation/adhoc-mod-snippet.html" title="generator.cue snippet">}}
 
-import "github.com/hofstadter-io/hof {{<hof-version>}}"
-
-foo: gen.#Generator: {
-	@gen(foo)
-
-	// input data
-	In: _
-
-	Out: [
-		// list of files to generate
-	]
-
-	// other fields filled by hof
-}
-{{</codeInner>}}
+The [first-example](/first-example/) covers
+creating a generator from scracth in detail.
 

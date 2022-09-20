@@ -5,7 +5,7 @@ brief: "for reusable CUE and code generation"
 weight: 20
 ---
 
-### Hof Modules
+### Hof & CUE Modules
 
 Every __hof generator__ is also a __CUE module__,
 and in fact, many of hof's other features can
@@ -35,7 +35,13 @@ The files and directories that make up a module:
 - `cue.mod/module.cue` denotes a CUE module and has a sinlge line
 - `cue.mod/pkg/...` is where the code for dependencies is located after fetching
 
+{{<codeInner title="cue.mod/module.cue">}}
+// indicates a CUE module, only one line
+module: "github.com/user/repo"
+{{</codeInner>}}
+
 {{<codeInner title="cue.mods">}}
+// indicates a Hof module, dependencies go here
 module github.com/user/repo
 
 cue {{<cue-version>}}
@@ -45,6 +51,36 @@ require (
 )
 {{</codeInner>}}
 
-{{<codeInner title="cue.mod/module.cue">}}
-module: "github.com/user/repo"
+
+### Replace for local development
+
+You can use `hof mod` for generally managing CUE or Hof modules and dependencies.
+In addition to setting, fetching, and validating dependencies,
+you can use `hof mod` to setup local development when working
+with multiple CUE or Hof modules.
+
+In your `cue.mods` file, use the `replace` directive just like you would in Go.
+
+{{<codeInner title="cue.mods with replace">}}
+module github.com/user/repo
+
+cue {{<cue-version>}}
+
+require (
+	github.com/username/repo v0.1.2
+)
+
+// local replace with relative path
+replace github.com/username/repo => ../repo
 {{</codeInner>}}
+
+{{<codeInner title="> terminal">}}
+$ hof mod vendor cue
+{{</codeInner>}}
+
+This will symlink any local replaces
+to point from the CUE vendor directory
+to the replacement directory.
+You can then develop CUE or hof code
+without having to copy or vendor upstream dependencies.
+
