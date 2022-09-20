@@ -56,7 +56,7 @@ The following is the creator from the `hofmod-cli` generator.
 
 ## Learn More
 
-Underneath, a `creator` is a hof generator with a `Create` field,
+As we were saying, a `creator` is a hof generator with a `Create` field,
 run as a one-time code generation.
 
 - The main new part is the `prompt` where you can ask the user for inputs
