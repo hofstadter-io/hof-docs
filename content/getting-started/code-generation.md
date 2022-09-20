@@ -103,7 +103,7 @@ where output goes and how files are named.
 
 You can use the `-T` flag as many times as you want.
 Each is independent and can have different options applied to 
-the data and schemas from the CUE entrypoints.
+the data and schemas from the CUE entrypoints. (we'll see this below)
 
 {{<codeInner title="> terminal" lang="sh">}}
 $ hof gen data.cue schema.cue -T template.txt -T debug.yaml -O out/
@@ -115,9 +115,10 @@ $ hof gen data.cue schema.cue -T template.txt -T debug.yaml -O out/
 Use `-w`/`--watch` to watch for changes and re-render output.
 
 {{<codeInner title="> terminal" lang="sh">}}
-$ hof gen data.cue schema.cue -T template.txt -O out/ --watch
+$ hof gen data.cue schema.cue -T template.txt -T debug.yaml -O out/ --watch
 {{</codeInner>}}
 
+There are extra watch flags if automatic detection doesn't fully work.
 
 
 ## On Using CUE
@@ -198,16 +199,20 @@ or if it comes in a data format.
 
 ### Partial Templates
 
-Partial templates and fragments are
-templates which are used from other templates.
+Partial templates are fragments
+which are used in other templates.
+You can capture repeated sections
+like the fields to a struct or the arguments to a function.
 Unlike regular templates, these do not map to an output file.
+Partials can also invoke other partials,
+which makes them ideal for breaking up
+your templates into logical components.
 
-To use partial templates you can
+There are two ways to define and use partial templates:
 
 - Use the `{{ define "name" }}` syntax in a regular template
 - User the `-P` to load them from a file
 
-Use __partial templates__ for repetitious template content within a single file.
 Let's extract field generation into its own template, where we _could_ make it complex.
 We won't here, but an example is struct tags for our Go fields.
 We can also use template helpers in the output filepath.
