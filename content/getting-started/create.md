@@ -7,8 +7,8 @@ weight: 30
 
 
 {{<lead>}}
-Hof Creators are code generators modules
-meant for one-time bootstrapping from a few inputs.
+Hof Creators are code generator modules
+intended for one-time bootstrapping from a few inputs.
 Use them to give your users one-liners for getting started
 or to provide reusable application blueprints.
 {{</lead>}}
@@ -48,9 +48,22 @@ a CUE module and hof generator, and then push a tag.
 1. test the creator locally
 1. tag and push
 
+There are a number of options for how to
+organize a creator, provide the prompt and inputs,
+and conditionally ask questions or output files.
+More information is provided below.
+
 ## Example Creator
 
 The following is the creator from the `hofmod-cli` generator.
+
+A user would run:
+
+{{<codeInner title="> terminal">}}
+$ hof create github.com/hofstadter-io/hofmod-cli@v0.7.12-beta.5
+{{</codeInner>}}
+
+The code that handles that looks like:
 
 {{<codePane file="code/hof-create/hofmod-cli/creator.html" title="hofmod-cli/creator.cue">}}
 
@@ -58,16 +71,17 @@ The following is the creator from the `hofmod-cli` generator.
 
 As we were saying, a `creator` is a hof generator with a `Create` field,
 run as a one-time code generation.
+The main new part is the `prompt` where you can ask the user for inputs.
+These then form the input value to code generation,
+and at this point, the creator is like any other generator
 
-- The main new part is the `prompt` where you can ask the user for inputs
-- These then form the input to the file bootstrapping process (one-time hof code gen)
-- A `hof generator` will use `hof create` to create the initial CUE files for using their generator
-- You can add `hof create` to any repository to generate any files
-
-Users then use `hof create <repo>@<tag>` bootstrap new applications, modules, or configuration
-like files needed for CI/CD, deployment, security, or other system.
-Since creators are just generators, you can create files for
-new applications or add pieces to an existing application.
+Users then run `hof create <repo>@<tag>` to bootstrap
+full applications or features to an existing application.
+Since creators are just generators, you can create the files
+needed for CI/CD, deployment, security, or other system.
+You can output CUE files and many `hof generators`
+will also provide creators to bootstrap the
+initial files needed to use their module.
 
 To learn more about writing creators, prompts, and how to give your users
 one-line bootstrapping or application blueprints, see the
