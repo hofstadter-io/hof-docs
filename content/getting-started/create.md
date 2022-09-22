@@ -34,7 +34,7 @@ which should output the files they need to get started using your project.
 The process is flexible enough for any git repository to provide the creator experience,
 so what you generate does not have to be `hof` related.
 
-<div id="create-cast"></div>
+<div id="create-cast" class="asciinema"></div>
 
 <br>
 <br>
@@ -59,15 +59,8 @@ More information is provided below.
 
 ## Example Creator
 
-The following is the creator from the `hofmod-cli` generator.
-
-A user would run:
-
-{{<codeInner title="> terminal">}}
-$ hof create github.com/hofstadter-io/hofmod-cli@v0.7.12-beta.5
-{{</codeInner>}}
-
-The code that handles that looks like:
+The following is the creator from the `hofmod-cli` generator
+in the video above.
 
 {{<codePane file="code/hof-create/hofmod-cli/creator.html" title="hofmod-cli/creator.cue">}}
 
