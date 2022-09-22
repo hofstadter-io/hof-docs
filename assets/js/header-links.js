@@ -3,8 +3,8 @@ function addHeaderLinks() {
 
   var h2s = content.querySelectorAll("h2");
   var h3s = content.querySelectorAll("h3");
-	
-	elems = [...h2s, ...h3s];
+
+  elems = [...h2s, ...h3s];
 
   elems.forEach(elem => {
     if (elem.parentNode == content) {

@@ -12,12 +12,14 @@
   ( resources.Get "lib/jquery.min.js" )
   ( resources.Get "lib/popper.min.js" )
   ( resources.Get "lib/bootstrap.min.js" )
+  ( resources.Get "lib/asciinema-player.min.js" )
   ( resources.Get "plugins/lunr.min.js" )
   ( resources.Get "plugins/auto-complete.js" | minify )
   ( resources.Get "plugins/search.js" | minify )
   ( resources.Get "plugins/clipboard.js" | minify )
   ( resources.Get "js/clipboard.js" | minify )
   ( resources.Get "js/header-links.js" | minify )
+  ( resources.Get "js/casts.js" | minify )
   | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" }}
 
 <script type="text/javascript" src="{{ $JS.RelPermalink }}" integrity="{{ $JS.Data.Integrity }}"></script>

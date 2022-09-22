@@ -25,7 +25,7 @@ or ask about it in Slack.
 `hof create` is run by users who provide the url to a git repository.
 
 {{<codeInner title="> terminal">}}
-$ hof create github.com/hofstadter-io/hofmod-cli@v0.7.12-beta.5
+$ hof create github.com/hofstadter-io/hofmod-cli
 {{</codeInner>}}
 
 The user is presented with an interactive prompt you design.
@@ -34,7 +34,11 @@ which should output the files they need to get started using your project.
 The process is flexible enough for any git repository to provide the creator experience,
 so what you generate does not have to be `hof` related.
 
-{{< youtube TfaEV37C6IE >}}
+<div id="create-cast"></div>
+
+<br>
+<br>
+
 
 
 ## Adding a Creator to your repository
