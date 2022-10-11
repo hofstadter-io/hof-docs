@@ -1,12 +1,12 @@
 ---
-title: "Hof Create"
-linkTitle: "Hof Create"
+title: "Creators"
+linkTitle: "Creators"
 weight: 11
 ---
 
 {{<beta style="warning">}}
-This command is beta and will be in the next release.
-[Download a pre-release](https://github.com/hofstadter-io/hof/releases)
+The `hof create` command is will be in the next release.
+[Download the release candidate](https://github.com/hofstadter-io/hof/releases)
 or ask about it in Slack.
 {{</beta>}}
 

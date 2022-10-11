@@ -15,7 +15,7 @@ or to provide reusable application blueprints.
 
 {{<beta style="warning">}}
 This command is beta and will be in the next release.
-[Download a pre-release](https://github.com/hofstadter-io/hof/releases)
+[Download the release candidate](https://github.com/hofstadter-io/hof/releases)
 or ask about it in Slack.
 {{</beta>}}
 

@@ -4,7 +4,10 @@ function addCasts() {
 	console.log(cast);
 
 	if (!!cast) {
-		AsciinemaPlayer.create('/casts/create.cast', cast);
+		AsciinemaPlayer.create('/casts/create.cast', cast, {
+			autoPlay: true,
+			loop: true,
+		});
 	}
 }
 
