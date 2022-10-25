@@ -13,12 +13,6 @@ Use them to give your users one-liners for getting started
 or to provide reusable application blueprints.
 {{</lead>}}
 
-{{<beta style="warning">}}
-This command is beta and will be in the next release.
-[Download the release candidate](https://github.com/hofstadter-io/hof/releases)
-or ask about it in Slack.
-{{</beta>}}
-
 
 ## Running `hof create`
 

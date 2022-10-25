@@ -4,12 +4,6 @@ linkTitle: "Creators"
 weight: 11
 ---
 
-{{<beta style="warning">}}
-The `hof create` command is will be in the next release.
-[Download the release candidate](https://github.com/hofstadter-io/hof/releases)
-or ask about it in Slack.
-{{</beta>}}
-
 {{<lead>}}
 `hof create` is a command for bootstrapping
 from user input from flags, files, or a prompt.
