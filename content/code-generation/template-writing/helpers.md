@@ -47,7 +47,6 @@ Notes:
 
 ### String processing helpers:
 
-- `indent` (`{{ indent .String "    " }}`)
 - `concat` (`{{ concat "foo" "bar" }}`)
 - `join` (`{{ join ", " "foo" "bar" }}`)
 - `contains` (`{{ contains .String .Substr }}`)
@@ -67,6 +66,9 @@ Notes:
 - `getprefix` (`{{ getprefix .String .Substr }}`) (opposite of `trimprefix`)
 - `getsuffix` (`{{ getsuffix .String .Substr }}`)
 - `getbetween` (`{{ getbetween .String .LhsSubstr .RhsSubstr }}`)
+
+The `indent` helper is disucssed in the
+[section on indentation](/code-generation/template-writing/indentation/).
 
 ### Other helpers:
 
