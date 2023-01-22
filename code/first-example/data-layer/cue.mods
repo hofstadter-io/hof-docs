@@ -3,5 +3,5 @@ module hof.io/docs/first-example
 cue v0.4.3
 
 require (
-	github.com/hofstadter-io/hof v0.6.2
+	github.com/hofstadter-io/hof v0.6.7
 )

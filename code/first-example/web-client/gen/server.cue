@@ -123,7 +123,7 @@ import (
 				RESOURCE: R
 			}
 			TemplatePath: "resource.html"
-			Filepath:     "client/\(strings.ToLower(In.RESOURCE.Name))"
+			Filepath:     "client/\(strings.ToLower(In.RESOURCE.Name)).html"
 		},
 		// HTML content
 		for _, R in In.Resources {

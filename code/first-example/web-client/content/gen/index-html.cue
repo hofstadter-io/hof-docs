@@ -1,4 +1,4 @@
-		// Generator definition
+// Generator definition
 #HofGenerator: gen.#HofGenerator & {
 	OnceFiles: [...gen.#File] & [
 			{

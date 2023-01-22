@@ -19,7 +19,7 @@ Since we broke down `index.html` into a number of partials,
 we can reuse them here and end up with a template for resource html
 which is very close to our index page.
 
-{{< codePane title="templates/resource.html" lang="html" file="code/first-example/web-client/content/templates/resource.html" >}}
+{{< codePane title="templates/resource.html" lang="html" file="code/first-example/web-client/templates/resource.html" >}}
 
 We will want to break this down into smaller snippets
 
