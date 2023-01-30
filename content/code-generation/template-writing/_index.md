@@ -1,6 +1,6 @@
 ---
 title: "Template Writing"
-weight: 10
+weight: 20
 ---
 
 ## Template System

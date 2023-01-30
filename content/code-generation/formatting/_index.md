@@ -1,6 +1,6 @@
 ---
 title: Formatting
-weight: 20
+weight: 25
 ---
 
 {{<lead>}}
