@@ -1,7 +1,27 @@
 ---
 title: With CUE
 
-weight: 1
+weight: 100
+---
+
+Code Gen with CUE
+
+- There are several types of "code gen" in relation to CUE
+- data can use export with --out <data> or --outfile <file>.<ext>
+- arbitrary uses same text/template
+- cue export -e content --out text > file.txt
+- write with tool/os
+
+Missing:
+
+- formatting
+- diff3 & custom code
+- expanded template helper functions
+- shared partial templates, can still use partials defined within the template
+- always writes, important when you use hot reload or make that checks FS events to compile
+
+
+---
 ---
 
 {{<lead>}}

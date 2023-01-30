@@ -1,7 +1,7 @@
 ---
 title: "How hof works"
 linkTitle: "How hof works"
-weight: 15
+weight: 5
 description: >
   How code generation works.
 ---

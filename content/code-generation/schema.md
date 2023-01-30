@@ -1,49 +1,55 @@
 ---
 title: "Schema"
-weight: 1
+weight: 10
 ---
 
 {{<lead>}}
 Hof has a few schemas for you to use when creating an using generators.
 {{</lead>}}
 
+- hof lets you put schemas in front of code gen because...
+- hof has schemas too, because...
+- we look at them first for an overview, used in several commands
+- we will see details, examples, and ... as we go through the code gen sections
+
 You can find their [source files on GitHub](https://github.com/hofstadter-io/hof/tree/_dev/schema/gen)
 
-### Generator
+## Generator
 
-{{<lead>}}
 The `Generator` is the schema for generators.
-As a creator, this is the definition you will use
+As a generator author, this is the definition you will use
 to define how an input is combined with templates
 to produce the output files.
 As a user, you will supply the input values
 to a specific geneartor to create code.
-{{</lead>}}
+Hof's adhoc code gen also assembles a generator
+from the arguments and flags you provide.
 
-<br>
+{{< codePane title="hof/schema/gen.#Generator" file="code/hof-schemas/gen/generator.html" >}}
 
-[Source on GitHub](https://github.com/hofstadter-io/hof/blob/_dev/schema/gen/generator.cue)
-
-{{< codePane title="gen.#Generator" file="code/hof-schemas/gen/generator.html" >}}
+[Schema on GitHub](https://github.com/hofstadter-io/hof/blob/_dev/schema/gen/generator.cue)
 
 
-#### Generator User Fields
+### User Fields
 
 These are fields that a user of a generator will typically fill in.
 The following fields are the default suggested user inputs
 You can decided to ignore these fields and
 make any set of exposed input fields for your generators.
 
+##### Name
+
 ##### In
 
 This is the primary input for users and will be used when rendering the templates.
 _(need to check if this is provided as a root context on repeated templates,
-or if that is set by creators, or is it the default applied when no input is
+or if that is set by authors, or is it the default applied when no input is
 set on a per template basis)_
 
-As a creator, you will likely want to provide a schema and set `In: #MySchema`.
+As a generator author, you will likely want to provide a schema and set `In: #MySchema`.
 This will make it easier for users to know if they have correctly specified
 the required input.
+They are often put in a `schemas` directory in your generator module.
 
 
 ##### Outdir
@@ -52,12 +58,11 @@ This is the base dir where the generator output will be written.
 
 ##### Other
 
-`#HofGenerator` was left open so you can
-specify any other inputs for your users.
+`#Generator` was left open so you can specify any other inputs for your users.
 This can be useful when you want more contextual inputs presented to the user
 or you want to transform the user input before passing into the template system.
 
-#### Generator Creator Fields
+### Author Fields
 
 ##### Out
 
@@ -98,23 +103,22 @@ _(this will go away once CUE supports the @embed() for this purpose, and likely 
 
 
 
-### File
-{{<lead>}}
-`File` is the schema for a generated file.
+## File
+
+`File` is the schema for a generated output file.
 The generator `Out` field is a list of these
 and what `hof` iterates over and processes.
-{{</lead>}}
 
 <br>
 
+{{< codePane title="hof/schema/gen.#File" file="code/hof-schemas/gen/file.html" >}}
+
 [Source on GitHub](https://github.com/hofstadter-io/hof/blob/_dev/schema/gen/file.cue)
 
-{{< codePane title="gen.#File" file="code/hof-schemas/gen/file.html" >}}
 
+### Author Fields
 
-#### Creator Fields
-
-`#HofGeneratorFile` is only for generator creators.
+`#File` is normally only used by generator authors.
 
 
 ##### In
@@ -137,18 +141,14 @@ Only needed when you need alternative delimitors.
 The default is `{{` and `}}`.
 
 
-### Templates
+## Templates
 
-{{<lead>}}
 The template config schemas are the parameters
 for the different available rendering engines.
-{{</lead>}}
 
-<br>
+{{< codePane title="hof/schmea/gen.#Template" file="code/hof-schemas/gen/template.html" >}}
 
 [Source on GitHub](https://github.com/hofstadter-io/hof/blob/_dev/schema/gen/template.cue)
-
-{{< codePane title="gen.#Template" file="code/hof-schemas/gen/template.html" >}}
 
 
 #### #Statics

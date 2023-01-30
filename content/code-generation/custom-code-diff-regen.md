@@ -1,7 +1,7 @@
 ---
-title: "Code Diff & Regen"
+title: "Custom Code, Diff, and Regen"
 
-draft: true
+weight: 30
 ---
 
 

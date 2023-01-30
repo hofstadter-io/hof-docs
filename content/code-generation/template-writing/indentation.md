@@ -5,12 +5,14 @@ weight: 20
 
 
 {{<lead>}}
-Getting spacing and indentation to follow
-your formatting rules is important for code generation.
+Formatting, spacing, and indentation are
+important for high-quality code.
+`hof` assists you in making your
+generated code share these qualities.
 {{</lead>}}
 
 
-## Don't template data files
+## Do not template data files
 
 Before we get into hof's helpers for whitespace control,
 we want to reiterate that you should not
@@ -42,7 +44,7 @@ To learn more about the formatters,
 see [code-gen/formatting](/code-generation/formatting/).
 
 
-## Indentation
+## Indent Helper
 
 Hof's `indent` helper mirros the behavior
 of Helm's while also supporting custom indentation.
@@ -72,7 +74,7 @@ The `indent` helper supports two variations
 
 
 
-## Controlling Spacing
+## Spacing Helpers
 
 If you want to remove whitespace in templates,
 use a hyphen inside the curly braces.
@@ -80,20 +82,22 @@ This makes it easier to make your template code
 understandable while still having correctly formatted output.
 
 {{<codeInner>}}
-// removes all space beforehand, until previous }}
-{{-  }}
+// removes all whitespace preceeding the {{
+{{- .name }}
 
-// removes all space afterwards, until next {{
-{{-  }}
+// removes all whitespace after the }}
+{{ .name -}}
 
-
+// use template comments to ensure exact spacing
+// here we are keeping two spaces on both sides of .name
+{{- /* ensure before */}}  {{ .name }}  {{/* ensure after */ -}}
 {{</codeInner>}}
 
 
 examples:
 
 - loops
-- group spacinv
+- group spacing
 - how to stop
 
 (link to go playground to see how it works)

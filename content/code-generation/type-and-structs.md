@@ -3,7 +3,7 @@ title: "Type and Structs"
 description: "Render types in multiple languages from CUE with hof"
 brief: "with CUE + text/template"
 
-weight: 11
+weight: 80
 ---
 
 {{<lead>}}

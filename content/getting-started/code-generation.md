@@ -27,12 +27,12 @@ hof gen <cue, data, config>... [--flags...]
 There are two main modes for
 template based code generation.
 
-1. `hof gen -T` configures code gen with flags
-2. `hof gen -G` configures code gen with CUE
+1. `hof gen -T` is code gen from flags
+2. `hof gen -G` is code gen from config
 
-We will only be covering `hof gen -T` in this section.
+We will be looking at `hof gen -T` in this section.
 The [first example](/first-example/) is a walkthrough
-in writing a full-stack app code generator (the `-G` flag).
+in writing a generator (the `-G` flag).
 The [getting-started/create] section will introduce
 `hof create` for running generators directly from git repositories.
 
@@ -42,6 +42,8 @@ each has a use case it is best at:
 - `hof gen -T` is good for simple cases or when you don't want dependencies
 - `hof gen -G` is aimed at reusable and sharable modules with dependencies
 - `hof create` is intended for interactive one-time setup and bootstrapping
+
+[Code generation topics](/code-generation/) are discussed in a dedicated section.
 
 
 ## Data + Templates
@@ -69,6 +71,9 @@ $ curl api.com  | hof gen - -T template.txt
 
 # intermix piped input with other entrypoints
 $ cat data.json | hof gen - schema.cue -T template.txt
+
+# set the data format when needed (cue help filetypes)
+$ cat data.yaml | hof gen yaml: - schema.cue -T template.txt
 {{</codeInner>}}
 
 
