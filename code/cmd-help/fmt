@@ -14,7 +14,7 @@ Available Commands:
   stop        stop a formatter
 
 Flags:
-  -d, --data   include cue,yaml,json,toml,xml files
+  -d, --data   include cue,yaml,json,toml,xml files, set to false to disable (default true)
   -h, --help   help for fmt
 
 Global Flags:

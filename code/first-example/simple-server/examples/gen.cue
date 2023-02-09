@@ -4,7 +4,7 @@ import (
 	"hof.io/docs/first-example/gen"
 )
 
-Server: gen.#HofGenerator & {
+Server: gen.#Generator & {
 	@gen(server)
 
 	Outdir:   "./output"

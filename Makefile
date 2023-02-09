@@ -65,7 +65,7 @@ code/%.html: code/%.cue
 	@node ci/highlight.js < "$<" > "$@"
 
 .PHONY: hugo
-hugo:
+hugo: config.yaml
 	@rm -rf dist
 	@hugo --baseURL https://docs.hofstadter.io/ -d dist
 

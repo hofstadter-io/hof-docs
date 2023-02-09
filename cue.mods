@@ -2,7 +2,7 @@ module github.com/hofstadter-io/hof-docs
 
 cue v0.4.3
 
-replace github.com/hofstadter-io/cuelm => ../../cuelm
+replace github.com/hofstadter-io/cuelm => ../cuelm
 
 require (
   github.com/hofstadter-io/harmony-cue v0.1.1

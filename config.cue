@@ -49,6 +49,7 @@ markup: tableOfContents: {
 }
 
 outputs: home: ["HTML", "RSS", "JSON"]
+outputs: page: ["HTML"]
 
 menu: shortcuts: [{
 	name:   "<i class='fab fa-github'></i> GitHub"

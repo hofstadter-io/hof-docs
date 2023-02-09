@@ -19,17 +19,18 @@ for you to start with.
 
 {{<codeInner title="Setup Commands">}}
 // create a directory
-mkdir first-example && cd first-example
+mkdir example && cd example
 git init   // (optional)
 
 // initialize a generator module
-hof gen --init hof.io/docs/first-example
+// the name is often the same as a github repo
+hof gen --init hof.io/docs/example
 {{</codeInner>}}
 
 Your working directory should now look like:
 
 {{<codeInner title="Module layout">}}
-first-example/
+example/
 |  // default directories
 ├── creators/
 ├── examples/
