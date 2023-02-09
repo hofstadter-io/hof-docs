@@ -1,12 +1,12 @@
-package example
+package examples
 
 import (
-	"hof.io/docs/first-example/schema"
+	"hof.io/docs/example/schema"
 )
 
 // A concrete value of the Server schem
 ServerDesign: schema.#Server & {
-	GoModule: "hof.io/docs/first-example"
+	GoModule: "hof.io/docs/example"
 
 	Name:        "Example"
 	Description: "An example server"

@@ -1,5 +1,5 @@
 // Generator definition
-#HofGenerator: gen.#HofGenerator & {
+#Generator: gen.#Generator & {
 	OnceFiles: [...gen.#File] & [
 			{
 			TemplatePath: "index.html"

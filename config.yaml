@@ -44,7 +44,6 @@ outputs:
     - JSON
   page:
     - HTML
-    - JSON
 menu:
   shortcuts:
     - name: <i class='fab fa-github'></i> GitHub

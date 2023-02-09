@@ -1,1 +1,1 @@
-module: "hof.io/docs/first-example"
+module: "hof.io/docs/example"

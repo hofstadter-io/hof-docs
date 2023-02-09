@@ -1,4 +1,4 @@
-			// Resources are pretty simple
+// Resources are pretty simple
 #Resources: [string]: #Resource
 #Resource: {
 	Model:  #Model

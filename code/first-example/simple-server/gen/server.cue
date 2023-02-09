@@ -3,7 +3,7 @@ package gen
 import (
 	"github.com/hofstadter-io/hof/schema/gen"
 
-	"hof.io/docs/first-example/schema"
+	"hof.io/docs/example/schema"
 )
 
 // Generator definition

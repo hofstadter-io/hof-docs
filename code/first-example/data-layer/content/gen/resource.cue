@@ -1,4 +1,4 @@
-#HofGenerator: gen.#HofGenerator & {
+#Generator: gen.#Generator & {
 	// We make resources from the data model
 	// and there is no new inputs for the user
 	In: {

@@ -1,4 +1,4 @@
-#HofGenerator: gen.#HofGenerator & {
+#Generator: gen.#Generator & {
 
 	// Exposed to the user
 	Datamodel: schema.#Datamodel

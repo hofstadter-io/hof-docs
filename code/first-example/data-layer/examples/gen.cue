@@ -1,15 +1,15 @@
-package example
+package examples
 
 import (
-	"hof.io/docs/first-example/gen"
+	"hof.io/docs/example/gen"
 )
 
-Server: gen.#HofGenerator & {
+Server: gen.#Generator & {
 	@gen(server)
 
 	Outdir:   "./output"
-	GoModule: "hof.io/docs/server-example"
-	Module:   "hof.io/docs/server-example"
+	GoModule: "hof.io/docs/example"
+	Module:   "hof.io/docs/example"
 
 	// We write the design in a separate file 
 	Server:    ServerDesign

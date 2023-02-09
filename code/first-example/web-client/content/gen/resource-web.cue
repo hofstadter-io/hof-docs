@@ -1,5 +1,5 @@
-		// Generator definition
-#HofGenerator: gen.#HofGenerator & {
+// Generator definition
+#Generator: gen.#Generator & {
 	// Define the resource Files
 	ResourceFiles: [...gen.#File] & [
 			// REST handlers, as before

@@ -1,7 +1,7 @@
-package example
+package examples
 
 import (
-	"hof.io/docs/first-example/gen"
+	"hof.io/docs/example/gen"
 )
 
 Server: gen.#Generator & {
