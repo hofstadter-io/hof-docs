@@ -11,8 +11,8 @@
 	// more meaningful fields presented to the user
 
 	// The list fo files for hof to generate
-	// Out: [...#HofGeneratorFile] | *[...]
-	Out: [...#HofGeneratorFile] | *[]
+	// Out: [...#File] | *[...]
+	Out: [...#File] | *[]
 
 	// Template (top-level) TemplateConfig (globs+config)
 	Templates: [...#Templates] | *[#Templates & {Globs: ["./templates/**/*"], TrimPrefix: "./templates/"}]
