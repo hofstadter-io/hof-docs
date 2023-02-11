@@ -25,6 +25,9 @@ git init   // (optional)
 // initialize a generator module
 // the name is often the same as a github repo
 hof gen --init hof.io/docs/example
+
+// temporary fix until v0.6.8
+mv generators gen
 {{</codeInner>}}
 
 Your working directory should now look like:
@@ -45,7 +48,6 @@ example/
 ├── cue.sums
 └── cue.mod/
 {{</codeInner>}}
-
 
 You will often have other files depending on the languages or technologies you choose.
 A common example are the files for dependency management like `package.json` and `go.mod`.
