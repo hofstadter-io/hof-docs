@@ -34,7 +34,7 @@ example/
 |  // default directories
 ├── creators/
 ├── examples/
-├── generators/
+├── gen/
 ├── partials/
 ├── schema/
 ├── statics/
@@ -54,7 +54,7 @@ There are no restrictions or limits on what you can include.
 The default directories:
 
 - `schema` is where your schemas for the other parts go
-- `generators` hold CUE files for specifiying your generators
+- `gen` holds CUE files for specifiying your generators
 - `templates`, `partials`, and `statics` are files for generators
 - `creators` are often in a subdirectory with their own templates
 - `examples` for using your generators, also helpful for testing
