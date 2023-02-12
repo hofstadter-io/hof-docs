@@ -7,39 +7,36 @@ weight: 5
 ---
 
 {{<lead>}}
-`hof` uses CUE (configure, unify, execute) for specifying inputs, schemas, and generators.
-CUE is a purpose built language for configuration and is core to	`hof`'s developer experience.
+`hof` leverages the power of CUE (Configure, Unify, Execute) to define inputs, schemas, and generators.
+CUE is a language specifically designed for configuration and is an integral component of the `hof` developer experience.
 {{</lead>}}
 
-This decision was made for two initial reasons.
+The choice to use CUE was driven by two key considerations:
 
-1. __hof is declarative code generation.__
-   A code generator is configuration for how to combine CUE, data, and templates during processing.
-	 We can create reusable, modular, and composable generators, letting users provide application specifics.
-	 From the source-of-truth CUE inputs, we can generate code across languages, technologies, and environments.
+1. __Declarative Code Generation__<br>
+   `hof` uses code generators defined in CUE which combine data and templates to generate any file.
+   With CUE as the source of truth, we gain consistency for inputs and mappings allowing
+	 for composable generators to generate code across languages and technologies.
+	 `hof` allows you to define the declarative schemas to code generators and package them into reusable modules.
 
-2. __CUE is purpose built for large scale configuration.__
-   It has good theory and tooling for working with configuration spanning many files, packages, and modules.
-	 Generators can import and use other generators, and adjust based on the user inputs.
-	 Models and schemas can be shared across teams for consistent, versioned inputs to code generation.
-	 CUE helps us write this efficiently and with confidence, validating whay we wrote is correct.
+2. __Purpose-Built for Large-Scale Configuration__<br>
+   CUE has a strong foundation and provides robust tooling for managing configuration across multiple files, packages, and modules.
+   CUE's logical nature ensures that the configuration is both efficient and correct.
+	 Since `hof`'s inputs are typically declarative configuration, CUE is a natural fit throughout the process.
 
-CUE is ideal for many reasons:
+Other benefits of CUE include:
 
-- looks like configuration while offering a full, logical language.
-- philosophically sound and based on a strong heritage.
-- declarative and logical, it proves that what you wrote is consistent and valid.
-- purpose built language, system, and tools for large scale configuration.
-- modules, packages, and dependency management for data, schemas, and configuration.
+- Configuration-like syntax with a full, logical language.
+- Built on sound principles and a rich heritage.
+- Declarative and logical, providing confidence in the validity and consistency of the configuration.
+- Purpose-built language and tooling for large-scale configuration.
+- Dependency management for data, schemas, configuration, and code generation.
 
-
-Bitfield Consulting has a quick
+For those unfamiliar with CUE, Bitfield Consulting has a great
 [introduction to CUE from a JSON perspective](https://bitfieldconsulting.com/golang/cuelang-exciting).
-This article is worth skimming through if you are unfamiliar with CUE.
-You will see the essential CUE for working with `hof`.
+It is a quick read and provides a great foundation for using CUE with `hof`.
 
-Keep these CUE learning resources at hand:
+To further your CUE knowledge, be sure to check out these resources:
 
-- [CUE documentation](https://cuelang.org) (CUE Team)
-- [Cuetorials](https://cuetorials.com) (Hofstadter)
-
+- [CUE documentation](https://cuelang.org) (from the CUE Team)
+- [Cuetorials](https://cuetorials.com) (by Hofstadter)
