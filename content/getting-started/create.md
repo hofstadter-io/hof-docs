@@ -1,6 +1,7 @@
 ---
 title: "Creators"
-brief: "for blueprints or bootstraping from in any git repo"
+description: "Application blueprints and bootstraping from in any git repo"
+brief: "Application blueprints and bootstraping from in any git repo"
 
 weight: 30
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Modules"
-brief: "for reusable CUE and code generation"
+description: "Dependency management for CUE and code generators"
+brief: "Dependency management for CUE and code generators"
 
 weight: 20
 ---

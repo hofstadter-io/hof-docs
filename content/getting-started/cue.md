@@ -1,7 +1,7 @@
 ---
 title: "CUE"
-description: "Getting started with Cuelang as the input to hof"
-brief: "as the language for user and dev"
+description: "A declarative language for configuration and code generation"
+brief: "A declarative language for configuration and code generation"
 
 weight: 5
 ---

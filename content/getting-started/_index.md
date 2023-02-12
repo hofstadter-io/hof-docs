@@ -8,8 +8,9 @@ description: >
 ---
 
 {{<lead>}}
-This section will introduce you to __hof__,
-the concepts, and take you through some examples.
+`hof` is a CLI with several tools to assist developers, powered by CUE.
+This section helps you get up and running
+by taking a tour through the features and concepts with examples.
 {{</lead>}}
 
 {{< childpages childBriefs="true">}}

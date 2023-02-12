@@ -2,7 +2,7 @@
 title: "Code Generation"
 linkTitle: "Code Gen"
 description: "Render any file from data and templates"
-brief: "with hof via CUE and templates"
+brief: "Render any file from data and templates"
 
 weight: 10
 ---
@@ -79,7 +79,7 @@ $ cat data.yaml | hof gen yaml: - schema.cue -T template.txt
 
 ### Writing to file
 
-Use `=` after the template name to write to file.
+Use  `=` (equal) after the template name to write to file.
 
 {{<codeInner title="> terminal" lang="sh">}}
 $ hof gen data.cue schema.cue -T template.txt=output.txt

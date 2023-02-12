@@ -1,7 +1,7 @@
 ---
 title: "Installation"
-description: "Install the hof cli tool"
-brief: "the hof cli"
+description: "Download and install the hof cli tool"
+brief: "Download and install the hof cli tool"
 weight: 3
 ---
 

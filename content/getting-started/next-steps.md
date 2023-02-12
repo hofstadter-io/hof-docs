@@ -1,7 +1,7 @@
 ---
 title: "Next Steps"
-description: "Next steps to get started with hof"
-brief: "to learn and use hof"
+description: "Next steps to learning and using hof"
+brief: "To learning and using hof"
 weight: 100
 ---
 
