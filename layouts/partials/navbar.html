@@ -7,12 +7,12 @@
         </div>
         <!-- only add the navbar toggle button if there are elements within the toggle -->
         {{- if .Site.Menus.shortcuts}}
-            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarMainCollapse" aria-controls="navbarMainCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainCollapse" aria-controls="navbarMainCollapse" aria-expanded="false" aria-label="Toggle navigation">
 							<i class='fas fa-bars fa-lg text-white'></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarMainCollapse">
-              <ul class="navbar-nav ml-auto">
+              <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
                     {{ $ver := .Site.Params.hofver }}
                     <a class="nav-link text-light" href="https://github.com/hofstadter-io/hof/releases/tag/{{ $ver }}" target="_blank">{{ $ver }}</a>

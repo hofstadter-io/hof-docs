@@ -26,8 +26,8 @@ params: {
 	github_repo:         "https://github.com/hofstadter-io/hof-docs"
 	time_format_default: "January 2, 2006"
 	keywords:            "hof hofstadter documentation docs"
-	hofver:              "v0.6.7"
-	cuever:              "v0.4.3"
+	hofver:              "v0.6.8-beta.5"
+	cuever:              "v0.5.0-beta.5"
 	cuedocBase:          "https://pkg.go.dev/cuelang.org/go@\(cuever)"
 
 	beta: """

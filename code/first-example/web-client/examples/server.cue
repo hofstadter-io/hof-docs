@@ -1,4 +1,4 @@
-package example
+package examples
 
 import (
 	"hof.io/docs/example/schema"

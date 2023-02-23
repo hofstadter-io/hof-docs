@@ -19,7 +19,7 @@ $danger:        #dc3545;
 $light:         $hof-white;
 $dark:          #343a40;
 
-@import "bootstrap/bootstrap";
+@import "bootstrap";
 @import "funcs";
 
 body, .main {
@@ -168,6 +168,7 @@ body, .main {
 .docs-toc a{
     font-size: 14px;
     color: gray;
+		text-decoration: none;
 }
 
 .docs-toc a:hover{

@@ -35,10 +35,10 @@
 
   <div class="px-1 flex-fill flex-column d-flex mb-3">
     {{ if $title1 }}
-    <p class="pl-2 py-1 m-0 border bg-light code-title">{{ $title1 }}</p>
+    <p class="ps-2 py-1 m-0 border bg-light code-title">{{ $title1 }}</p>
     {{ end }}
     <div class="position-relative border flex-fill" id="{{printf "clipboard_%s" (.Scratch.Get "ident1") }}">
-      <div class="position-absolute pt-1 pr-1" style="right:0;">
+      <div class="position-absolute pt-1 pe-1" style="right:0;">
         <button class="btn btn-light" data-clipboard-target="#{{printf "clipboard_%s" (.Scratch.Get "ident1") }}">
           <i class="far fa-copy"></i>
         </button>
@@ -55,10 +55,10 @@
 
   <div class="px-1 flex-fill flex-column d-flex mb-3">
     {{ if $title2 }}
-    <p class="pl-2 py-1 m-0 border bg-light code-title">{{ $title2 }}</p>
+    <p class="ps-2 py-1 m-0 border bg-light code-title">{{ $title2 }}</p>
     {{ end }}
     <div class="position-relative border flex-fill" id="{{printf "clipboard_%s" (.Scratch.Get "ident2") }}">
-      <div class="position-absolute pt-1 pr-1" style="right:0;">
+      <div class="position-absolute pt-1 pe-1" style="right:0;">
           <button class="btn btn-light" data-clipboard-target="#{{printf "clipboard_%s" (.Scratch.Get "ident2") }}">
           <i class="far fa-copy"></i>
           </button>

@@ -7,19 +7,21 @@
 </script>
 
 {{ $JS := slice
-  ( resources.Get "js/pv.js" | minify )
   ( resources.Get "js/menu.js" | minify )
-  ( resources.Get "lib/jquery.min.js" )
-  ( resources.Get "lib/popper.min.js" )
-  ( resources.Get "lib/bootstrap.min.js" )
-  ( resources.Get "lib/asciinema-player.min.js" )
-  ( resources.Get "plugins/lunr.min.js" )
-  ( resources.Get "plugins/auto-complete.js" | minify )
-  ( resources.Get "plugins/search.js" | minify )
-  ( resources.Get "plugins/clipboard.js" | minify )
-  ( resources.Get "js/clipboard.js" | minify )
   ( resources.Get "js/header-links.js" | minify )
+
+  ( resources.Get "node_modules/jquery/dist/jquery.min.js" )
+  ( resources.Get "node_modules/@popperjs/core/dist/umd/popper.min.js" )
+  ( resources.Get "node_modules/bootstrap/dist/js/bootstrap.min.js" )
+  ( resources.Get "node_modules/asciinema-player/dist/bundle/asciinema-player.min.js" )
+  ( resources.Get "node_modules/lunr/lunr.min.js" )
+  ( resources.Get "node_modules/javascript-autocomplete/auto-complete.min.js" )
+  ( resources.Get "node_modules/clipboard/dist/clipboard.min.js" )
+
+  ( resources.Get "js/search.js" | minify )
+  ( resources.Get "js/clipboard.js" | minify )
   ( resources.Get "js/casts.js" | minify )
+
   | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" }}
 
 <script type="text/javascript" src="{{ $JS.RelPermalink }}" integrity="{{ $JS.Data.Integrity }}"></script>

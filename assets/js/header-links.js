@@ -9,7 +9,7 @@ function addHeaderLinks() {
   elems.forEach(elem => {
     if (elem.parentNode == content) {
       var a = document.createElement("a");
-      a.className = "ml-2 fas fa-link fa-xs";
+      a.className = "ms-2 fas fa-link fa-xs";
       a.href = window.location.pathname + "#" + elem.id
       elem.className = "anchor"
       elem.appendChild(a);
