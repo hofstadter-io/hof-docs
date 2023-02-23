@@ -311,6 +311,8 @@ You can find more examples in the
 Generators are `hof gen` flags as configuration,
 often in CUE modules and git repositories.
 The next page will overview modules more generally.
+The [first-example](/first-example/) covers
+creating a generator from scracth in detail.
 
 To turn your adhoc `hof gen ... -T ...` commands into a generator
 by adding `--as-module <module name>` after the current flags.
@@ -325,6 +327,4 @@ and a few others for setting up a CUE module.
 
 {{<codePane file="code/getting-started/code-generation/adhoc-mod-snippet.html" title="generator.cue snippet">}}
 
-The [first-example](/first-example/) covers
-creating a generator from scracth in detail.
 

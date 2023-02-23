@@ -80,3 +80,23 @@ one-line bootstrapping or application blueprints, see the
 [hof create section](/hof-create/)
 
 
+## Creator vs Generator Module
+
+Under the hood, a Creator is a one-time Generator Module
+with an optional prompt.
+To decide when to use one versus the other...
+
+Use a Creator when:
+
+- You expect users to run the generation process just once
+- Your users need to quickly bootstrap an application based on a few inputs
+- You want a `hof create github.com/user/repo` one-liner to give your users
+
+Use a Module when:
+
+- You expect your users to run code generation iteratively, as part of their application development
+- You want your users to add or change features and then regenerate their code
+- If you want to give them the ability to change or add features from your app skeleton, then hof gen is the way to go.
+  Full generators were designed for an iterative, ongoing experience during software development.
+
+

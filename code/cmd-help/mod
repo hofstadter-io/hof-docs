@@ -110,12 +110,14 @@ Aliases:
   mod, m
 
 Available Commands:
-  info        print info about languages and modders known to hof mod
+  get         add a new dependency to the current module
   init        initialize a new module in the current directory
-  vendor      make a vendored copy of dependencies
+  tidy        recalculate dependencies and update mod files
+  vendor      copy dependencies to cue.mod/pkg
 
 Flags:
-  -h, --help   help for mod
+  -h, --help     help for mod
+  -u, --update   update dependencies while processing
 
 Global Flags:
   -p, --package string   the Cue package context to use during execution

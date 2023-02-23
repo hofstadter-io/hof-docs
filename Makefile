@@ -3,6 +3,18 @@ HTML_FILES = $(patsubst code/%.cue, code/%.html, $(CUE_FILES))
 TAG        = $(shell git rev-parse --short HEAD | tr -d "\n")
 PROJECT    = "hof-io--develop"
 
+help:
+	@cat Makefile
+
+# setup the development workspacce
+# missing is install hugo...
+# convert to hof/flow?
+setup: deps config.yaml extern highlight
+
+.PHONY: deps
+deps:
+	npm install
+
 # run locally in dev mode
 .PHONY: dev
 dev: config.yaml
