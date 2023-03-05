@@ -36,13 +36,13 @@
     {{- $pages := (.Scratch.Get "pages") }}
 
 	{{- if eq $sortTerm "Weight"}}
-		{{- template "childs" dict "menu" $pages.ByWeight "pages" .Site.Pages "sortTerm" $sortTerm "brief" (.Get "childBriefs")}}
+		{{- template "children" dict "menu" $pages.ByWeight "pages" .Site.Pages "sortTerm" $sortTerm "brief" (.Get "childBriefs")}}
 	{{end}}
 </ul>
 
 
 
-{{ define "childs" }}
+{{ define "children" }}
   {{ $cBrief := .brief }}
   {{- range .menu }}
     <li class="h5 py-1">
